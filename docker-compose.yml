@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  web:
+    hostname: project_web
+    container_name: project_web
+    build: .
+    ports:
+      - "80:5173"
+      - "5173:5173"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - HOST=0.0.0.0
+      - VITE_HOST=0.0.0.0
+      - CHOKIDAR_USEPOLLING=true
+      - CHOKIDAR_INTERVAL=100
+      - FORCE_POLLING=true
+      - TZ=UTC
+    command: ["npm","run","dev"]
+    restart: unless-stopped

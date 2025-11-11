@@ -1,0 +1,20 @@
+:root {
+    --color-primary: 0, 90, 167;
+    --color-text: 33, 33, 33;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial;
+    color: rgb(var(--color-text));
+    min-height: 100vh;
+}
+
+section {
+    padding: 2rem;
+}
