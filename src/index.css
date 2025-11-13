@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:acb3551b6d662693a858059b57d999aa8cb7937dc096b7eb6241cc9569348593
-size 944
+:root {
+    --nhl_stenden_corp_blue: 0, 90, 167;
+    --nhl_stenden_corp_cyan: 0, 167, 162;
+    --nhl_stenden_corp_green: 0, 120, 79;;
+    --nhl_stenden_corp_red: 229, 35, 41;
+    --nhl_stenden_corp_pink: 255, 140, 178;
+    --nhl_stenden_corp_orange: 255, 100, 10;
+    --nhl_stenden_tech_and_design_cyan: 99, 186, 139;
+    --color-text: 33, 33, 33;
+}
+
+@font-face {
+    font-family: 'CeraPro';
+    src: url(/public/font/CeraPRO-Regular.otf);
+}
+
+@font-face {
+    font-family: 'CeraPro_Bold';
+    src: url(/public/font/CeraPRO-Bold.otf);
+}
+
+@font-face {
+    font-family: 'CeraPro_Italic';
+    src: url(/public/font/CeraPRO-RegularItalic.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'CeraPro';
+    color: rgb(var(--color-text));
+    min-height: 100vh;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+    font-family: 'CeraPro_Bold';
+}
+
+section {
+    padding: 2rem;
+}

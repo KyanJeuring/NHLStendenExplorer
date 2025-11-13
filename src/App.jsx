@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:740ee6addecd32893666c9404ee46ac4f38af15b4f0b41df5cfe3d025a3027f8
-size 460
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/home/Home'
+import Page1 from './pages/page1/Page1'
+import Navbar from './components/navbar/Navbar'
+
+export default function App() {
+  return (
+    <>
+      <Navbar/>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/page1" element={<Page1/>}/>
+        </Routes>
+      </main>
+    </>
+  )
+}

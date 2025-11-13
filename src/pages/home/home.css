@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c52ba8751d6343d72840450f4bd2268c63c9062adb5bc1ef1f44eb6a9a0e8123
-size 227
+.home {
+    color: rgb(var(--nhl_stenden_corp_red));
+}
+
+.logos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin: 20px 0;
+    fill: red;
+}

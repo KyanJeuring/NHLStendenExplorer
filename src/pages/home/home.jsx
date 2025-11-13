@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:10f332b8bd4dbaf34d7d53c0936f099736d0d38364a0a636a75e333aecbe9ff5
-size 478
+import React from 'react'
+import './home.css'
+
+export default function Home() {
+    return (
+        <section className="home">
+            <h1>Home</h1>
+            <p>Welcome</p>
+            <div className="logos">
+                <img src="/logos/NHLStendenENLogo.svg" alt="NHL Stenden EN Logo" className="logo"/>
+                <img src="/logos/NHLStendenNLLogo.svg" alt="NHL Stenden NL Logo" className="logo"/>
+            </div>
+        </section>
+    )
+}
