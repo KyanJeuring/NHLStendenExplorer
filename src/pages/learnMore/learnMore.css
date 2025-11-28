@@ -1,5 +1,5 @@
 .learnMorePage {
-    background-color: #005AA7;
+    background-color: rgb(--nhl_stenden_corp_blue);
     display: flex;
     justify-content: space-between;
 }
@@ -27,4 +27,19 @@
 
 .learnMoreHeader .tagline{
     margin-top: 80px;
+}
+
+.learn-more-container{
+    background-color: #005AA7;
+    min-height: 100vh;
+
+}
+
+.lets-go-to-links{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;          /* let child use 100% */
+    margin-top: 2rem;     /* optional */
 }

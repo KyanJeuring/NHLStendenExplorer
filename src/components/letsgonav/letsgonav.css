@@ -1,0 +1,67 @@
+.letsgonav-container{
+    min-width: 90%;
+}
+
+.letsgonav-block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    padding: 1.5rem;
+}
+
+.letsgonav-block:hover{
+    background-color: rgb(200, 200, 200);
+}
+
+.letsgonav-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* ---------------- ICON + BG ---------------- */
+
+.letsgonav-icon-wrapper {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: rgb(var(--nhl_stenden_corp_cyan));
+    overflow: hidden;
+    position: relative;     
+}
+
+
+.letsgonav-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;            
+    height: 70%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    display: block;
+}
+
+
+
+.letsgonav-text h3 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.letsgonav-text p {
+    margin: 0.2rem 0 0;
+    font-size: 1rem;
+    color: rgb(138, 138, 138);
+}
+
+/* ---------------- ARROW ---------------- */
+
+.letsgonav-arrow{
+    width: 30px;
+}
