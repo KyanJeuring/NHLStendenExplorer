@@ -1,0 +1,6 @@
+footer {
+    background-color: rgb(var(--nhl_stenden_corp_blue));
+    color: white;
+    width: 100%;
+    height: max-content;
+}
