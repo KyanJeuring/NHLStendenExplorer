@@ -10,7 +10,7 @@ export default function Navbar() {
             </section>
             <section className="nav-links">
                 <NavLink to="/" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Home</NavLink>
-                <NavLink to="/page1" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Page 1</NavLink>
+                <NavLink to="/faq" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>FAQ</NavLink>
                 <NavLink to="/learnMore" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Learn More</NavLink>
             </section>
         </nav>

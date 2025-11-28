@@ -1,14 +1,14 @@
 import React from 'react'
 import { Routes, Route , useLocation} from 'react-router-dom'
 import Home from './pages/home/Home'
-import Page1 from './pages/page1/Page1'
+import Faq from './pages/faq/Faq'
 import Navbar from './components/navbar/Navbar'
 import LearnMore from './pages/learnMore/LearnMore'
 
 export default function App() {
   const routesWithNavbar = [
     { path: "/", page: <Home /> },
-    { path: "/page1", page: <Page1 /> }
+    { path: "/faq", page: <Faq /> }
   ];
 
   const routesWithoutNavbar = [
