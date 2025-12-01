@@ -1,0 +1,18 @@
+footer {
+    background-color: rgb(var(--nhl_stenden_corp_blue));
+    color: white;
+    display: grid;
+}
+
+.footerContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: space-between;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.footerElement {
+    margin-left: 5%;
+}
+
