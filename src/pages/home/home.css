@@ -1,7 +1,8 @@
-.home{
+.home {
     display: flex;
     flex-direction: column;
 }
+
 .home > h1 {
     color: black;
 }
@@ -36,24 +37,7 @@
     box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.5);
 }
 
-.buttonPulse {
-    display: flex;
-    width: 12rem;
-    height: 3rem;
-    justify-content: center;
-    align-items: center;
-    margin-inline: auto;
-    margin-top: 2rem;
-    border-radius: 1rem;
-    font-size: 1rem;
-    border: 2px solid rgb(var(--nhl_stenden_corp_blue));
-    font-family: 'CeraPro';
-    transition: background-color 0.4s, color 0.4s;
-    cursor: pointer;
-    color: rgb(var(--nhl_stenden_corp_blue));
-    text-decoration: none;          
-    background-color: transparent;  
-}
+
 
 .buttonPulse:hover {
     background-color: rgb(var(--nhl_stenden_corp_blue));
@@ -66,11 +50,174 @@
     margin-block: 1rem;
 }
 
-.infoAboutHiddenPlaces{
-    text-align: center;
-    margin: 5rem;
+/* PHONE SIZE */
+@media screen and (max-width: 600px) {
+    
+    .home > h1 {
+        font-size: 1.8rem;
+    }
+    
+    .address {
+        font-size: 1rem;
+    }
+
+    .postalCode {
+        font-size: 1rem;
+    }
+
+    .description {
+        font-size: 1.1rem;
+    }
+
+    .buttonPulse {
+        display: flex;
+        width: 12rem;
+        height: 3rem;
+        justify-content: center;
+        align-items: center;
+        margin-inline: auto;
+        margin-top: 2rem;
+        border-radius: 1rem;
+        font-size: 1rem;
+        border: 2px solid rgb(var(--nhl_stenden_corp_blue));
+        font-family: 'CeraPro';
+        transition: background-color 0.4s, color 0.4s;
+        cursor: pointer;
+        color: rgb(var(--nhl_stenden_corp_blue));
+        text-decoration: none;          
+        background-color: transparent;  
+    }
+
+    .explanationToButton {
+        font-size: 1rem;
+    }
+
+    .infoAboutHiddenPlaces {
+        text-align: center;
+        margin: 0.5rem;
+    }
+
+    .infoAboutHiddenPlaces > h2 {
+        font-size: 1rem;
+    }
+
+    .infoAboutHiddenPlaces > p {  
+        font-size: 0.9rem;
+        margin: 0.5rem;
+    }
 }
 
-.infoAboutHiddenPlaces p{
-    margin: 1rem;
+/* TABLET SIZE */
+@media screen and (min-width: 600px) and (max-width : 990px) {
+
+    .home > h1 {
+        font-size: 2.5rem;
+    }
+    
+    .address {
+        font-size: 1.3rem;
+    }
+
+    .postalCode {
+        font-size: 1.3rem;
+    }
+
+    .description {
+        font-size: 1.4rem;
+    }
+
+    .buttonPulse {
+        display: flex;
+        width: 18rem;
+        height: 4rem;
+        justify-content: center;
+        align-items: center;
+        margin-inline: auto;
+        margin-top: 2rem;
+        border-radius: 1rem;
+        font-size: 1.5rem;
+        border: 3px solid rgb(var(--nhl_stenden_corp_blue));
+        font-family: 'CeraPro';
+        transition: background-color 0.4s, color 0.4s;
+        cursor: pointer;
+        color: rgb(var(--nhl_stenden_corp_blue));
+        text-decoration: none;          
+        background-color: transparent;  
+    }
+
+    .explanationToButton {
+        font-size: 1.3rem;
+    }
+
+    .infoAboutHiddenPlaces {
+        text-align: center;
+        margin: 0.5rem;
+    }
+
+    .infoAboutHiddenPlaces > h2 {
+        font-size: 1.3rem;
+    }
+
+    .infoAboutHiddenPlaces > p {  
+        font-size: 1rem;
+        margin: 0.5rem;
+    }
+}
+
+/* LAPTOP AND DESKTOP SIZE */
+@media screen and (min-width: 990px) {
+
+    .home > h1 {
+        font-size: 3rem;
+    }
+    
+    .address {
+        font-size: 1.3rem;
+    }
+
+    .postalCode {
+        font-size: 1.3rem;
+    }
+
+    .description {
+        font-size: 1.4rem;
+    }
+
+    .buttonPulse {
+        display: flex;
+        width: 20rem;
+        height: 4.5rem;
+        justify-content: center;
+        align-items: center;
+        margin-inline: auto;
+        margin-top: 2rem;
+        border-radius: 1.5rem;
+        font-size: 2rem;
+        border: 3px solid rgb(var(--nhl_stenden_corp_blue));
+        font-family: 'CeraPro';
+        transition: background-color 0.4s, color 0.4s;
+        cursor: pointer;
+        color: rgb(var(--nhl_stenden_corp_blue));
+        text-decoration: none;          
+        background-color: transparent;  
+    }
+
+    .explanationToButton {
+        font-size: 1.3rem;
+    }
+
+    .infoAboutHiddenPlaces {
+        text-align: center;
+        margin: 0.5rem;
+    }
+
+    .infoAboutHiddenPlaces > h2 {
+        font-size: 2rem;
+    }
+
+    .infoAboutHiddenPlaces > p {  
+        font-size: 1.5rem;
+        margin: 1rem;
+        margin-left: 5rem;
+    }
 }
