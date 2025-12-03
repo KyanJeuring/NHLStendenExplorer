@@ -192,14 +192,14 @@
         margin-inline: auto;
         margin-top: 2rem;
         border-radius: 1.5rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
         border: 3px solid rgb(var(--nhl_stenden_corp_blue));
         font-family: 'CeraPro';
         transition: background-color 0.4s, color 0.4s;
         cursor: pointer;
         color: rgb(var(--nhl_stenden_corp_blue));
         text-decoration: none;          
-        background-color: transparent;  
+        background-color: transparent; 
     }
 
     .explanationToButton {
@@ -224,7 +224,7 @@
     .pixelsCombinationForHomePage{
         display: grid;
         grid-template-columns: repeat(5, 4fr);
-        grid-template-rows: repeat(3, 2fr);
+        grid-template-rows: repeat(2, 2fr);
     }
 
     .pixelsCombination{
@@ -257,5 +257,19 @@
         grid-row: 2;
         margin-inline: 1rem;
         margin-top: 0.5rem;
+    }
+
+    .playArrow{
+        width: 2.5rem;
+        margin-right: 1rem;
+        fill: rgb(var(--nhl_stenden_corp_blue));
+    }
+
+    .buttonPulse:hover .playArrow {
+        fill: white; 
+    }
+
+    .pixelsCombinationForHomePage{
+        margin-block: 5rem;
     }
 }
