@@ -12,25 +12,56 @@ nav {
     height: 8vh;
 }
 
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-end;
+/* PHONE SCREEN */
+@media screen and (max-width: 600px) {
+
+    .nav-links {
+        display: none;
+    }
 }
 
-.nav-link {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    padding: .25rem .5rem;
-    border-radius: 0.5rem;
-    transition:  all 0.2s ease-in-out;
-}
-.nav-link:hover {
-    text-decoration: underline;
-    transform: translateY(-0.1rem);
+/* TABLET SCREEN */
+@media screen and (min-width: 600px) and (max-width : 990px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        stroke: white;
+        height: 4rem;
+        width: auto;
+    }
 }
 
-.nav-link.active {
-    text-decoration: underline;
+/* LAPTOP AND DESKTOP SCREEN */
+@media screen and (min-width: 990px) {
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-end;
+    }
+    
+    .nav-link {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        padding: .25rem .5rem;
+        border-radius: 0.5rem;
+        transition:  all 0.2s ease-in-out;
+    }
+    .nav-link:hover {
+        text-decoration: underline;
+        transform: translateY(-0.1rem);
+    }
+    
+    .nav-link.active {
+        text-decoration: underline;
+    }
 }
+
