@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS carousel_card (
   title TEXT NOT NULL,
   description TEXT NOT NULL,
   image_url TEXT NOT NULL
-)
+);
 
 INSERT INTO carousel_card (title, description, image_url) VALUES
 ('Test Card 1', 'This is placeholder text for now, will be changed later.', 'https://lipsum.app/512x512'),
@@ -41,13 +41,15 @@ INSERT INTO letsgo_item (title, description, icon_url, link_url) VALUES
 ('Kennispoort', 'Collaboration with real companies.', '/icons/kennispoort_icon.svg', '/kennispoort');
 
 -- Explore Item Table with Category Enum
-CREATE TYPE IF NOT EXISTS category_enum AS ENUM (
-  "FACILITIES",
-  "STUDY_AREAS",
-  "SERVICES",
-);
+DO $$
+BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'category_enum') THEN
+    CREATE TYPE category_enum AS ENUM ('FACILITIES','STUDY_AREAS','SERVICES');
+  END IF;
+END
+$$;
 
-CREATE TABLE explore_item (
+CREATE TABLE IF NOT EXISTS explore_item (
   id SERIAL PRIMARY KEY,
   title TEXT NOT NULL,
   description TEXT NOT NULL,
