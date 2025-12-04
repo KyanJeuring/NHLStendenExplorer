@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './home.css'
-import {Link}  from 'react-router-dom'
+import {Link, useNavigate}  from 'react-router-dom'
+import Carousel from '../../components/carousel/Carousel'
 
 export default function Home() {
     const OnClick = () => {
         useNavigate('/page1');
     }
+
+    const [lorem ,setLorem] = useState('Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae architecto, molestias temporibus dicta veniam perspiciatis nulla facere saepe excepturi, quasi quidem atque quas ipsum, consequatur quia magnam neque? Voluptatum, quae?')
+    const [carouselItems, setCarouselItems] = useState([
+{ title: "Did you know?", description: lorem },
+  { title: "Did you know?", description: lorem },
+  { title: "Did you know? ", description: lorem },
+  { title: "Did you know?", description: lorem }])
     
     return (
         <section className="home">
@@ -21,6 +29,10 @@ export default function Home() {
                 <img src="/pixels/triangles.svg" alt="Pixel Triangles" className="pixelTriangles"/>
                 <h2>✨ Hidden Gems of Our Campus — The Most Fascinating Places You Might Overlook</h2>
                 <p className="info">Explore the corners of NHL Stenden that often go unnoticed — but hold the most inspiring stories, innovation, and creativity.</p>
+            </div>
+            <div className='carousel-section'>
+               <Carousel items={carouselItems} />
+
             </div>
         </section>
     )

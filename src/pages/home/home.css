@@ -48,6 +48,14 @@
     margin-block: 1rem;
 }
 
+.carousel-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+
 /* PHONE SIZE */
 @media screen and (max-width: 600px) {
     

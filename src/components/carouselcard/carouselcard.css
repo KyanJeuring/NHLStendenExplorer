@@ -1,0 +1,23 @@
+.carousel-card {
+  background:rgb(var( --nhl_stenden_corp_cyan)) ;
+  width: 100%;
+  height: 100%;         /* <-- FORCES full height */
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* keeps content at top */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+
+.carousel-card-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.carousel-card-description {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
