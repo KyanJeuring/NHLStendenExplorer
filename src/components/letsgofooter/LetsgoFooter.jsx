@@ -7,12 +7,12 @@ export default function LetsgoFooter() {
 
     return (
         <section className="letsgofooter">
-            <h1 onClick={() => navigate('/home')} className="footer-h1">FAQ</h1>
+            <h1 onClick={() => navigate('/faq')} className="footer-h1">FAQ</h1>
 
             <img 
                 src="/icons/button_home.svg" 
                 alt="home button" 
-                onClick={() => navigate('/faq')}
+                onClick={() => navigate('/home')}
                 className="footer-image"
             />
         </section>
