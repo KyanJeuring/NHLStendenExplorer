@@ -2,52 +2,50 @@ import React, { useState } from "react";
 import CarouselCard from "../carouselcard/CarouselCard";
 import "./carousel.css";
 
-const MAX_VISIBILITY = 3;
-
 export default function Carousel({ items }) {
-  const [active, setActive] = useState(2); 
-  const count = items.length;
+  const [active, setActive] = useState(0);
+
+  const prev = () => setActive((i) => (i - 1 + items.length) % items.length);
+  const next = () => setActive((i) => (i + 1) % items.length);
 
   return (
-    <div className="carousel-3d">
-      {active > 0 && (
-        <button
-          className="nav-3d nav-3d-left"
-          onClick={() => setActive((i) => i - 1)}
-        >
-          <span>&lt;</span>
-        </button>
-      )}
+    <div className="carousel-2d">
 
-      {items.map((item, i) => {
-        const offset = active - i;
-        const absOffset = Math.abs(offset);
+      {/* LEFT ARROW */}
+      <img
+        src="/arrows/left-arrow-icon.svg"
+        className="side-arrow left-arrow"
+        onClick={prev}
+        alt="left"
+      />
 
-        if (absOffset > MAX_VISIBILITY) {return null;}
+      {/* CARDS */}
+      <div className="cards-wrapper">
+        {items.map((item, idx) => {
+          let className = "card hidden";
 
-        return (
-          <div
-            key={i}
-            className="card-3d-container"
-            style={{
-              "--active": i === active ? 1 : 0,
-              "--offset": offset,
-              "--abs-offset": absOffset,
-            }}
-          >
-            <CarouselCard title={item.title} description={item.description} />
-          </div>
-        );
-      })}
+          if (idx === active) className = "card center";
+          else if (idx === (active - 1 + items.length) % items.length)
+            className = "card side left";
+          else if (idx === (active + 1) % items.length)
+            className = "card side right";
 
-      {active < count - 1 && (
-        <button
-          className="nav-3d nav-3d-right"
-          onClick={() => setActive((i) => i + 1)}
-        >
-          <span>&gt;</span>
-        </button>
-      )}
+          return (
+            <div key={idx} className={className}>
+              <CarouselCard {...item} />
+            </div>
+          );
+        })}
+      </div>
+
+      {/* RIGHT ARROW */}
+      <img
+        src="/arrows/right-arrow-icon.svg"
+        className="side-arrow right-arrow"
+        onClick={next}
+        alt="right"
+      />
+
     </div>
   );
 }

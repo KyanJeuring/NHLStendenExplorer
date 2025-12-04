@@ -1,24 +1,23 @@
-.card-3d {
+.carousel-card {
+  background:rgb(var( --nhl_stenden_corp_cyan)) ;
   width: 100%;
-  height: 100%;
-  background: white;
-  border-radius: 1rem;
+  height: 100%;         /* <-- FORCES full height */
+  border-radius: 20px;
   padding: 2rem;
-  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.25);
-background-color: rgb(var(--nhl_stenden_corp_cyan));
   display: flex;
   flex-direction: column;
+  justify-content: flex-start; /* keeps content at top */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  overflow: hidden;
 }
 
-.card-3d h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+.carousel-card-title {
+  font-size: 1.6rem;
   font-weight: bold;
-  color: white;
+  margin-bottom: 1rem;
 }
 
-.card-3d p {
-  font-size: 1rem;
-  color: white;
-  line-height: 1.4;
+.carousel-card-description {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
