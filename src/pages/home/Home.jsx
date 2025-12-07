@@ -32,7 +32,6 @@ export default function Home() {
             </div>
             <div className='carousel-section'>
                <Carousel items={carouselItems} />
-
             </div>
         </section>
     )
