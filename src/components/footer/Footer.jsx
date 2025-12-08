@@ -18,8 +18,6 @@ export default function Footer(){
                     Fri 8:00-17:00
                 </div>
             </div>
-            
-            
         </footer>
     )
 }

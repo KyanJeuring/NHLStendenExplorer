@@ -16,3 +16,12 @@ footer {
     margin-left: 5%;
 }
 
+
+@media screen and (max-width: 600px) {
+
+    .footerContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
