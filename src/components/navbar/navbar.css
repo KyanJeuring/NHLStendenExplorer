@@ -25,7 +25,7 @@ nav {
     z-index: 10;
 }
 
-.menu > .link {
+.menu .link {
     font-size: 1.5rem;
     margin-left: 2rem;
     display: flex;
@@ -46,10 +46,6 @@ nav {
 .hidden {
     display: none;
 }
-
-/* .hidden {
-    display: none;
-} */
 
 /* PHONE SCREEN */
 @media screen and (max-width: 600px) {

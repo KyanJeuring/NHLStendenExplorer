@@ -75,9 +75,19 @@
         font-size: 1.1rem;
     }
 
+    .playArrow {
+        width: 2.5rem;
+        margin-right: 1rem;
+        fill: rgb(var(--nhl_stenden_corp_blue));
+    }
+
+    .buttonPulse:hover .playArrow {
+        fill: white; 
+    }
+
     .buttonPulse {
         display: flex;
-        width: 12rem;
+        width: 14rem;
         height: 3rem;
         justify-content: center;
         align-items: center;
@@ -129,6 +139,16 @@
 
     .description {
         font-size: 1.4rem;
+    }
+
+    .playArrow {
+        width: 2.5rem;
+        margin-right: 1rem;
+        fill: rgb(var(--nhl_stenden_corp_blue));
+    }
+
+    .buttonPulse:hover .playArrow {
+        fill: white; 
     }
 
     .buttonPulse {
