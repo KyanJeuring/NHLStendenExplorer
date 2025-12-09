@@ -43,4 +43,5 @@ body {
 
 main > section {
     padding: 2rem;
+    overflow-x: hidden; 
 }

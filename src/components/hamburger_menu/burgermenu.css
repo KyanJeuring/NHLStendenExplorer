@@ -1,0 +1,16 @@
+.burger-btn {
+    background-color: transparent;
+    border: 0;
+}
+
+.burger-bar {
+    stroke: white;
+    height: 4rem;
+    width: auto;
+}
+
+.close-x {
+    fill: white;
+    height: 4rem;
+    width: auto;
+}

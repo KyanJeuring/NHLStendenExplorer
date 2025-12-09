@@ -10,7 +10,7 @@ export default function Home() {
 
     const [lorem ,setLorem] = useState('Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae architecto, molestias temporibus dicta veniam perspiciatis nulla facere saepe excepturi, quasi quidem atque quas ipsum, consequatur quia magnam neque? Voluptatum, quae?')
     const [carouselItems, setCarouselItems] = useState([
-{ title: "Did you know?", description: lorem },
+  {title: "Did you know?", description: lorem },
   { title: "Did you know?", description: lorem },
   { title: "Did you know? ", description: lorem },
   { title: "Did you know?", description: lorem }])
@@ -32,7 +32,6 @@ export default function Home() {
             </div>
             <div className='carousel-section'>
                <Carousel items={carouselItems} />
-
             </div>
         </section>
     )
