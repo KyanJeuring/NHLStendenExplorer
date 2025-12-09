@@ -14,7 +14,7 @@ nav {
 
 .menu {
     background-color: white;
-    position: absolute;
+    position: fixed;
     top: 7rem;
     left: 0;
     width: 100%;
@@ -23,6 +23,10 @@ nav {
     flex-direction: column;
     gap: 2rem;
     z-index: 10;
+}
+
+.menu-open {
+    position: fixed;
 }
 
 .menu .link {

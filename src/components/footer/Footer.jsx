@@ -12,7 +12,6 @@ export default function Footer(){
                 </div>
             
                 <div class="footerElement">
-                
                     Opening hours <br/> <br/>
                     Mon-Thu 8:00-18:00 <br/>
                     Fri 8:00-17:00

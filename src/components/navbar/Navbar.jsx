@@ -23,7 +23,7 @@ export default function Navbar() {
     }
 
     return (
-        <nav>
+        <nav className={menuOpen ? "menu-open" : "menu-hidden"}>
             <section className='logo'>
                 <img src="/logos/NHLStendenLogo_White.svg" alt="NHL Stenden Logo" />
             </section>

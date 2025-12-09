@@ -1,3 +1,6 @@
+.carousel-section {
+  z-index: -1;
+}
 
 .carousel-2d {
   position: relative;
@@ -7,7 +10,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 .side-arrow {
   position: absolute;
@@ -26,7 +28,6 @@
   right: 10px;
 }
 
-
 .cards-wrapper {
   position: relative;
   width: 90%;
@@ -37,7 +38,6 @@
   overflow: visible;     
 }
 
-
 .card {
   position: absolute;
   width: 65%;           
@@ -47,8 +47,8 @@
   transform: scale(0.85);
   pointer-events: none;
   color: white;
+  z-index: 5;
 }
-
 
 .card.center {
   opacity: 1;
@@ -56,7 +56,6 @@
   z-index: 3;
   pointer-events: auto;
 }
-
 
 .card.side {
   opacity: 0.7;
@@ -69,11 +68,9 @@
   transform: translateX(-140%) scale(0.9);
 }
 
-
 .card.side.right {
   transform: translateX(140%) scale(0.9);
 }
-
 
 .card.hidden {
   display: none;
