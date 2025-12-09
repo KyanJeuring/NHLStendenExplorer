@@ -1,0 +1,37 @@
+h1 {
+    color: black
+}
+
+h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: rgb(var(--nhl_stenden_corp_cyan));
+    text-transform: uppercase;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* .filter-buttons > * {
+    color: black;
+    font-size: 1.3vh;
+    background-color: white;
+    border: 0.2vh solid rgb(194, 192, 192);
+    border-radius: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    min-width: 3.5rem;
+} */
+
+.cards > h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: rgb(var(--nhl_stenden_corp_cyan));
+}
