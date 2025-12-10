@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './filterbutton.css';
 
-export default function Filter({ title, onClick }) {
-    
+export default function FilterButton({ title, onClick, isActive }) {
+    const className = `filter-button${isActive ? ' active' : ''}`
     return (
-        <button className="filter-button" onClick={onClick}>{title}</button>
+        <button className={className} onClick={onClick} type="button">
+            {title}
+        </button>
     )
 }

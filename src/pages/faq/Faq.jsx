@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './faq.css'
-import FaqCard from '../..//components/faq/FaqCard'
+import FaqCard from '../../components/faq/FaqCard'
 
 export default function Faq() {
     const [faqData, setFaqData] = useState([])

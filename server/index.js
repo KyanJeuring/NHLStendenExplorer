@@ -8,8 +8,28 @@ app.use(express.json());
 
 app.get('/api/faq', async (req, res) => {
   try {
-    const result = await db.query('SELECT id, question, answer FROM faq ORDER BY RANDOM() LIMIT 10');
+    const result = await db.query('SELECT * FROM faq ORDER BY RANDOM() LIMIT 10');
     res.json(result.rows);
+  } catch (err) {
+    console.error('DB error', err);
+    res.status(500).json({ error: 'Database error' });
+  }
+});
+
+app.get('/api/explorer', async (req, res) => {
+  try {
+    const result = await db.query('SELECT * FROM explore_item');
+    res.json(result.rows);
+  } catch (err) {
+    console.error('DB error', err);
+    res.status(500).json({ error: 'Database error' });
+  }
+});
+
+app.get('/api/explorer/categories', async (req, res) => {
+  try {
+    const result = await db.query("SELECT unnest(enum_range(NULL::category_enum)) AS category");
+    res.json(result.rows.map(r => r.category));
   } catch (err) {
     console.error('DB error', err);
     res.status(500).json({ error: 'Database error' });

@@ -1,4 +1,4 @@
-button {
+.filter-button {
     color: black;
     font-size: 1.3vh;
     background-color: white;
@@ -9,4 +9,10 @@ button {
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
     min-width: 3.5rem;
+}
+
+.filter-button.active {
+    background-color: rgb(var(--nhl_stenden_corp_cyan));
+    color: white;
+    border-color: rgb(var(--nhl_stenden_corp_cyan));
 }

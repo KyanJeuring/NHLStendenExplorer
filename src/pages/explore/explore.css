@@ -12,9 +12,11 @@ h3 {
 .filter-buttons {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 1rem;
 }
+
+
 
 /* .filter-buttons > * {
     color: black;
@@ -29,9 +31,16 @@ h3 {
     min-width: 3.5rem;
 } */
 
-.cards > h2 {
+.card-section > h2 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
     color: rgb(var(--nhl_stenden_corp_cyan));
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 4vh;
 }
