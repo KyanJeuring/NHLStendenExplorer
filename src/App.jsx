@@ -2,6 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/home/Home'
 import Navbar from './components/navbar/Navbar'
+import Faq from './pages/faq/Faq'
 import LearnMore from './pages/learnMore/LearnMore'
 
 export default function App() {
