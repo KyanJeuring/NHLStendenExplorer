@@ -5,6 +5,7 @@ import Explore from './pages/explore/Explore'
 import Faq from './pages/faq/Faq'
 import Navbar from './components/navbar/Navbar'
 import LearnMore from './pages/learnMore/LearnMore'
+import Kennispoort from './pages/kennispoort/Kennispoort'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <Route path="/faq" element={<Faq/>}/>
           <Route path="/learnMore" element={<LearnMore/>}/>
           <Route path="/explore" element={<Explore/>}/>
+          <Route path="/kennispoort" element={<Kennispoort/>}/>
         </Routes>
       </main>
     </>
