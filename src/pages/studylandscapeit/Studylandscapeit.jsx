@@ -1,17 +1,17 @@
 import React from 'react';
-import './studylandscape.css';
+import './studylandscapeit.css';
 import { useNavigate } from 'react-router-dom';
 
 export default function Studylandscape() {
     const navigate = useNavigate();
 
     return (
-        <section className="studylandscapePage-container">
-            <div className="studylandscape-header">
+        <section className="studylandscapePage-container-it">
+            <div className="studylandscape-header-it">
                 <h1>Study Areas</h1>
                 <img src="/pixels/combinationOfPixelsForLocations.svg" alt="Pixels Combination" className="pixelsCombination"/>
             </div>
-            <main className="studylandcape-main-content">
+            <main className="studylandcape-main-content-it">
                 <h2>Study Landscape in Tech & Design department</h2>
                 <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="techAndDesign"/>
                 <h3>Welcome to the Study Landscape</h3>
