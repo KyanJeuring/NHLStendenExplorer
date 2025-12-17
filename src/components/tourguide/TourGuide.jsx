@@ -6,7 +6,7 @@ export default function TourGuide() {
     {
       text: (
         <>
-          👋 <strong>Meet Nova</strong> – your campus buddy! <br />
+          👋 <strong></strong> – your campus buddy! <br />
           Here to show you around, crack a joke, and help you discover the
           coolest spots at NHL Stenden.
         </>
@@ -39,18 +39,19 @@ export default function TourGuide() {
   };
 
   return (
-    <section className="tour-guide-section" onClick={handleClick}>
-      <img
-        className="guide"
-        src="/icons/talking_man.svg"
-        alt="Tour Guide"
-      />
-
-      <div className="speech-wrapper">
-        <div className="speech-bubble">
-          <p className="speech-text">{messages[currentIndex].text}</p>
+    <div className="tour-guide-fixed">
+      <section className="tour-guide-section" onClick={handleClick}>
+        <img
+          className="guide"
+          src="/icons/talking_man.svg"
+          alt="Tour Guide"
+        />
+        <div className="speech-wrapper">
+          <div className="speech-bubble">
+            <p className="speech-text">{messages[currentIndex].text}</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
