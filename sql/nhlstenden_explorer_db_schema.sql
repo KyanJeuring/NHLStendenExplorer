@@ -54,13 +54,16 @@ CREATE TABLE IF NOT EXISTS explore_item (
   title TEXT NOT NULL,
   description TEXT NOT NULL,
   categories category_enum[] NOT NULL,
-  image_url TEXT NOT NULL
+  image_url TEXT NOT NULL,
+  link_url TEXT NOT NULL
 );
 
-INSERT INTO explore_item (title, description, categories, image_url) VALUES
-('Main Library', 'Central library with study spaces and resources.', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512'),
-('Computer Lab', 'Open computer labs with up-to-date software for coursework.', ARRAY['FACILITIES','STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512'),
-('Career Services', 'Support for internships, CVs and career guidance.', ARRAY['SERVICES']::category_enum[], 'https://lipsum.app/512x512'),
-('Study Lounge', 'Comfortable lounges ideal for individual and group study.', ARRAY['STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512'),
-('Cafeteria', 'Hot and cold meals, snacks and beverage options.', ARRAY['FACILITIES','SERVICES']::category_enum[], 'https://lipsum.app/512x512'),
-('Kennispoort Hub', 'Collaboration space connecting students with industry partners.', ARRAY['STUDY_AREAS','SERVICES']::category_enum[], 'https://lipsum.app/512x512');
+INSERT INTO explore_item (title, description, categories, image_url, link_url) VALUES
+('Student Info', 'Help & important information.', ARRAY['SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/studentInfo'),
+('Study Landscapes', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/studyLandscapes'),
+('Canteen', 'Hot and cold meals, snacks and beverage options.', ARRAY['FACILITIES','SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/canteen'),
+('Library', 'The library with study spaces and resources.', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/library'),
+('Computer Lab', 'Open computer labs with up-to-date software for coursework.', ARRAY['FACILITIES','STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/computerLab'),
+('Career Services', 'Support for internships, CVs and career guidance.', ARRAY['SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/careerServices'),
+('Kennispoort Hub', 'Collaboration space connecting students with industry partners.', ARRAY['STUDY_AREAS','SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/kennispoort'),
+('MyConcept Lab', 'lorem ipsum', ARRAY['FACILITIES','STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/myConceptLab');
