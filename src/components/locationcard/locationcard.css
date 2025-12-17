@@ -5,6 +5,7 @@
     border: 2px solid gray;
     padding: 2rem;
     gap: 1rem;
+    user-select: none;
 }
 
 .location-card img {
