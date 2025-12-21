@@ -1,6 +1,7 @@
 import React from 'react';
 import './lockers.css';
 import { useNavigate } from 'react-router-dom';
+import TourGuide from '../../components/tourguide/TourGuide';
 
 export default function Lockers() {
     const navigate = useNavigate();
@@ -22,6 +23,7 @@ export default function Lockers() {
                     <li>Close the locker door and it will lock automatically.</li>
                     <li>To open the locker again, simply put your myCard on the scanner again.</li>
                 </ol>
+                <TourGuide />
             </main>
             <div className="buttonToNextPage">                
                 <button onClick={() => navigate('/learnMore')} className="moveNext">Move Next</button>

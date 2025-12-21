@@ -1,7 +1,9 @@
 import React from 'react';
 import './kennispoort.css';
 import { useNavigate } from 'react-router-dom';
+
 import TourGuide from '../../components/tourguide/TourGuide';
+
 
 export default function Kennispoort() {
     const navigate = useNavigate();
@@ -22,6 +24,8 @@ export default function Kennispoort() {
                     <li>The seats on the stairs are real stadium chairs from the Emmen stadium.</li>
                     <li>The center of entrepreneurship is here (check the website for more information).</li>
                 </ul>
+       <TourGuide />
+
                 <TourGuide />
             </main>
             <div className="buttonToNextPage">                

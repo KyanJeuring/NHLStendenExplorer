@@ -1,6 +1,7 @@
 import React from 'react';
 import './myConceptLab.css';
 import { useNavigate } from 'react-router-dom';
+import TourGuide from '../../components/tourguide/TourGuide';
 
 export default function MyConceptLab() {
     const navigate = useNavigate();
@@ -15,6 +16,7 @@ export default function MyConceptLab() {
                 <h3>Welcome to MyConcept Lab</h3>
                 <p>MyConcept Lab is a location within the university.</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis illo, odio necessitatibus animi, inventore voluptate omnis cumque fugiat fuga laboriosam, officia deleniti? Sequi ut, nisi voluptatum ducimus a eveniet consectetur?</p>
+                <TourGuide />   
             </main>
             <div className="buttonToNextPage">                
                 <button onClick={() => navigate('/learnMore')} className="moveNext">Move Next</button>
