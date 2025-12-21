@@ -25,8 +25,6 @@ export default function Kennispoort() {
                     <li>The center of entrepreneurship is here (check the website for more information).</li>
                 </ul>
        <TourGuide />
-
-                <TourGuide />
             </main>
             <div className="buttonToNextPage">                
                 <button onClick={() => navigate('/learnMore')} className="moveNext">Move Next</button>
