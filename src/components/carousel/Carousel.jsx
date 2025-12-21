@@ -13,7 +13,7 @@ export default function Carousel({ items }) {
 
       {/* LEFT ARROW */}
       <img
-        src="/arrows/left-arrow-icon.svg"
+        src="/arrows/left_arrow_icon.svg"
         className="side-arrow left-arrow"
         onClick={prev}
         alt="left"
@@ -40,7 +40,7 @@ export default function Carousel({ items }) {
 
       {/* RIGHT ARROW */}
       <img
-        src="/arrows/right-arrow-icon.svg"
+        src="/arrows/right_arrow_icon.svg"
         className="side-arrow right-arrow"
         onClick={next}
         alt="right"

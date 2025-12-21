@@ -5,6 +5,7 @@ import Explore from './pages/explore/Explore'
 import Faq from './pages/faq/Faq'
 import Navbar from './components/navbar/Navbar'
 import LearnMore from './pages/learnMore/LearnMore'
+import Kennispoort from './pages/kennispoort/Kennispoort'
 import Canteen from './pages/canteen/Canteen'
 import Kennispoort from './pages/kennispoort/Kennispoort'
 import Library from './pages/library/Library'
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/faq" element={<Faq/>}/>
           <Route path="/learnMore" element={<LearnMore/>}/>
           <Route path="/explore" element={<Explore/>}/>
+          <Route path="/kennispoort" element={<Kennispoort/>}/>
           <Route path="/canteen" element={<Canteen/>}/>
           <Route path="/kennispoort" element={<Kennispoort/>}/>
           <Route path="/library" element={<Library/>}/>

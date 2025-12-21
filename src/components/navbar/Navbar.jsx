@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
 import { NavLink } from 'react-router-dom';
 import './navbar.css';  
 import BurgerMenu from '../hamburger_menu/burgermenu';
@@ -17,6 +18,19 @@ export default function Navbar() {
 
         setIsMenuClicked(!isMenuClicked);
     }
+
+    useEffect(() => {
+  if (menuOpen) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+
+  return () => {
+    document.body.style.overflow = '';
+  };
+}, [menuOpen]);
+
 
     const closeMenu = () => {
         setMenuOpen(false);
