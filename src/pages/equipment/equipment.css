@@ -1,8 +1,8 @@
-.gamesPage-container {
+.equipmentPage-container {
     padding: 0rem;
 }
 
-.games-header {
+.equipment-header {
     display: flex;
     justify-content: space-between;
     align-items: top;
@@ -13,7 +13,7 @@
     width: 25%;
 }
 
-.games-header > h1 {
+.equipment-header > h1 {
     font-size: 3rem;
     margin-block: auto;
     margin-inline: 3rem;
@@ -23,30 +23,30 @@
     width: 30%;
 }
 
-.games-main-content {
+.equipment-main-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.games-main-content > h2 {
+.equipment-main-content > h2 {
     margin-right: 51rem;
     margin-block: 4rem;
     color: rgb(var(--nhl_stenden_corp_cyan));
 }
 
-.games-main-content > h3 {
+.equipment-main-content > h3 {
     margin-right: 65rem;
     margin-top: 5rem;
 }
 
-.games-main-content > p {
+.equipment-main-content > p {
     margin-right: 2rem;
     margin-block: 1rem;
 }
 
-.games-main-content > ol {
+.equipment-main-content > ol {
     width: 50%;
 }
 
@@ -75,31 +75,30 @@
 }
 
 @media screen and (max-width: 768px) {
-    .games-main-content {
+    .equipment-main-content {
         padding: 2rem;
     }
 
-    .games-header > h1 {
+    .equipment-header > h1 {
         font-size: 2rem;
         margin-inline: 1rem;
     }
 
-    .games-main-content > h2 {
+    .equipment-main-content > h2 {
         margin-right: 2rem;
         margin-block: 2rem;
     }
 
-    .games-main-content > h3 {
+    .equipment-main-content > h3 {
         margin-right: 2rem;
         margin-top: 2rem;
     }
 
-    .games-main-content > p {
+    .equipment-main-content > p {
         margin-right: 1rem;
     }
 
-    .games-main-content > ol {
+    .equipment-main-content > ol {
         width: 90%;
     }
-    
 }

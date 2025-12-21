@@ -5,7 +5,7 @@ import Explore from './pages/explore/Explore'
 import Faq from './pages/faq/Faq'
 import Navbar from './components/navbar/Navbar'
 import LearnMore from './pages/learnMore/LearnMore'
-
+import Equipment from './pages/equipment/Equipment'
 import Canteen from './pages/canteen/Canteen'
 import Kennispoort from './pages/kennispoort/Kennispoort'
 import Library from './pages/library/Library'
@@ -35,6 +35,7 @@ export default function App() {
           <Route path="/studylandscapelogistics" element={<Studylandscapelogistics/>}/>
           <Route path="/studylandscapeit" element={<Studylandscapeit/>}/>
           <Route path="/games" element={<Games />}/>
+          <Route path ='/equipment' element={<Equipment />} />
         </Routes>
       </main>
     </>
