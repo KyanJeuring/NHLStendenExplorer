@@ -47,7 +47,7 @@ export default function LearnMore() {
                     src="/icons/lab_icon.svg" 
                     location="MyConcept Lab" 
                     description="Step in, get hands-on, and explore the future." 
-                    link="/myconcept-lab"
+                    link="/myConceptLab"
                 />
 
                 <LetsgoNav  

@@ -9,6 +9,7 @@ import Canteen from './pages/canteen/Canteen'
 import Kennispoort from './pages/kennispoort/Kennispoort'
 import Library from './pages/library/Library'
 import StudentInfo from './pages/studentInfo/studentinfo'
+import MyConceptLab from './pages/myConceptLab/MyConceptLab'
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/kennispoort" element={<Kennispoort/>}/>
           <Route path="/library" element={<Library/>}/>
           <Route path="/student-info" element={<StudentInfo/>}/>
+          <Route path="/myConceptLab" element={<MyConceptLab/>}/>
         </Routes>
       </main>
     </>

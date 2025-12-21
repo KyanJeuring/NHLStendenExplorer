@@ -1,0 +1,71 @@
+.myConceptLabPage-container {
+    padding: 0rem;
+}
+
+.myConceptLab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding: 0;
+}
+
+.pixelsCombination {
+    width: 25%;
+}
+
+.myConceptLab-header > h1 {
+    font-size: 3rem;
+    margin-block: auto;
+    margin-inline: 3rem;
+}
+
+.techAndDesign {
+    width: 30%;
+}
+
+.myConceptLab-main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.myConceptLab-main-content > h2 {
+    margin-right: 51rem;
+    margin-block: 4rem;
+    color: rgb(var(--nhl_stenden_corp_cyan));
+}
+
+.myConceptLab-main-content > h3 {
+    margin-right: 65rem;
+    margin-top: 5rem;
+}
+
+.myConceptLab-main-content > p {
+    margin-right: 2rem;
+    margin-block: 1rem;
+}
+
+.buttonToNextPage {
+    display: flex;
+    justify-content: center;
+}
+
+.moveNext {
+    background-color: rgb(var(--nhl_stenden_corp_blue));
+    color: white;
+    margin: 2rem;
+    width: 7rem;
+    height: 3rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    border: none;
+    font-family: 'CeraPro';
+}
+
+.moveNext:hover {
+    background-color: white;
+    border: 3px solid rgb(var(--nhl_stenden_corp_blue));
+    color: rgb(var(--nhl_stenden_corp_blue));
+    cursor: pointer;
+}
