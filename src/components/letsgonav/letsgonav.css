@@ -53,6 +53,7 @@
 .letsgonav-text h3 {
     margin: 0;
     font-size: 1.4rem;
+    color: rgb(var(--color-text));
 }
 
 .letsgonav-text p {

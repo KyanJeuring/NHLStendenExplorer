@@ -81,7 +81,7 @@ export default function Explore() {
                 {!loading && !error && visibleItems.length === 0 && <p>No Explorer Items found.</p>}
                 <div className="cards">
                     {!loading && !error && visibleItems.map((item) => (
-                        <LocationCard key={item.id} image={item.image_url} title={item.title} description={item.description} />
+                        <LocationCard key={item.id} image={item.image_url} title={item.title} description={item.description} link={item.link_url} />
                     ))}
                 </div>
             </div>
