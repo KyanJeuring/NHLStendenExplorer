@@ -14,6 +14,7 @@ import MyConceptLab from './pages/myConceptLab/MyConceptLab'
 import Lockers from './pages/lockers/Lockers'
 import Studylandscapelogistics from './pages/studylandscapelogistics/Studylandscapelogistics'
 import Studylandscapeit from './pages/studylandscapeit/Studylandscapeit'
+import Games from './pages/games/Games'
 
 export default function App() {
   return (
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="/lockers" element={<Lockers/>}/>
           <Route path="/studylandscapelogistics" element={<Studylandscapelogistics/>}/>
           <Route path="/studylandscapeit" element={<Studylandscapeit/>}/>
+          <Route path="/games" element={<Games />}/>
         </Routes>
       </main>
     </>
