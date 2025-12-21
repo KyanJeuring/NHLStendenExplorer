@@ -1,0 +1,15 @@
+{
+    "name": "sandbox-react-photo-sphere-viewer-by-elius94",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-photo-sphere-viewer": "latest",
+    "react-scripts": "5.0.1",
+    "@photo-sphere-viewer/markers-plugin": "5.13.2",
+    "@photo-sphere-viewer/core": "5.13.2",
+    "photo-sphere-viewer-lensflare-plugin": "2.1.4"
+  }
