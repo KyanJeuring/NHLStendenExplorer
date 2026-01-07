@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+export PATH="/usr/bin:/bin:/mingw64/bin:/usr/sbin:/sbin:$PATH"
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 log() {
   printf '%b\n' "${1:-}"
@@ -52,13 +56,12 @@ json_formatter() {
 }
 
 BASE_URL="http://127.0.0.1:4000"
-METHOD="GET"
 
 ENDPOINTS=(
-  "/api/faq"
-  "/api/explorer"
-  "/api/explorer/categories"
-  "/api/carousel"
+  "GET /api/faq"
+  "GET /api/explorer"
+  "GET /api/explorer/categories"
+  "GET /api/carousel"
 )
 
 SUMMARY_ENDPOINTS=()
@@ -67,23 +70,40 @@ SUMMARY_METHODS=()
 SUMMARY_STATUS=()
 SUMMARY_TIME=()
 
-
 info "Testing API endpoints at $BASE_URL"
 
-for endpoint in "${ENDPOINTS[@]}"; do
-  URL="${BASE_URL}${endpoint}"
+for entry in "${ENDPOINTS[@]}"; do
+  METHOD="${entry%% *}"
+  REST="${entry#* }"
+  ENDPOINT_PATH="${REST%% *}"
+  URL="${BASE_URL}${ENDPOINT_PATH}"
+
+  BODY_FILE=""
+  if [[ "$REST" == *"body="* ]]; then
+    BODY_FILE="${REST##*body=}"
+  fi
 
   log
-  econtent "▶ $METHOD $endpoint"
+  econtent "▶ $METHOD $ENDPOINT_PATH"
   log
 
-  HEADERS=$(mktemp)
-  BODY=$(mktemp)
+  HEADERS="/tmp/headers.$$"
+  BODY="/tmp/body.$$"
 
-  RESPONSE=$(curl -s \
-    -X "$METHOD" \
-    -D "$HEADERS" \
-    -o "$BODY" \
+  CURL_ARGS=(-s -X "$METHOD" -D "$HEADERS" -o "$BODY")
+
+  if [[ -n "$BODY_FILE" ]]; then
+    if [[ ! -f "$BODY_FILE" ]]; then
+      fail "Body file not found: $BODY_FILE"
+      continue
+    fi
+    CURL_ARGS+=(
+      -H "Content-Type: application/json"
+      --data-binary "@$BODY_FILE"
+    )
+  fi
+
+  RESPONSE=$(curl "${CURL_ARGS[@]}" \
     -w "HTTP_STATUS:%{http_code}\nTIME_TOTAL:%{time_total}\n" \
     "$URL")
 
@@ -92,6 +112,7 @@ for endpoint in "${ENDPOINTS[@]}"; do
 
   hcontent
   log "Method: $METHOD"
+  [[ -n "$BODY_FILE" ]] && log "Body: $BODY_FILE"
   cat "$HEADERS"
 
   bcontent
@@ -112,13 +133,13 @@ for endpoint in "${ENDPOINTS[@]}"; do
     RESULT="FAIL"
   fi
 
-  SUMMARY_ENDPOINTS+=("$endpoint")
+  SUMMARY_ENDPOINTS+=("$ENDPOINT_PATH")
   SUMMARY_RESULTS+=("$RESULT")
   SUMMARY_METHODS+=("$METHOD")
   SUMMARY_STATUS+=("$STATUS_CODE")
   SUMMARY_TIME+=("$TIME_TOTAL")
 
-  rm "$HEADERS" "$BODY"
+  rm -f "$HEADERS" "$BODY"
 done
 
 log
