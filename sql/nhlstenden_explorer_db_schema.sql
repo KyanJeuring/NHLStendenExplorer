@@ -18,15 +18,15 @@ INSERT INTO faq (question, answer) VALUES
 ('Is there a place to study quietly?', 'Yes—there are quiet study zones, library spaces, and silence booths are available on campus.'),
 ('Where is the bike shed?', 'Bike sheds are located outside the campus building. They are easy to access and provide safe parking for your bicycle while you are on campus.');
 
--- Carousel Card Table
-CREATE TABLE IF NOT EXISTS carousel_card (
+-- Carousel Item Table
+CREATE TABLE IF NOT EXISTS carousel_item (
   id SERIAL PRIMARY KEY,
   title TEXT NOT NULL,
   description TEXT NOT NULL,
   image_url TEXT NOT NULL
 );
 
-INSERT INTO carousel_card (title, description, image_url) VALUES
+INSERT INTO carousel_item (title, description, image_url) VALUES
 ('Test Card 1', 'This is placeholder text for now, will be changed later.', 'https://lipsum.app/512x512'),
 ('Test Card 2', 'This is placeholder text for now, will be changed later.', 'https://lipsum.app/512x512'),
 ('Test Card 3', 'This is placeholder text for now, will be changed later.', 'https://lipsum.app/512x512');
