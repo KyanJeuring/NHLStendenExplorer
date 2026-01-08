@@ -42,8 +42,8 @@
 }
 
 .studylandcape-main-content > p {
-    margin-right: 2rem;
     margin-block: 1rem;
+    margin-inline: 6rem;
 }
 
 .buttonToNextPage {
