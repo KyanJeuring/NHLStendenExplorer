@@ -31,19 +31,19 @@
 }
 
 .studylandcape-main-content > h2 {
-    margin-right: 36.5rem;
+    margin-right: 36rem;
     margin-block: 4rem;
     color: rgb(var(--nhl_stenden_corp_cyan));
 }
 
 .studylandcape-main-content > h3 {
-    margin-right: 37.5rem;
+    margin-right: 37rem;
     margin-top: 5rem;
     margin-bottom: 1rem;
 }
 
 .studylandcape-main-content > p {
-    margin-left: 3rem;
+    margin-inline: 3.3rem;
     margin-block: 1rem;
 }
 

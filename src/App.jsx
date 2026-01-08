@@ -6,6 +6,8 @@ import LearnMore from './pages/learnMore/LearnMore'
 import Studylandscapelogistics from './pages/studylandscapelogistics/Studylandscapelogistics'
 import Studylandscapeit from './pages/studylandscapeit/Studylandscapeit'
 import Studylandscapemain from './pages/studylandscapemain/Studylandscapemain'
+import Studylandscapepabo from './pages/studylandscapepabo/Studylandscapepabo'
+import Studylandscapeengineering from './pages/studylandscapeengineering/Studylandscapeengineering'
 
 export default function App() {
   return (
@@ -18,6 +20,8 @@ export default function App() {
           <Route path="/studylandscapelogistics" element={<Studylandscapelogistics/>}/>
           <Route path="/studylandscapeit" element={<Studylandscapeit/>}/>
           <Route path="/studylandscapemain" element={<Studylandscapemain/>}/>
+          <Route path="/studylandscapepabo" element={<Studylandscapepabo/>}/>
+          <Route path="/studylandscapeengineering" element={<Studylandscapeengineering/>}/>
         </Routes>
       </main>
     </>

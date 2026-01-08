@@ -1,8 +1,8 @@
-.studylandscapePage-container-logistics {
+.studylandscapePage-container-engineering {
     padding: 0rem;
 }
 
-.studylandscape-header-logistics {
+.studylandscape-header-engineering {
     display: flex;
     justify-content: space-between;
     align-items: top;
@@ -13,7 +13,7 @@
     width: 25%;
 }
 
-.studylandscape-header-logistics > h1 {
+.studylandscape-header-engineering > h1 {
     font-size: 3rem;
     margin-block: auto;
     margin-inline: 3rem;
@@ -23,27 +23,32 @@
     width: 30%;
 }
 
-.studylandcape-main-content-logistics {
+.studylandcape-main-engineering {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.studylandcape-main-content-logistics > h2 {
-    margin-right: 28rem;
+.studylandcape-main-engineering > h2 {
+    margin-right: 50.5rem;
     margin-block: 4rem;
     color: rgb(var(--nhl_stenden_corp_cyan));
 }
 
-.studylandcape-main-content-logistics > h3 {
-    margin-right: 37rem;
+.studylandcape-main-engineering > h3 {
+    margin-right: 69.3rem;
     margin-top: 5rem;
+    margin-bottom: 1rem;
 }
 
-.studylandcape-main-content-logistics > p {
-    margin-inline: 3.5rem;
+.explanation {
+    margin-inline: 3.2rem;
     margin-block: 1rem;
+}
+
+.title {
+    margin-right: 1.2rem;
 }
 
 .buttonToNextPage {
