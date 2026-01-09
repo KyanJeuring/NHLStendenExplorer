@@ -1,5 +1,51 @@
+/* LAPTOP AND DESKTOP SIZE */
+@media screen and (min-width: 990px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .filter-buttons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+    }
+}
+
+/* TABLET SIZE */
+@media screen and (min-width: 600px) and (max-width : 990px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .filter-buttons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3rem;
+    }
+}
+
+/* PHONE SIZE */
+@media screen and (max-width: 600px) {
+    .filter-buttons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
 h1 {
-    color: black
+    color: black;
 }
 
 h3 {
@@ -7,13 +53,6 @@ h3 {
     margin-bottom: 1rem;
     color: rgb(var(--nhl_stenden_corp_cyan));
     text-transform: uppercase;
-}
-
-.filter-buttons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
 }
 
 .card-section > h2 {

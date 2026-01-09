@@ -1,14 +1,49 @@
-.filter-button {
-    color: black;
-    font-size: 1.3vh;
-    background-color: white;
-    border: 0.2vh solid rgb(194, 192, 192);
-    border-radius: 1rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
-    min-width: 3.5rem;
+/* LAPTOP AND DESKTOP SIZE */
+@media screen and (min-width: 990px) {
+    .filter-button {
+        color: black;
+        font-size: 2vh;
+        background-color: white;
+        border: 0.3vh solid rgb(194, 192, 192);
+        border-radius: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+        min-width: 5rem;
+    }
+}
+
+/* TABLET SIZE */
+@media screen and (min-width: 600px) and (max-width : 990px) {
+    .filter-button {
+        color: black;
+        font-size: 1.6vh;
+        background-color: white;
+        border: 0.2vh solid rgb(194, 192, 192);
+        border-radius: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+        min-width: 5rem;
+    }
+}
+
+/* PHONE SIZE */
+@media screen and (max-width: 600px) {
+    .filter-button {
+        color: black;
+        font-size: 1.3vh;
+        background-color: white;
+        border: 0.2vh solid rgb(194, 192, 192);
+        border-radius: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        min-width: 3.5rem;
+    }
 }
 
 .filter-button.active {
