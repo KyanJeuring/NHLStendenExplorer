@@ -37,13 +37,17 @@
 }
 
 .studylandcape-main-content-it > h3 {
-    margin-right: 65rem;
+    margin-right: 69.4rem;
     margin-top: 5rem;
 }
 
-.studylandcape-main-content-it > p {
-    margin-right: 2rem;
+.textForIT {
+    margin-right: 2.3rem;
     margin-block: 1rem;
+}
+
+.descriptionForIT {
+    margin-inline: 3.1rem;
 }
 
 .buttonToNextPage {
