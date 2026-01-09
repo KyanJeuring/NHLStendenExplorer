@@ -1,17 +1,58 @@
-.location-card {
-    display: flex;
-    flex-direction: column;
-    border-radius: 1rem;
-    border: 2px solid gray;
-    padding: 2rem;
-    gap: 1rem;
-    user-select: none;
+/* PHONE SIZE */
+@media screen and (max-width: 600px) {
+    .location-card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 1rem;
+        border: 1px solid gray;
+        padding: 1rem;
+        gap: 1rem;
+        width: 40vh;
+    }
+    
+    .location-card img {
+        width: 100%;
+        border-radius: 1rem;
+        height: auto;
+    }
 }
 
-.location-card img {
-    width: 100%;
-    border-radius: 1rem;
-    height: auto;
+/* TABLET SIZE */
+@media screen and (min-width: 600px) and (max-width : 990px) {
+    .location-card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 0.7rem;
+        border: 1px solid gray;
+        padding: 1.5rem;
+        gap: 1rem;
+        width: 40vh;
+    }
+    
+    .location-card img {
+        width: 100%;
+        border-radius: 0.7rem;
+        height: auto;
+    }
+}
+
+/* LAPTOP AND DESKTOP SIZE */
+@media screen and (min-width: 990px) {
+    .location-card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 1rem;
+        border: 1px solid gray;
+        padding: 2rem;
+        gap: 1rem;
+        width: 60vh;
+    }
+    
+    .location-card img {
+        width: 100%;
+        border-radius: 1rem;
+        height: auto;
+    }
 }
 
 .location-card .more-info {
