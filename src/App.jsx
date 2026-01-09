@@ -18,7 +18,7 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home lang={lang} toggleLang={toggleLang} />} />
-          <Route path="/faq" element={<Faq />} />
+          <Route path="/faq" element={<Faq lang={lang} toggleLang={toggleLang} />} />
           <Route path="/learnMore" element={<LearnMore />} />
           <Route path="/explore" element={<Explore />} />
         </Routes>

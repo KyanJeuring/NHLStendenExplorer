@@ -2,12 +2,15 @@
 CREATE TABLE IF NOT EXISTS faq (
   id SERIAL PRIMARY KEY,
   question TEXT NOT NULL,
-  answer TEXT NOT NULL
+  answer TEXT NOT NULL,
+  language_code TEXT DEFAULT 'en' NOT NULL
 );
 
-INSERT INTO faq (question, answer) VALUES
-('What is NHL Stenden Explorer?', 'NHL Stenden Explorer is a platform that provides information about NHL Stenden University of Applied Sciences.'),
-('How can I contact support?', 'You can contact support by emailing support@nhlstendenexplorer.com.');
+INSERT INTO faq (question, answer, language_code) VALUES
+('What is NHL Stenden Explorer?', 'NHL Stenden Explorer is a platform that provides information about NHL Stenden University of Applied Sciences.', 'en'),
+('Wat is NHL Stenden Explorer?', 'NHL Stenden Explorer is een platform dat informatie biedt over NHL Stenden Hogeschool.', 'nl'),
+('How can I contact support?', 'You can contact support by emailing support@nhlstendenexplorer.com.', 'en'),
+('Hoe kan ik contact opnemen met support?', 'U kunt contact opnemen met support door een e-mail te sturen naar support@nhlstendenexplorer.com.', 'nl');
 
 -- Carousel Card Table
 CREATE TABLE IF NOT EXISTS carousel_card (

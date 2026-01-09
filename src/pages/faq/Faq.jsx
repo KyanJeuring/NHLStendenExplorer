@@ -1,8 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useMemo, useEffect, useState } from 'react'
 import './faq.css'
 import FaqCard from '../../components/faq/FaqCard'
 
-export default function Faq() {
+const translations = {
+    en: {
+        title: "Frequently Asked Questions",
+        subtitle: "Search by topic"
+    },
+    nl: {
+        title: "Veelgestelde Vragen",
+        subtitle: "Zoek op onderwerp"
+    }
+}
+
+export default function Faq({ lang, toggleLang }) {
+    const translated = useMemo(() => translations[lang] || translations.en, [lang]);
     const [faqData, setFaqData] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
@@ -11,8 +23,12 @@ export default function Faq() {
 
     useEffect(() => {
         let mounted = true
+        const apiLang = lang === 'en' ? 'en' : 'nl'
+
         setLoading(true)
-        fetch(`${API_URL}/api/faq`)
+        setError(null)
+
+        fetch(`${API_URL}/api/faq/${apiLang}`)
             .then((res) => {
                 if (!res.ok) throw new Error('Network response was not ok')
                 return res.json()
@@ -29,13 +45,13 @@ export default function Faq() {
         return () => {
             mounted = false
         }
-    }, [API_URL])
+    }, [API_URL, lang])
 
     return (
         <>
             <section className="page-title">
-                <h1>Frequently Asked Questions</h1>
-                <h2>Search by topic</h2>
+                <h1>{translated.title}</h1>
+                <h2>{translated.subtitle}</h2>
             </section>
             <section className="faq-cards">
                 {loading && <p>Loading...</p>}
