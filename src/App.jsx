@@ -17,14 +17,10 @@ export default function App() {
 
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home lang={lang} toggleLang={toggleLang} />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/learnMore" element={<LearnMore />} />
           <Route path="/explore" element={<Explore />} />
-          <Route
-            path="/translate"
-            element={<Translate lang={lang} toggleLang={toggleLang} />}
-          />
         </Routes>
       </main>
     </>
