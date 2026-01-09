@@ -15,7 +15,7 @@
 
 .games-header > h1 {
     font-size: 3rem;
-    margin-block: auto;
+    margin-block: 6rem;
     margin-inline: 3rem;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .games-main-content > h3 {
-    margin-right: 65rem;
+    margin-right: 61rem;
     margin-top: 5rem;
 }
 

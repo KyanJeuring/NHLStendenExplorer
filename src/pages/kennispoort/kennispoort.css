@@ -15,7 +15,7 @@
 
 .kennispoort-header > h1 {
     font-size: 3rem;
-    margin-block: auto;
+    margin-block: 6rem;
     margin-inline: 3rem;
 }
 
@@ -37,12 +37,12 @@
 }
 
 .kennispoort-main-content > h3 {
-    margin-right: 65rem;
+    margin-right: 63rem;
     margin-top: 5rem;
 }
 
 .kennispoort-main-content > p {
-    margin-right: 2rem;
+    margin-right: 2.1rem;
     margin-block: 1rem;
 }
 

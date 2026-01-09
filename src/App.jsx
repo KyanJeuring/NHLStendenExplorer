@@ -14,6 +14,9 @@ import Studylandscapeit from './pages/studylandscapeit/Studylandscapeit'
 import Studylandscapemain from './pages/studylandscapemain/Studylandscapemain'
 import Studylandscapepabo from './pages/studylandscapepabo/Studylandscapepabo'
 import Studylandscapeengineering from './pages/studylandscapeengineering/Studylandscapeengineering'
+import Canteen from './pages/canteen/Canteen' 
+import Equipment from './pages/equipment/Equipment' 
+import Games from './pages/games/Games'
 
 export default function App() {
   return (
@@ -34,6 +37,9 @@ export default function App() {
           <Route path="/studylandscapemain" element={<Studylandscapemain/>}/>
           <Route path="/studylandscapepabo" element={<Studylandscapepabo/>}/>
           <Route path="/studylandscapeengineering" element={<Studylandscapeengineering/>}/>
+          <Route path="/canteen" element={<Canteen/>}/>
+          <Route path="/equipment" element={<Equipment/>}/>
+          <Route path="/games" element={<Games/>}/>
         </Routes>
       </main>
     </>
