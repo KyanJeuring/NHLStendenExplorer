@@ -1,5 +1,5 @@
 import React from 'react';
-import './studentinfo.css';
+import './studentInfo.css';
 import { useNavigate } from 'react-router-dom';
 import TourGuide from '../../components/tourguide/TourGuide';
 
@@ -7,12 +7,12 @@ export default function StudentInfo() {
     const navigate = useNavigate();
 
     return (
-        <section className="studylandscapePage-container">
-            <div className="studylandscape-header">
+        <section className="studentInfo-container">
+            <div className="studentInfo-header">
                 <h1>Student Info</h1>
                 <img src="/pixels/combinationOfPixelsForLocations.svg" alt="Pixels Combination" className="pixelsCombination"/>
             </div>
-            <main className="studylandcape-main-content">
+            <main className="studentInfo-main-content">
                 <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="techAndDesign"/>
                 <TourGuide />
             </main>

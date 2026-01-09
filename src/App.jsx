@@ -30,8 +30,8 @@ export default function App() {
           <Route path="/explore" element={<Explore/>}/>
           <Route path="/library" element={<Library/>}/>
           <Route path="/kennispoort" element={<KennisPoort/>}/>
-          <Route path="/myconceptlab" element={<MyConceptLab/>}/>
-          <Route path="/studentinfo" element={<StudentInfo/>}/>
+          <Route path="/myConceptLab" element={<MyConceptLab/>}/>
+          <Route path="/studentInfo" element={<StudentInfo/>}/>
           <Route path="/studylandscapelogistics" element={<Studylandscapelogistics/>}/>
           <Route path="/studylandscapeit" element={<Studylandscapeit/>}/>
           <Route path="/studylandscapemain" element={<Studylandscapemain/>}/>
