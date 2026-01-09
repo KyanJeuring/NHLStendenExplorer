@@ -26,7 +26,7 @@ INSERT INTO faq (question, answer, language_code) VALUES
 ('Where is the bathroom?', 'Toilets are located on every floor of the building and are clearly signposted along the corridors. If you cannot find one, staff at reception are happy to help.', 'en'),
 ('Waar is het toilet?', 'Toiletten bevinden zich op elke verdieping van het gebouw en zijn duidelijk aangegeven langs de gangen. Als je er geen kunt vinden, helpen de medewerkers bij de receptie je graag.', 'nl'),
 ('Why are campus TVs showing NHL Stenden content?', 'Campus screens display updates, events, important announcements, and faculty information to help keep students informed.', 'en'),
-('Waarom tonen campus-tv&apos;s NHL Stenden-inhoud?', 'Campus-schermen tonen updates, evenementen, belangrijke aankondigingen en informatie van faculteiten om studenten op de hoogte te houden.', 'nl'),
+('Waarom tonen campus schermen NHL Stenden-inhoud?', 'Campus-schermen tonen updates, evenementen, belangrijke aankondigingen en informatie van faculteiten om studenten op de hoogte te houden.', 'nl'),
 ('Is the campus accessible?', 'Yes, the campus includes elevators, ramps, and accessible facilities to support students with mobility needs.', 'en'),
 ('Is de campus toegankelijk?', 'Ja, de campus beschikt over liften, hellingen en toegankelijke faciliteiten om mensen met mobiliteitsbehoeften te ondersteunen.', 'nl'),
 ('Can I park a car near the campus?', 'Yes, the campus has a parking area and there are also parking areas available nearby.', 'en'),
