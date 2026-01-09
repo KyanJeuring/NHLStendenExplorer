@@ -9,8 +9,33 @@ CREATE TABLE IF NOT EXISTS faq (
 INSERT INTO faq (question, answer, language_code) VALUES
 ('What is NHL Stenden Explorer?', 'NHL Stenden Explorer is a platform that provides information about NHL Stenden University of Applied Sciences.', 'en'),
 ('Wat is NHL Stenden Explorer?', 'NHL Stenden Explorer is een platform dat informatie biedt over NHL Stenden Hogeschool.', 'nl'),
-('How can I contact support?', 'You can contact support by emailing support@nhlstendenexplorer.com.', 'en'),
-('Hoe kan ik contact opnemen met support?', 'U kunt contact opnemen met support door een e-mail te sturen naar support@nhlstendenexplorer.com.', 'nl');
+('How do I use NHL Stenden Explorer?', 'You can navigate through the various sections to find information about campus facilities, study areas, services, and more.', 'en'),
+('Hoe gebruik ik NHL Stenden Explorer?', 'Je kunt door de verschillende secties navigeren om informatie te vinden over campusfaciliteiten, studieruimtes, diensten en meer.', 'nl'),
+('Who can I contact for more information?', 'For more information, you can reach out to the student services department or visit the official NHL Stenden website.', 'en'),
+('Met wie kan ik contact opnemen voor meer informatie?', 'Voor meer informatie kun je contact opnemen met de studentenservice of de officiële NHL Stenden-website bezoeken.', 'nl'),
+('Where can I find my classroom?', 'You can find your classroom in app YOS. Or once you are in the building, follow the numeric signage or ask at the Service Desk / Reception—they are always happy to help new students navigate.', 'en'),
+('Waar kan ik mijn klaslokaal vinden?', 'Je kunt je klaslokaal vinden in de app YOS. Of zodra je in het gebouw bent, volg de borden of vraag het bij de Service Desk / Receptie - zij helpen nieuwe studenten graag met de weg vinden.', 'nl'),
+('Is there Wi-Fi on campus?', 'Yes, NHL Stenden provides free Wi-Fi access throughout the campus for all students and staff.', 'en'),
+('Is er Wi-Fi op de campus?', 'Ja, NHL Stenden biedt gratis Wi-Fi-toegang op de hele campus voor alle studenten en medewerkers.', 'nl'),
+('How big is the Emmen campus?', 'The campus may look compact from the outside, but it is designed to feel open, modern, and spacious inside, with plenty of places to study, relax, and meet people.', 'en'),
+('Hoe groot is de campus Emmen?', 'De campus lijkt van buiten misschien compact, maar is van binnen ontworpen om open, modern en ruimtelijk aan te voelen, met veel plekken om te studeren, te ontspannen en mensen te ontmoeten.', 'nl'),
+('Is there a pool table or recreation area?', 'Yes, there are common areas to relax, socialize, and unwind between classes. Facilities may change over time, so check locally what is currently available.', 'en'),
+('Is er een pooltafel of recreatieruimte?', 'Ja, er zijn gemeenschappelijke ruimtes om te ontspannen, socializen en tot rust te komen tussen de lessen door. De faciliteiten kunnen in de loop van de tijd veranderen, dus controleer lokaal wat er momenteel beschikbaar is.', 'nl'),
+('How does this university treat its students?', 'NHL Stenden values a community-focused, supportive, and international learning environment. Students generally appreciate the approachable teachers, collaborative atmosphere, and practical learning style.', 'en'),
+('Hoe gaat de universiteit met haar studenten om?', 'NHL Stenden hecht waarde aan een gemeenschapsgerichte, ondersteunende en internationale leeromgeving. Studenten waarderen over het algemeen de toegankelijkheid van docenten, de samenwerkingsgerichte sfeer en de praktische leermethode.', 'nl'),
+('Where is the bathroom?', 'Toilets are located on every floor of the building and are clearly signposted along the corridors. If you cannot find one, staff at reception are happy to help.', 'en'),
+('Waar is het toilet?', 'Toiletten bevinden zich op elke verdieping van het gebouw en zijn duidelijk aangegeven langs de gangen. Als je er geen kunt vinden, helpen de medewerkers bij de receptie je graag.', 'nl'),
+('Why are campus TVs showing NHL Stenden content?', 'Campus screens display updates, events, important announcements, and faculty information to help keep students informed.', 'en'),
+('Waarom tonen campus-tv&apos;s NHL Stenden-inhoud?', 'Campus-schermen tonen updates, evenementen, belangrijke aankondigingen en informatie van faculteiten om studenten op de hoogte te houden.', 'nl'),
+('Is the campus accessible?', 'Yes, the campus includes elevators, ramps, and accessible facilities to support students with mobility needs.', 'en'),
+('Is de campus toegankelijk?', 'Ja, de campus beschikt over liften, hellingen en toegankelijke faciliteiten om mensen met mobiliteitsbehoeften te ondersteunen.', 'nl'),
+('Can I park a car near the campus?', 'Yes, the campus has a parking area and there are also parking areas available nearby.', 'en'),
+('Kan ik een auto parkeren in de buurt van de campus?', 'Ja, de campus heeft een parkeerterrein en er zijn ook parkeerplaatsen in de buurt.', 'nl'),
+('Is there a place to study quietly?', 'Yes—there are quiet study zones, library spaces, and silence booths are available on campus.', 'en'),
+('Is er een plek om rustig te studeren?', 'Ja - er zijn stille studiezones, bibliotheekruimtes en stiltehokjes beschikbaar op de campus.', 'nl'),
+('Where is the bike shed?', 'Bike sheds are located outside the campus building. They are easy to access and provide safe parking for your bicycle while you are on campus.', 'en'),
+('Waar is de fietsenstalling?', 'Fietsenstallingen bevinden zich buiten het campusgebouw. Ze zijn gemakkelijk toegankelijk en bieden veilige parkeergelegenheid voor je fiets terwijl je op de campus bent.', 'nl');
+
 
 -- Carousel Card Table
 CREATE TABLE IF NOT EXISTS carousel_card (
