@@ -70,6 +70,9 @@ export default function Explore() {
             <h3>Quick categories</h3>
             <div className="filter-buttons">
                 <FilterButton key="ALL" title="All" isActive={selected === 'ALL'} onClick={() => {setSelected('ALL'); setFilterTitle('All')}}/>
+                <FilterButton key="FACILITIES" title="Facilities" isActive={selected === 'FACILITIES'} onClick={() => {setSelected('Facilities'); setFilterTitle('Facilities')}}/>
+                <FilterButton key="STUDY_AREAS" title="Study Areas" isActive={selected === 'STUDY_AREAS'} onClick={() => {setSelected('Study Areas'); setFilterTitle('Study Areas')}}/>
+                <FilterButton key="SERVICES" title="Services" isActive={selected === 'SERVICES'} onClick={() => {setSelected('Services'); setFilterTitle('Services')}}/>
                 {categories.map((value) => (
                     <FilterButton key={value} title={prettyTitle(value)} isActive={selected === value} onClick={() => {setSelected(value); setFilterTitle(prettyTitle(value))}}/>
                 ))}
