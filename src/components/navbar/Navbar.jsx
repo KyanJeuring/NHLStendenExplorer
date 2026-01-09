@@ -32,9 +32,6 @@ export default function Navbar({ lang, toggleLang }) {
         <NavLink to="/faq" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
           FAQ
         </NavLink>
-        <NavLink to="/translate" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
-          Translate
-        </NavLink>
       </section>
 
       <div className="hamburger-menu">
