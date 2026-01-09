@@ -15,7 +15,7 @@ export default function MyConceptLab() {
                 <img src="https://lipsum.app/1920x1080" alt="MyConcept Lab" className="techAndDesign"/>
                 <h3>Welcome to MyConcept Lab</h3>
                 <p>MyConcept Lab is a location within the university.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis illo, odio necessitatibus animi, inventore voluptate omnis cumque fugiat fuga laboriosam, officia deleniti? Sequi ut, nisi voluptatum ducimus a eveniet consectetur?</p>
+                <p>At MyConceptLab, students have access to 3D printers, a factory model, and various other prototypes used in their projects. There are also monitors, keyboards, and mice available, providing students with a comfortable workspace where they can design, research, and develop their projects with ease. Additionally, the Green Chemistry course provides students with a fully equipped lab, where they can conduct experiments and gain hands-on experience in a real-world setting.</p>
                 <TourGuide />   
             </main>
             <div className="buttonToNextPage">                
