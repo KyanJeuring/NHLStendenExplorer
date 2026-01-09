@@ -20,6 +20,7 @@ export default function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/faq" element={<Faq/>}/>
           <Route path="/learnMore" element={<LearnMore/>}/>
+          <Route path="/explore" element={<Explore/>}/>
           <Route path="/studylandscapelogistics" element={<Studylandscapelogistics/>}/>
           <Route path="/studylandscapeit" element={<Studylandscapeit/>}/>
           <Route path="/studylandscapemain" element={<Studylandscapemain/>}/>
