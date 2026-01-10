@@ -24,7 +24,7 @@ export default function Studylandscape() {
             </div>
             <main className="studylandcape-main-content">
                 <h2>Study Landscape - Your Perfect Spot to Focus, Create and Connect</h2>
-                <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="techAndDesign"/>
+                <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="imagePlaceholder"/>
                 <h3>Right next to the bustling canteen at NHL Stenden Emmen lies the Study Landscape</h3>
                 <p>It's a bright, welcoming space designed for students who want the best of both worlds: productivity and comfort. Whether you're diving into assignments, collaborating on projects, this area offers the ideal environment to stay focused and inspired.</p>
                 <p>With comfortable seating, open tables, and a relaxed atmosphere, the Study Landscape encourages creativity, teamwork, and concentration. Need a quick break or snack? The canteen is just steps away, so you're never far from a good coffee or something tasty to recharge your energy.</p>

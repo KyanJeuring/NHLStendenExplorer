@@ -16,7 +16,7 @@
         font-size: 1rem;
     }
 
-    .studylandcape-main-content > .techAndDesign {
+    .studylandcape-main-content > .imagePlaceholder {
         margin-left: 35%;
         justify-content: center;
     }
@@ -53,7 +53,7 @@
         font-size: 1.5rem;
     }
 
-    .studylandcape-main-content > .techAndDesign {
+    .studylandcape-main-content > .imagePlaceholder {
         margin-left: 35%;
         justify-content: center;
     }
@@ -89,7 +89,7 @@
         font-size: 2rem;
     }
 
-    .studylandcape-main-content > .techAndDesign {
+    .studylandcape-main-content > .imagePlaceholder {
         margin-left: 35%;
         justify-content: center;
     }
@@ -107,7 +107,6 @@
     }
 }
 
-
 .studylandscapePage-container-main {
     padding: 0rem;
 }
@@ -118,7 +117,7 @@
     align-items: top;
 }
 
-.techAndDesign {
+.imagePlaceholder {
     width: 30%;
 }
 
