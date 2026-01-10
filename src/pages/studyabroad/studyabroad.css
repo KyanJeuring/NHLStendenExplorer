@@ -1,0 +1,77 @@
+.studyabroad-container {
+    padding: 0rem;
+}
+
+.studyabroads-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding: 0;
+}
+
+.pixelsCombination {
+    width: 25%;
+}
+
+.studyabroad-header > h1 {
+    font-size: 3rem;
+    margin-block: 6rem;
+    margin-inline: 3rem;
+}
+
+.techAndDesign {
+    width: 30%;
+}
+
+.studyabroad-main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.studyabroad-main-content > h2 {
+    margin-right: 51rem;
+    margin-block: 4rem;
+    color: rgb(var(--nhl_stenden_corp_cyan));
+}
+
+.studyabroad-main-content > h3 {
+    margin-right: 40.5rem;
+    margin-top: 5rem;
+}
+
+.studyabroad-main-content > p {
+    margin-block: 1rem;
+    margin-inline: 3rem;
+}
+
+a:link {
+    text-decoration: underline;
+    color: rgb(var(--nhl_stenden_corp_cyan));
+}
+
+.buttonToNextPage {
+    display: flex;
+    justify-content: center;
+}
+
+.moveNext {
+    background-color: rgb(var(--nhl_stenden_corp_blue));
+    color: white;
+    margin: 2rem;
+    width: 7rem;
+    height: 3rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    border: none;
+    font-family: 'CeraPro';
+}
+
+.moveNext:hover {
+    background-color: white;
+    border: 3px solid rgb(var(--nhl_stenden_corp_blue));
+    color: rgb(var(--nhl_stenden_corp_blue));
+    cursor: pointer;
+}
+

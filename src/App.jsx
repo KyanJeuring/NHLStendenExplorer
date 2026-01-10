@@ -17,6 +17,8 @@ import Studylandscapeengineering from './pages/studylandscapeengineering/Studyla
 import Canteen from './pages/canteen/Canteen' 
 import Equipment from './pages/equipment/Equipment' 
 import Games from './pages/games/Games'
+import Lockers from './pages/lockers/Lockers'
+import Studyabroad from './pages/studyabroad/Studyabroad'
 
 export default function App() {
   return (
@@ -40,6 +42,8 @@ export default function App() {
           <Route path="/canteen" element={<Canteen/>}/>
           <Route path="/equipment" element={<Equipment/>}/>
           <Route path="/games" element={<Games/>}/>
+          <Route path="/lockers" element={<Lockers/>}/>
+          <Route path="/studyabroad" element={<Studyabroad/>}/>
         </Routes>
       </main>
     </>
