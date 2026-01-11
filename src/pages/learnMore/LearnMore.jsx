@@ -8,65 +8,74 @@ export default function LearnMore() {
         <section className='learn-more-container'>
             <header className="learnMorePage">
                 <div className="learnMoreHeader">
-                    
-                    <h2 className="tagline">Let's go to...</h2>
+                    <h2 className="tagline">Learn more about...</h2>
                     <img src="/pixels/learnMoreSvgCombination.svg" alt="" className="whiteWaves"/>
-                </div>
-                    
+                </div> 
             </header>
             <main className='lets-go-to-links'>
                 <LetsgoNav  
                     src="/icons/library_icon.svg" 
-                    location="Library" 
-                    description="Study resources & a quiet place." 
-                    link="/library"
+                    location="Unwind your mind" 
+                    description="Play ping pon or football table." 
+                    link="/games"
                 />
 
                 <LetsgoNav  
                     src="/icons/student_info_icon.svg" 
-                    location="Student Info" 
-                    description="Help & important information." 
-                    link="/student-info"
+                    location="Need technical equipment?" 
+                    description="Cameras, tripods, microphones and etc." 
+                    link="/studentInfo"
                 />
 
                 <LetsgoNav  
-                    src="/icons/canteen_icon.svg" 
-                    location="Canteen" 
-                    description="Food & beverages." 
-                    link="/canteen"
+                    src="/icons/emergency.svg" 
+                    location="Emergency" 
+                    description="Where is first aid kit? Slow whoop sound what to do?" 
+                    link="/"
                 />
 
                 <LetsgoNav  
-                    src="/icons/parking_icon.svg" 
-                    location="Parking & Bike Area" 
-                    description="Vehicle & bicycle parking." 
-                    link="/parking"
+                    src="/icons/it-support.svg" 
+                    location="IT Support Service" 
+                    description="Have some technical issues?" 
+                    link="/"
                 />
 
                 <LetsgoNav  
-                    src="/icons/lab_icon.svg" 
-                    location="MyConcept Lab" 
-                    description="Step in, get hands-on, and explore the future." 
-                    link="/myConceptLab"
+                    src="/icons/campus-store.svg" 
+                    location="Campus Store" 
+                    description="Urgently need a pen or a notebook?" 
+                    link="/"
                 />
 
                 <LetsgoNav  
-                    src="/icons/study_landscape_icon.svg" 
-                    location="Study Landscape" 
-                    description="Time to study!" 
-                    link="/study-landscape"
+                    src="/icons/lockers.svg" 
+                    location="Lockers" 
+                    description="Place to keep your stuff." 
+                    link="/lockers"
                 />
 
                 <LetsgoNav  
-                    src="/icons/kennispoort_icon.svg" 
-                    location="Kennispoort" 
-                    description="Collaboration with real companies." 
-                    link="/kennispoort"
+                    src="/icons/stones-restaurant.svg" 
+                    location="Stones Restaurant" 
+                    description="Visit real restaurant on campus where students get hands on experience!" 
+                    link="/"
+                />
+
+                <LetsgoNav  
+                    src="/icons/study-abroad.svg" 
+                    location="Study Abroad" 
+                    description="Want to know more about internships abroad or exchange programmes?" 
+                    link="/"
+                />
+
+                <LetsgoNav  
+                    src="/icons/courses_overview.svg" 
+                    location="Courses Overview" 
+                    description="Go grab a flyer with the course overview in Student Info." 
+                    link="/"
                 />
             </main>
-           
-        
-
         </section>
     );
 }
