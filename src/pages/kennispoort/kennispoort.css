@@ -17,7 +17,9 @@
     }
 
     .kennispoort-main-content > .imagePlaceholder {
-        margin-left: 35%;
+        margin-left: 14%;
+        width: 75%;
+        margin-top: 2rem;
     }
 
     .kennispoort-main-content > h3 {
@@ -34,9 +36,13 @@
     }
 
     .kennispoort-main-content li {
-        margin-inline: 5rem;
-        margin-block: 1rem;
-        font-size: 1.2rem;
+        margin-inline: 3rem;
+        margin-block: 0.25rem;
+        font-size: 0.8rem;
+    }
+
+    .tour-guide-fixed {
+        margin-left: 0%
     }
 }
 
@@ -59,7 +65,9 @@
     }
 
     .kennispoort-main-content > .imagePlaceholder {
-        margin-left: 35%;
+        margin-left: 12%;
+        width: 75%;
+        margin-top: 4rem;
     }
 
     .kennispoort-main-content > h3 {
@@ -75,9 +83,13 @@
     }
 
     .kennispoort-main-content li {
-        margin-inline: 5rem;
-        margin-block: 1rem;
+        margin-inline: 4em;
+        margin-block: 0.3rem;
         font-size: 1.2rem;
+    }
+
+    .tour-guide-fixed {
+        margin-left: 0%;
     }
 }
 
@@ -116,9 +128,13 @@
     }
 
     .kennispoort-main-content li {
-        margin-inline: 5rem;
-        margin-block: 1rem;
-        font-size: 1.2rem;
+        margin-inline: 6rem;
+        margin-block: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .tour-guide-fixed {
+        margin-left: 25%
     }
 }
 
