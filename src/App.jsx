@@ -19,6 +19,7 @@ import Equipment from './pages/equipment/Equipment'
 import Games from './pages/games/Games'
 import Lockers from './pages/lockers/Lockers'
 import Studyabroad from './pages/studyabroad/Studyabroad'
+import Parking from './pages/parking/Parking'
 
 export default function App() {
   return (
@@ -44,6 +45,7 @@ export default function App() {
           <Route path="/games" element={<Games/>}/>
           <Route path="/lockers" element={<Lockers/>}/>
           <Route path="/studyabroad" element={<Studyabroad/>}/>
+          <Route path="/parking" element={<Parking/>}/>
         </Routes>
       </main>
     </>
