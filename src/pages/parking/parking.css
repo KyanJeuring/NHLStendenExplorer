@@ -1,50 +1,138 @@
-.library-container {
+/* PHONE SIZE */
+@media screen and (max-width: 600px) {
+    .pixelsCombination {
+        height: 5rem;
+    }
+
+    .parking-header > h1 {
+        font-size: 2rem;
+        margin-block: auto;
+        margin-inline: 2rem;
+    }
+
+    .parking-content > h2 {
+        margin-block: 2rem;
+        margin-inline: 2rem;
+        font-size: 1rem;
+    }
+
+    .parking-content > .imagePlaceholder {
+        margin-left: 14%;
+        width: 75%;
+        margin-top: 2rem;
+    }
+
+    .parking-content > h3 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        margin-inline: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .parking-content > p {
+        margin-inline: 2rem;
+        margin-block: 1rem;
+        font-size: 1rem;
+    }
+
+    .tour-guide-fixed {
+        margin-left: 0%
+    }
+}
+
+/* TABLET SIZE */
+@media screen and (min-width: 600px) and (max-width : 990px) {
+    .pixelsCombination {
+        height: 10rem;
+    }
+
+    .parking-header > h1 {
+        font-size: 2.5rem;
+        margin-block: auto;
+        margin-inline: 3rem;
+    }
+
+    .parking-content > h2 {
+        margin-block: 4rem;
+        margin-inline: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .parking-content > .imagePlaceholder {
+        margin-left: 12%;
+        width: 75%;
+        margin-top: 4rem;
+    }
+
+    .parking-content > h3 {
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        margin-inline: 3rem;
+    }
+
+    .parking-content > p {
+        margin-inline: 3rem;
+        margin-block: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .tour-guide-fixed {
+        margin-left: 0%;
+    }
+}
+
+/* LAPTOP AND DESKTOP SIZE */
+@media screen and (min-width: 990px) {
+    .pixelsCombination {
+        height: 19rem;
+    }
+
+    .parking-header > h1 {
+        font-size: 3rem;
+        margin-block: auto;
+        margin-inline: 5rem;
+    }
+
+    .parking-main-content > h2 {
+        margin-block: 4rem;
+        margin-inline: 5rem;
+        font-size: 2rem;
+    }
+
+    .parking-content > .imagePlaceholder {
+        margin-left: 35%;
+    }
+
+    .parking-content > h3 {
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        margin-inline: 5rem;
+    }
+
+    .parking-content > p {
+        margin-inline: 5rem;
+        margin-block: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .tour-guide-fixed {
+        margin-left: 25%
+    }
+}
+
+.parking-container {
     padding: 0rem;
 }
 
-.library-header {
+.parking-header {
     display: flex;
     justify-content: space-between;
     align-items: top;
     padding: 0;
 }
 
-.pixelsCombination {
-    width: 25%;
-}
-
-.library-header > h1 {
-    font-size: 3rem;
-    margin-block: auto;
-    margin-inline: 3rem;
-}
-
-.techAndDesign {
-    width: 30%;
-}
-
-.library-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .library-content > h2 {
-    margin-right: 36rem;
-    margin-block: 4rem;
     color: rgb(var(--nhl_stenden_corp_cyan));
-}
-
-.library-content > h3 {
-    margin-right: 64.2rem;
-    margin-top: 5rem;
-    margin-bottom: 1rem;
-}
-
-.library-content > p {
-    margin-inline: 3.4rem;
-    margin-block: 1rem;
 }
 
 .buttonToNextPage {
