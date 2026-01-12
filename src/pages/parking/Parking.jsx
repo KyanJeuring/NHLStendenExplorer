@@ -14,6 +14,7 @@ export default function Parking() {
             </div>
             <main className="parking-content">
                 <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="imagePlaceholder"/>
+                <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="imagePlaceholder"/>
                 <h3>Looking for a place to park your car, bike, or scooter?</h3>
                 <p>
                     At NHL Stenden Emmen, parking is completely free. Many parking spaces are available for cars, bikes, and even scooters!.
