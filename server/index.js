@@ -6,13 +6,20 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/api/faq', async (_req, res) => {
+app.get('/api/faq/en', async (req, res) => {
   try {
-    const result = await db.query('SELECT * FROM faq ORDER BY RANDOM() LIMIT 10');
-    if (result.rows.length === 0) {
-      return res.status(404).json({ error: 'No FAQ entries found' });
-    }
-    res.status(200).json(result.rows);
+    const result = await db.query("SELECT * FROM faq WHERE language_code = 'en' ORDER BY RANDOM() LIMIT 10");
+    res.json(result.rows);
+  } catch (err) {
+    console.error('DB error', err);
+    res.status(500).json({ error: 'Database error' });
+  }
+});
+
+app.get('/api/faq/nl', async (req, res) => {
+  try {
+    const result = await db.query("SELECT * FROM faq WHERE language_code = 'nl' ORDER BY RANDOM() LIMIT 10");
+    res.json(result.rows);
   } catch (err) {
     console.error('DB error', err);
     res.status(500).json({ error: 'Database error' });
