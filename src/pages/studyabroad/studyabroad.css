@@ -46,7 +46,7 @@
     margin-inline: 3rem;
 }
 
-a:link {
+.studyabroad-main-content a:link {
     text-decoration: underline;
     color: rgb(var(--nhl_stenden_corp_cyan));
 }

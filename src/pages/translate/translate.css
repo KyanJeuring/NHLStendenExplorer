@@ -1,0 +1,21 @@
+.translate-page {
+    padding: 2rem;
+}
+.translate-page header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.translate-content {
+    margin-top: 1rem;
+}
+.translate-content .intro {
+    font-family: \"CeraPro_Bold\";
+    margin-bottom: 0.5rem;
+}
+.translate-content .links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
