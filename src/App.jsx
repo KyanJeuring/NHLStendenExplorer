@@ -20,6 +20,7 @@ import Games from './pages/games/Games'
 import Lockers from './pages/lockers/Lockers'
 import Studyabroad from './pages/studyabroad/Studyabroad'
 import Parking from './pages/parking/Parking'
+import CampusStore from './pages/campusStore/CampusStore';
 
 export default function App() {
   const [lang, setLang] = useState("en");
@@ -50,6 +51,7 @@ export default function App() {
           <Route path="/lockers" element={<Lockers/>}/>
           <Route path="/studyabroad" element={<Studyabroad/>}/>
           <Route path="/parking" element={<Parking/>}/>
+          <Route path="/campusStore" element={<CampusStore/>}/>
         </Routes>
       </main>
     </>
