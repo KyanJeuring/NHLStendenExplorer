@@ -98,4 +98,9 @@ INSERT INTO explore_item (title, description, categories, image_url, link_url) V
 ('Study Landscape Tech & Design', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/studylandscapeit'),
 ('Study Landscape Logistics & IB', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/studylandscapelogistics'),
 ('Study Landscape Engineering', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/studylandscapeengineering'),
-('Study Landscape PABO', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/studyLandscapePabo');
+('Study Landscape PABO', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/studyLandscapePabo'),
+('Equipment', 'Looking to borrow equipement?', ARRAY['SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/equipment'),
+('Games', 'Unwind your mind with some games!', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/games'),
+('Lockers', 'Want to store your stuff for the day?', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/lockers'),
+('Study Abroad', 'Looking to study abroad? Sky is the limit!', ARRAY['SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/studyabroad'),
+('Parking', 'Do not know where to park your car, bike, or scooter?', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/parking');
