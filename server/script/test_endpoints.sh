@@ -58,7 +58,8 @@ json_formatter() {
 BASE_URL="http://127.0.0.1:4000"
 
 ENDPOINTS=(
-  "GET /api/faq"
+  "GET /api/faq/en"
+  "GET /api/faq/nl"
   "GET /api/explorer"
   "GET /api/explorer/categories"
   "GET /api/carousel"
