@@ -2,47 +2,109 @@
     background-color: rgb(--nhl_stenden_corp_blue);
 }
 
-.learnMoreHeader{
-    margin-inline: 65px;
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    align-items: center;
-    font-size: 1.8rem;
-}
-
 .tagline {
     color: white;
-    
-}
-.learnMoreHeader .logo_learnMore {
-    width: 150px;
-    margin-block: 30px;
 }
 
-.learnMorePage .whiteWaves {
-    margin-left: 0;
-}
-
-.whiteWaves {
-    height: 300px;
-}
-
-.learnMoreHeader .tagline{
-    margin-top: 80px;
-}
-
-.learn-more-container{
-    background-color: #005AA7;
-    min-height: 100vh;
-
-}
-
-.lets-go-to-links{
+.lets-go-to-links {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
     width: 100%;          /* let child use 100% */
     margin-top: 2rem;     /* optional */
+}
+
+.learn-more-container {
+    background-color: #005AA7;
+}
+
+/* PHONE SIZE */
+@media screen and (max-width: 600px) {
+    .learnMoreHeader > h2 {
+        margin-left: 1rem;
+        font-size: 1.5rem
+    }
+
+    .whiteWaves {
+        height: 140px;
+        position: relative;
+        bottom: 2rem;
+    }
+    
+    .learnMoreHeader .tagline {
+        margin-top: 80px;
+    }
+    
+    .learn-more-container {
+        min-height: 100vh;
+    }
+
+    .learnMoreHeader {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        gap: 5%;
+    }
+}
+
+/* TABLET SIZE */
+@media screen and (min-width: 600px) and (max-width : 990px) {
+    .learnMoreHeader > h2 {
+        margin-left: 2rem;
+        font-size: 2rem
+    }
+
+    .whiteWaves {
+        height: 250px;
+        position: relative;
+        bottom: 2rem;
+    }
+
+    .learnMoreHeader .tagline {
+        margin-top: 80px;
+    }
+    
+    .learn-more-container {
+        min-height: 100vh;
+    }
+
+    .learnMoreHeader {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        gap: 30%;
+    }
+}
+
+/* LAPTOP AND DESKTOP SIZE */
+@media screen and (min-width: 990px) {
+    .learnMoreHeader > h2 {
+        margin-left: 2rem;
+        font-size: 2.5rem;
+    }
+
+    .whiteWaves {
+        height: 300px;
+        position: relative;
+        bottom: 2rem;
+    }
+    
+    .learnMoreHeader .tagline {
+        margin-top: 80px;
+    }
+    
+    .learn-more-container {
+        min-height: 100vh;
+    }
+
+    .learnMoreHeader {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        gap: 40%;
+    }
 }

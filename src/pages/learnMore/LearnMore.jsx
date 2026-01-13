@@ -16,7 +16,7 @@ export default function LearnMore() {
                 <LetsgoNav  
                     src="/icons/library_icon.svg" 
                     location="Unwind your mind" 
-                    description="Play ping pon or football table." 
+                    description="Play ping pong or football table." 
                     link="/games"
                 />
 
@@ -30,14 +30,14 @@ export default function LearnMore() {
                 <LetsgoNav  
                     src="/icons/emergency.svg" 
                     location="Emergency" 
-                    description="Where is first aid kit? Slow whoop sound what to do?" 
+                    description="Where is first aid kit? Slow whoop sound?" 
                     link="/"
                 />
 
                 <LetsgoNav  
                     src="/icons/it-support.svg" 
                     location="IT Support Service" 
-                    description="Have some technical issues?" 
+                    description="Have any technical issues?" 
                     link="/"
                 />
 
@@ -51,14 +51,14 @@ export default function LearnMore() {
                 <LetsgoNav  
                     src="/icons/lockers.svg" 
                     location="Lockers" 
-                    description="Place to keep your stuff." 
+                    description="The perfect place to keep your stuff." 
                     link="/lockers"
                 />
 
                 <LetsgoNav  
                     src="/icons/stones-restaurant.svg" 
                     location="Stones Restaurant" 
-                    description="Visit real restaurant on campus where students get hands on experience!" 
+                    description="The real restaurant on campus where students get hands on experience!" 
                     link="/"
                 />
 

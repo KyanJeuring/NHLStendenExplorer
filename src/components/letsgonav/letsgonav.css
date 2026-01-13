@@ -1,69 +1,153 @@
-.letsgonav-container{
+.letsgonav-container {
     min-width: 90%;
 }
 
-.letsgonav-block{
+.letsgonav-block {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    border-radius: 2rem;
     box-sizing: border-box;
-    padding: 1.5rem;
 }
 
-.letsgonav-block:hover{
+.letsgonav-block:hover {
     background-color: rgb(200, 200, 200);
 }
 
-.letsgonav-info{
+.letsgonav-info {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 2rem;
 }
 
 /* ---------------- ICON + BG ---------------- */
 
 .letsgonav-icon-wrapper {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
     background-color: rgb(var(--nhl_stenden_corp_cyan));
     overflow: hidden;
     position: relative;     
 }
 
-
 .letsgonav-icon {
     position: absolute;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    display: block;
     top: 50%;
     left: 50%;
     width: 50%;            
     height: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: contain;
-    display: block;
 }
 
-
-
-
 .letsgonav-text h3 {
-    margin: 0;
-    font-size: 1.4rem;
     color: rgb(var(--color-text));
 }
 
 .letsgonav-text p {
-    margin: 0.2rem 0 0;
-    font-size: 1rem;
     color: rgb(138, 138, 138);
 }
 
-/* ---------------- ARROW ---------------- */
+/* PHONE SIZE */
+@media screen and (max-width: 600px) {
+    .letsgonav-container {
+        max-width: 90%;
+    }
 
-.letsgonav-arrow{
-    width: 3rem;
+    .letsgonav-block {
+        border-radius: 1.5rem;
+        padding: 1rem;
+    }
+
+    .letsgonav-info {
+        gap: 1rem;
+    }
+
+    .letsgonav-icon-wrapper {
+        min-width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .letsgonav-text h3 {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .letsgonav-text p {
+        margin: 0.2rem 0 0;
+        font-size: 0.8rem;
+    }
+
+    .letsgonav-arrow {
+        min-width: 2rem;
+    }
+}
+
+/* TABLET SIZE */
+@media screen and (min-width: 600px) and (max-width : 990px) {
+    .letsgonav-container {
+        max-width: 90%;
+    }
+
+    .letsgonav-block {
+        border-radius: 2rem;
+        padding: 1.5rem;
+    }
+
+    .letsgonav-info {
+        gap: 2rem;
+    }
+
+    .letsgonav-icon-wrapper {
+        min-width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+
+    .letsgonav-text h3 {
+        margin: 0;
+        font-size: 1.4rem;
+    }
+
+    .letsgonav-text p {
+        margin: 0.2rem 0 0;
+        font-size: 1rem;
+    }
+
+    .letsgonav-arrow {
+        min-width: 3rem;
+    }
+}
+
+/* LAPTOP AND DESKTOP SIZE */
+@media screen and (min-width: 990px) {
+    .letsgonav-block {
+        border-radius: 2rem;
+        padding: 1.5rem;
+    }
+
+    .letsgonav-info {
+        gap: 2rem;
+    }
+
+    .letsgonav-icon-wrapper {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+
+    .letsgonav-text h3 {
+        margin: 0;
+        font-size: 1.4rem;
+    }
+
+    .letsgonav-text p {
+        margin: 0.2rem 0 0;
+        font-size: 1rem;
+    }
+
+    .letsgonav-arrow {
+        width: 3rem;
+    }
 }

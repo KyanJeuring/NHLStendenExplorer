@@ -1,3 +1,112 @@
+/* PHONE SIZE */
+@media screen and (max-width: 600px) {
+    .pixelsCombination {
+        height: 5rem;
+    }
+
+    .studylandscape-header-main > h1 {
+        font-size: 1.5rem;
+        margin-block: auto;
+        margin-inline: 2rem;
+    }
+
+    .studylandcape-main-content > h2 {
+        margin-block: 2rem;
+        margin-inline: 2rem;
+        font-size: 1rem;
+    }
+
+    .studylandcape-main-content > .imagePlaceholder {
+        margin-left: 35%;
+        justify-content: center;
+    }
+
+    .studylandcape-main-content > h3 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        margin-inline: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .studylandcape-main-content > p {
+        margin-inline: 2rem;
+        margin-block: 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* TABLET SIZE */
+@media screen and (min-width: 600px) and (max-width : 990px) {
+    .pixelsCombination {
+        height: 10rem;
+    }
+
+    .studylandscape-header-main > h1 {
+        font-size: 2.5rem;
+        margin-block: auto;
+        margin-inline: 3rem;
+    }
+
+    .studylandcape-main-content > h2 {
+        margin-block: 4rem;
+        margin-inline: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .studylandcape-main-content > .imagePlaceholder {
+        margin-left: 35%;
+        justify-content: center;
+    }
+
+    .studylandcape-main-content > h3 {
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        margin-inline: 3rem;
+    }
+
+    .studylandcape-main-content > p {
+        margin-inline: 3rem;
+        margin-block: 1rem;
+        font-size: 1.3rem;
+    }
+}
+
+/* LAPTOP AND DESKTOP SIZE */
+@media screen and (min-width: 990px) {
+    .pixelsCombination {
+        height: 19rem;
+    }
+
+    .studylandscape-header-main > h1 {
+        font-size: 3rem;
+        margin-block: auto;
+        margin-inline: 5rem;
+    }
+
+    .studylandcape-main-content > h2 {
+        margin-block: 4rem;
+        margin-inline: 5rem;
+        font-size: 2rem;
+    }
+
+    .studylandcape-main-content > .imagePlaceholder {
+        margin-left: 35%;
+        justify-content: center;
+    }
+
+    .studylandcape-main-content > h3 {
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        margin-inline: 5rem;
+    }
+
+    .studylandcape-main-content > p {
+        margin-inline: 5rem;
+        margin-block: 1rem;
+        font-size: 1.3rem;
+    }
+}
+
 .studylandscapePage-container-main {
     padding: 0rem;
 }
@@ -6,45 +115,14 @@
     display: flex;
     justify-content: space-between;
     align-items: top;
-    padding: 0;
 }
 
-.pixelsCombination {
-    width: 25%;
-}
-
-.studylandscape-header-main > h1 {
-    font-size: 3rem;
-    margin-block: auto;
-    margin-inline: 3rem;
-}
-
-.techAndDesign {
+.imagePlaceholder {
     width: 30%;
 }
 
-.studylandcape-main-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .studylandcape-main-content > h2 {
-    margin-right: 36rem;
-    margin-block: 4rem;
     color: rgb(var(--nhl_stenden_corp_cyan));
-}
-
-.studylandcape-main-content > h3 {
-    margin-right: 16.3rem;
-    margin-top: 5rem;
-    margin-bottom: 1rem;
-}
-
-.studylandcape-main-content > p {
-    margin-inline: 3.3rem;
-    margin-block: 1rem;
 }
 
 .buttonToNextPage {

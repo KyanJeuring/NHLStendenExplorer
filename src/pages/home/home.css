@@ -48,6 +48,20 @@
     margin-block: 1rem;
 }
 
+.combination-for-home-page {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    gap: 1rem;
+}
+
+img {
+    grid-column: 1 / 2;
+}
+
+.description-for-combination-home-page {
+    grid-column: 2 / 3;
+}
+
 .carousel-section {
     width: 100%;
     display: flex;
@@ -112,17 +126,54 @@
         font-size: 1rem;
     }
 
-    .infoAboutHiddenPlaces {
-        text-align: center;
+   .description-for-combination-home-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
-    .infoAboutHiddenPlaces > h2 {
+    .description-for-combination-home-page > h2 {
+        text-align: left;
         font-size: 1rem;
+        margin-right: 0.5rem;
     }
 
-    .infoAboutHiddenPlaces > p {  
-        font-size: 0.9rem;
-        margin: 0.5rem;
+    img {
+        height: 100%;
+    }
+
+    .combination-for-home-page p {  
+        font-size: 1rem;
+        margin-right: 1rem
+    }
+
+    .blackPixel {
+        grid-column: 2;
+    }
+
+    .info {
+        margin-top: 0.5rem;
+        margin-bottom: 5rem;
+    }
+
+    .play-arrow {
+        width: 2rem;
+        margin-right: 1rem;
+        fill: rgb(var(--nhl_stenden_corp_blue));
+    }
+
+    .button-pulse:hover .play-arrow {
+        fill: white; 
+    }
+
+    .pixels-home-page {
+        width: 20rem;
+    }
+    
+    .combination-for-home-page {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
     }
 }
 
@@ -178,18 +229,53 @@
         font-size: 1.3rem;
     }
 
-    .infoAboutHiddenPlaces {
-        text-align: center;
-        margin: 0.5rem;
+    .description-for-combination-home-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
-    .infoAboutHiddenPlaces > h2 {
-        font-size: 1.3rem;
+    .description-for-combination-home-page > h2 {
+        text-align: left;
+        font-size: 1.5rem
     }
 
-    .infoAboutHiddenPlaces > p {  
-        font-size: 1rem;
-        margin: 0.5rem;
+    img {
+        height: 100%;
+    }
+
+    .combination-for-home-page p {  
+        font-size: 1.2rem;
+        margin-right: 1rem
+    }
+
+    .blackPixel {
+        grid-column: 2;
+    }
+
+    .info {
+        margin-top: 0.5rem;
+        margin-bottom: 5rem;
+    }
+
+    .play-arrow {
+        width: 2rem;
+        margin-right: 1rem;
+        fill: rgb(var(--nhl_stenden_corp_blue));
+    }
+
+    .button-pulse:hover .play-arrow {
+        fill: white; 
+    }
+
+    .pixels-home-page {
+        width: 20rem;
+    }
+    
+    .combination-for-home-page {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
     }
 }
 
@@ -261,17 +347,6 @@
 
     .button-pulse:hover .play-arrow {
         fill: white; 
-    }
-
-    .combination-for-home-page {
-        display: flex;
-        margin-block: 5rem;
-        padding-inline: 0rem;
-    }
-
-    .description-for-combination-home-page {
-        display: flex;
-        flex-direction: column;
     }
 
     .pixels-home-page {
