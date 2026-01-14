@@ -47,7 +47,7 @@ export default function App() {
           <Route path="/canteen" element={<Canteen/>}/>
           <Route path="/equipment" element={<Equipment/>}/>
           <Route path="/games" element={<Games/>}/>
-          <Route path="/lockers" element={<Lockers/>}/>
+          <Route path="/lockers" element={<Lockers lang={lang} toggleLang={toggleLang} />}/>
           <Route path="/studyabroad" element={<Studyabroad lang={lang} toggleLang={toggleLang} />}/>
           <Route path="/parking" element={<Parking/>}/>
         </Routes>
