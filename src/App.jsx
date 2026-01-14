@@ -33,7 +33,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/faq" element={<Faq lang={lang} toggleLang={toggleLang}/>}/>
-          <Route path="/learnMore" element={<LearnMore/>}/>
+          <Route path="/learnMore" element={<LearnMore lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/explore" element={<Explore/>}/>
           <Route path="/library" element={<Library lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/kennispoort" element={<KennisPoort lang={lang} toggleLang={toggleLang}/>}/>
