@@ -92,7 +92,7 @@ INSERT INTO explore_item (title, description, categories, image_url, link_url) V
 ('Computer Lab', 'Open computer labs with up-to-date software for coursework.', ARRAY['FACILITIES','STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/computerLab'),
 ('Career Services', 'Support for internships, CVs and career guidance.', ARRAY['SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/careerServices'),
 ('Kennispoort Hub', 'Collaboration space connecting students with industry partners.', ARRAY['STUDY_AREAS','SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/kennispoort'),
-('MyConcept Lab', 'lorem ipsum', ARRAY['FACILITIES','STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/myConceptLab'),
+('MyConcept Lab', 'Hands-on innovation lab with 3D printing, prototyping, and fully equipped chemistry facilities.', ARRAY['FACILITIES','STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/myConceptLab'),
 ('Main Study Landscape', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/studylandscapemain'),
 ('Study Landscape Tech & Design', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/studylandscapeit'),
 ('Study Landscape Logistics & IB', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/studylandscapelogistics'),
@@ -103,3 +103,102 @@ INSERT INTO explore_item (title, description, categories, image_url, link_url) V
 ('Lockers', 'Want to store your stuff for the day?', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/lockers'),
 ('Study Abroad', 'Looking to study abroad? Sky is the limit!', ARRAY['SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/studyabroad'),
 ('Parking', 'Do not know where to park your car, bike, or scooter?', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/parking');
+
+-- Category Translations
+CREATE TABLE IF NOT EXISTS category_translation (
+  category category_enum NOT NULL,
+  language_code TEXT NOT NULL,
+  label TEXT NOT NULL,
+  PRIMARY KEY (category, language_code)
+);
+
+INSERT INTO category_translation (category, language_code, label) VALUES
+('FACILITIES', 'en', 'Facilities'),
+('STUDY_AREAS', 'en', 'Study Areas'),
+('SERVICES', 'en', 'Services')
+ON CONFLICT DO NOTHING;
+
+INSERT INTO category_translation (category, language_code, label) VALUES
+('FACILITIES', 'nl', 'Faciliteiten'),
+('STUDY_AREAS', 'nl', 'Studiegebieden'),
+('SERVICES', 'nl', 'Diensten')
+ON CONFLICT DO NOTHING;
+
+-- Explore Item Translations
+CREATE TABLE IF NOT EXISTS explore_item_translation (
+  id SERIAL PRIMARY KEY,
+  explore_item_id INTEGER NOT NULL REFERENCES explore_item(id) ON DELETE CASCADE,
+  language_code TEXT NOT NULL,
+  title TEXT NOT NULL,
+  description TEXT NOT NULL,
+  UNIQUE (explore_item_id, language_code)
+);
+
+-- Seed NL translations mapped by link_url
+INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
+SELECT id, 'nl', 'Studenteninfo', 'Hulp & belangrijke informatie.' FROM explore_item WHERE link_url = '/studentInfo'
+ON CONFLICT DO NOTHING;
+
+INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
+SELECT id, 'nl', 'Kantine', 'Warme en koude maaltijden, snacks en dranken.' FROM explore_item WHERE link_url = '/canteen'
+ON CONFLICT DO NOTHING;
+
+INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
+SELECT id, 'nl', 'Bibliotheek', 'De bibliotheek met studieruimtes en bronnen.' FROM explore_item WHERE link_url = '/library'
+ON CONFLICT DO NOTHING;
+
+INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
+SELECT id, 'nl', 'Computerlab', 'Open computerlabs met actuele software voor cursussen.' FROM explore_item WHERE link_url = '/computerLab'
+ON CONFLICT DO NOTHING;
+
+INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
+SELECT id, 'nl', 'Carrièreservices', 'Ondersteuning voor stages, cv''s en loopbaanadvies.' FROM explore_item WHERE link_url = '/careerServices'
+ON CONFLICT DO NOTHING;
+
+INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
+SELECT id, 'nl', 'Kennispoort Hub', 'Samenwerkingsruimte die studenten verbindt met partners uit het bedrijfsleven.' FROM explore_item WHERE link_url = '/kennispoort'
+ON CONFLICT DO NOTHING;
+
+INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
+SELECT id, 'nl', 'MyConcept Lab', 'Hands-on innovatie lab met 3D-printen, prototyping en volledig uitgeruste chemiefaciliteiten.' FROM explore_item WHERE link_url = '/myConceptLab'
+ON CONFLICT DO NOTHING;
+
+INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
+SELECT id, 'nl', 'Studielandschap Hoofd', 'Tijd om te studeren!' FROM explore_item WHERE link_url = '/studylandscapemain'
+ON CONFLICT DO NOTHING;
+
+INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
+SELECT id, 'nl', 'Studielandschap Tech & Design', 'Tijd om te studeren!' FROM explore_item WHERE link_url = '/studylandscapeit'
+ON CONFLICT DO NOTHING;
+
+INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
+SELECT id, 'nl', 'Studielandschap Logistiek & IB', 'Tijd om te studeren!' FROM explore_item WHERE link_url = '/studylandscapelogistics'
+ON CONFLICT DO NOTHING;
+
+INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
+SELECT id, 'nl', 'Studielandschap Engineering', 'Tijd om te studeren!' FROM explore_item WHERE link_url = '/studylandscapeengineering'
+ON CONFLICT DO NOTHING;
+
+INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
+SELECT id, 'nl', 'Studielandschap PABO', 'Tijd om te studeren!' FROM explore_item WHERE link_url = '/studyLandscapePabo'
+ON CONFLICT DO NOTHING;
+
+INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
+SELECT id, 'nl', 'Apparatuur', 'Wil je apparatuur lenen?' FROM explore_item WHERE link_url = '/equipment'
+ON CONFLICT DO NOTHING;
+
+INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
+SELECT id, 'nl', 'Spelletjes', 'Ontspan je met wat spelletjes!' FROM explore_item WHERE link_url = '/games'
+ON CONFLICT DO NOTHING;
+
+INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
+SELECT id, 'nl', 'Kluisjes', 'Wil je je spullen voor de dag bewaren?' FROM explore_item WHERE link_url = '/lockers'
+ON CONFLICT DO NOTHING;
+
+INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
+SELECT id, 'nl', 'Studeren in het buitenland', 'Wil je in het buitenland studeren? De sky is de limit!' FROM explore_item WHERE link_url = '/studyabroad'
+ON CONFLICT DO NOTHING;
+
+INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
+SELECT id, 'nl', 'Parkeren', 'Weet je niet waar je je auto, fiets of scooter kunt parkeren?' FROM explore_item WHERE link_url = '/parking'
+ON CONFLICT DO NOTHING;

@@ -60,8 +60,10 @@ BASE_URL="http://127.0.0.1:4000"
 ENDPOINTS=(
   "GET /api/faq/en"
   "GET /api/faq/nl"
-  "GET /api/explorer"
-  "GET /api/explorer/categories"
+  "GET /api/explorer?lang=en"
+  "GET /api/explorer?lang=nl"
+  "GET /api/explorer/categories?lang=en"
+  "GET /api/explorer/categories?lang=nl"
   "GET /api/carousel"
 )
 
