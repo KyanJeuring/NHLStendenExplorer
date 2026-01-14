@@ -39,11 +39,11 @@ export default function App() {
           <Route path="/kennispoort" element={<KennisPoort/>}/>
           <Route path="/myConceptLab" element={<MyConceptLab/>}/>
           <Route path="/studentInfo" element={<StudentInfo/>}/>
-          <Route path="/studylandscapelogistics" element={<Studylandscapelogistics/>}/>
-          <Route path="/studylandscapeit" element={<Studylandscapeit/>}/>
-          <Route path="/studylandscapemain" element={<Studylandscapemain/>}/>
-          <Route path="/studylandscapepabo" element={<Studylandscapepabo/>}/>
-          <Route path="/studylandscapeengineering" element={<Studylandscapeengineering/>}/>
+          <Route path="/studylandscapelogistics" element={<Studylandscapelogistics lang={lang} toggleLang={toggleLang}/>}/>
+          <Route path="/studylandscapeit" element={<Studylandscapeit lang={lang} toggleLang={toggleLang}/>}/>
+          <Route path="/studylandscapemain" element={<Studylandscapemain lang={lang} toggleLang={toggleLang}/>}/>
+          <Route path="/studylandscapepabo" element={<Studylandscapepabo lang={lang} toggleLang={toggleLang}/>}/>
+          <Route path="/studylandscapeengineering" element={<Studylandscapeengineering lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/canteen" element={<Canteen/>}/>
           <Route path="/equipment" element={<Equipment/>}/>
           <Route path="/games" element={<Games/>}/>

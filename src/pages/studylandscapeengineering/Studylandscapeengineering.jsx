@@ -1,14 +1,35 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import './studylandscapeengineering.css';
 import { useNavigate } from 'react-router-dom';
 
-export default function Studylandscape() {
+const translations = {
+    en: {
+        studyArea: "Study Areas",
+        title: "Study Landscape in the Polymer Lab & Engineering department",
+        subtitle: "Robotics & 3D Technology",
+        bodyP1: "This place offers hands-on learning with modern equipment. Students work on real projects, design and test ideas, and develop practical skills for their future engineering careers.",
+        bodyP2: "Here is also located a big 3D Robotic arm that can print large complex objects and used for different projects. There is also lots of other equipment students use for designing, printing, and learning how to use smart technology in a practical way.",
+        contact: "Contact Support",
+        moveNext: "Move Next",
+    },
+    nl: {
+        studyArea: "Studiegebieden",
+        title: "Studielandschap in het Polymer Lab & Engineering afdeling",
+        subtitle: "Robotica & 3D Technologie",
+        bodyP1: "Deze plek biedt praktijkgericht leren met moderne apparatuur. Studenten werken aan echte projecten, ontwerpen en testen ideeën, en ontwikkelen praktische vaardigheden voor hun toekomstige loopbaan in de techniek.",
+        bodyP2: "Hier bevindt zich ook een grote 3D-robotarm die grote complexe objecten kan printen en voor verschillende projecten wordt gebruikt. Er is ook veel andere apparatuur die studenten gebruiken voor het ontwerpen, printen en leren hoe ze slimme technologie op een praktische manier kunnen gebruiken.",
+        moveNext: "Volgende",
+    },
+};
+
+export default function Studylandscape({ lang, toggleLang }) {
     const navigate = useNavigate();
+    const translated = useMemo(() => translations[lang], [lang]);
 
     return (
         <section className="studylandscapePage-container-engineering">
             <div className="studylandscape-header-engineering">
-                <h1>Study Areas</h1>
+                <h1>{translated.studyArea}</h1>
                 <svg width="174" height="147" viewBox="0 0 174 147" fill="none" xmlns="http://www.w3.org/2000/svg" className="pixelsCombination">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M108.85 94.2339H53V109.607H108.85V94.2339Z" fill="#00A7A2"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M108.85 63.4861H53V78.8611H108.85V63.4861Z" fill="#00A7A2"/>
@@ -23,14 +44,14 @@ export default function Studylandscape() {
                 </svg>
             </div>
             <main className="studylandcape-main-engineering">
-                <h2>Study Landscape in the Polymer Lab & Engineering department</h2>
+                <h2>{translated.title}</h2>
                 <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="imagePlaceholder"/>
-                <h3>Robotics & 3D Technology</h3>
-                <p className="title">This place offers hands-on learning with modern equipment. Students work on real projects, design and test ideas, and develop practical skills for their future engineering careers.</p>
-                <p className="explanation">Here is also located a big 3D Robotic arm that can print large complex objects and used for different projects. There is also lots of other equipment students use for designing, printing, and learning how to use smart technology in a practical way.</p>
+                <h3>{translated.subtitle}</h3>
+                <p className="title">{translated.bodyP1}</p>
+                <p className="explanation">{translated.bodyP2}</p>
             </main>
             <div className="buttonToNextPage">                
-                <button onClick={() => navigate('/learnMore')} className="moveNext">Move Next</button>
+                <button onClick={() => navigate('/learnMore')} className="moveNext">{translated.moveNext}</button>
             </div>
         </section>
     )
