@@ -1,14 +1,32 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import './studylandscapelogistics.css';
 import { useNavigate } from 'react-router-dom';
 
-export default function Studylandscape() {
+const translations = {
+    en: {
+        studyArea: "Study Areas",
+        title: "Study Landscape in the Business Leadership & Commerce Media Entrepreneurship department",
+        subtitle: "🚀 Explore the World of Logistics & International Business at NHL Stenden Emmen!",
+        bodyP1: "Step into a dynamic study environment where global trade meets smart logistics. At NHL Stenden in Emmen, you'll dive into real-world projects, work with international partners, and develop the skills to lead in a fast-moving global market. From supply chains to sustainable solutions — your journey starts here!",
+        moveNext: "Move Next",
+    },
+    nl: {
+        studyArea: "Studiegebieden",
+        title: "Studielandschap in de Business Leadership & Commerce Media Entrepreneurship afdeling",
+        subtitle: "🚀 Ontdek de Wereld van Logistiek & International Business bij NHL Stenden Emmen!",
+        bodyP1: "Stap in een dynamische studieomgeving waar wereldhandel slimme logistiek ontmoet. Bij NHL Stenden in Emmen duik je in praktijkgerichte projecten, werk je samen met internationale partners en ontwikkel je de vaardigheden om te leiden in een snel veranderende wereldmarkt. Van supply chains tot duurzame oplossingen — jouw reis begint hier!",
+        moveNext: "Volgende",
+    },
+};
+
+export default function Studylandscape({ lang, toggleLang }) {
     const navigate = useNavigate();
+    const translated = useMemo(() => translations[lang], [lang]);
 
     return (
         <section className="studylandscapePage-container-logistics">
             <div className="studylandscape-header-logistics">
-                <h1>Study Areas</h1>
+                <h1>{translated.studyArea}</h1>
                 <svg width="174" height="147" viewBox="0 0 174 147" fill="none" xmlns="http://www.w3.org/2000/svg" className="pixelsCombination">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M108.85 94.2339H53V109.607H108.85V94.2339Z" fill="#00A7A2"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M108.85 63.4861H53V78.8611H108.85V63.4861Z" fill="#00A7A2"/>
@@ -23,13 +41,13 @@ export default function Studylandscape() {
                 </svg>
             </div>
             <main className="studylandcape-main-content-logistics">
-                <h2>Study Landscape in the Business Leadership & Commerce Media Entrepreneurship department</h2>
+                <h2>{translated.title}</h2>
                 <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="imagePlaceholder"/>
-                <h3>🚀 Explore the World of Logistics & International Business at NHL Stenden Emmen!</h3>
-                <p>Step into a dynamic study environment where global trade meets smart logistics. At NHL Stenden in Emmen, you'll dive into real-world projects, work with international partners, and develop the skills to lead in a fast-moving global market. From supply chains to sustainable solutions — your journey starts here!</p>
+                <h3>{translated.subtitle}</h3>
+                <p>{translated.bodyP1}</p>
             </main>
             <div className="buttonToNextPage">                
-                <button onClick={() => navigate('/learnMore')} className="moveNext">Move Next</button>
+                <button onClick={() => navigate('/learnMore')} className="moveNext">{translated.moveNext}</button>
             </div>
         </section>
     )
