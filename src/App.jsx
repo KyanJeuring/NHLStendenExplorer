@@ -27,29 +27,29 @@ export default function App() {
 
   return (
     <>
-      <Navbar lang={lang} toggleLang={toggleLang} />
+      <Navbar lang={lang} toggleLang={toggleLang}/>
 
       <main>
         <Routes>
-          <Route path="/" element={<Home lang={lang} toggleLang={toggleLang} />} />
-          <Route path="/faq" element={<Faq lang={lang} toggleLang={toggleLang} />} />
+          <Route path="/" element={<Home lang={lang} toggleLang={toggleLang}/>}/>
+          <Route path="/faq" element={<Faq lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/learnMore" element={<LearnMore/>}/>
           <Route path="/explore" element={<Explore/>}/>
-          <Route path="/library" element={<Library lang={lang} toggleLang={toggleLang} />}/>
+          <Route path="/library" element={<Library lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/kennispoort" element={<KennisPoort/>}/>
           <Route path="/myConceptLab" element={<MyConceptLab/>}/>
-          <Route path="/studentInfo" element={<StudentInfo lang={lang} toggleLang={toggleLang} />}/>
+          <Route path="/studentInfo" element={<StudentInfo lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/studylandscapelogistics" element={<Studylandscapelogistics lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/studylandscapeit" element={<Studylandscapeit lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/studylandscapemain" element={<Studylandscapemain lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/studylandscapepabo" element={<Studylandscapepabo lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/studylandscapeengineering" element={<Studylandscapeengineering lang={lang} toggleLang={toggleLang}/>}/>
-          <Route path="/canteen" element={<Canteen/>}/>
+          <Route path="/canteen" element={<Canteen lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/equipment" element={<Equipment/>}/>
-          <Route path="/games" element={<Games lang={lang} toggleLang={toggleLang} />}/>
-          <Route path="/lockers" element={<Lockers lang={lang} toggleLang={toggleLang} />}/>
-          <Route path="/studyabroad" element={<Studyabroad lang={lang} toggleLang={toggleLang} />}/>
-          <Route path="/parking" element={<Parking lang={lang} toggleLang={toggleLang} />}/>
+          <Route path="/games" element={<Games lang={lang} toggleLang={toggleLang}/>}/>
+          <Route path="/lockers" element={<Lockers lang={lang} toggleLang={toggleLang}/>}/>
+          <Route path="/studyabroad" element={<Studyabroad lang={lang} toggleLang={toggleLang}/>}/>
+          <Route path="/parking" element={<Parking lang={lang} toggleLang={toggleLang}/>}/>
         </Routes>
       </main>
     </>
