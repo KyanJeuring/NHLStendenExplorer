@@ -209,6 +209,3 @@ ON CONFLICT DO NOTHING;
 INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
 SELECT id, 'nl', 'Stones Restaurant', 'Lekkere gerechten koffie en nog meer!' FROM explore_item WHERE link_url = '/stonesRestaurant'
 ON CONFLICT DO NOTHING;
-('Parking', 'Do not know where to park your car, bike, or scooter?', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/parking'),
-('Campus Store', 'In need of school supplies? Visit the Campus Store!', ARRAY['FACILITIES', 'SERVICES'']::category_enum[], 'https://lipsum.app/512x512', '/campusStore')
-('Courses Overview', 'Curious in exploring our courses? Get a flier by Student Info!', ARRAY['SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/coursesOverview');
