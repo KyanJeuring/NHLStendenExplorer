@@ -30,7 +30,7 @@ app.get('/api/explorer', async (req, res) => {
   try {
     const lang = (req.query.lang || 'en').toLowerCase();
     const result = await db.query(
-      `SELECT ei.id,
+      `SELECT DISTINCT ei.id,
               COALESCE(eit.title, ei.title) AS title,
               COALESCE(eit.description, ei.description) AS description,
               ei.categories,
@@ -38,7 +38,8 @@ app.get('/api/explorer', async (req, res) => {
               ei.link_url
        FROM explore_item ei
        LEFT JOIN explore_item_translation eit
-         ON eit.explore_item_id = ei.id AND eit.language_code = $1`,
+         ON eit.explore_item_id = ei.id AND eit.language_code = $1
+       ORDER BY ei.id`,
       [lang]
     );
     if (result.rows.length === 0) {

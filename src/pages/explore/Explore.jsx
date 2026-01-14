@@ -29,7 +29,7 @@ export default function Explore({ lang, toggleLang }) {
     const [error, setError] = useState(null)
     const translation = useMemo(() => translations[lang] || translations.en, [lang])
 
-    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000'
+    const API_URL = useMemo(() => import.meta.env.VITE_API_URL || 'http://localhost:4000', [])
 
     useEffect(() => {
         let mounted = true
@@ -40,7 +40,14 @@ export default function Explore({ lang, toggleLang }) {
                 return res.json()
             })
             .then((data) => {
-                if (mounted) setExplorerData(data)
+                if (mounted) {
+                    const ids = data.map(item => item.id);
+                    const uniqueIds = new Set(ids);
+                    if (ids.length !== uniqueIds.size) {
+                        console.warn('DUPLICATES FOUND IN API RESPONSE!');
+                    }
+                    setExplorerData(data)
+                }
             })
             .catch((err) => {
                 console.error('Failed to fetch EXPLORERs', err)

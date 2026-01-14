@@ -82,8 +82,12 @@ CREATE TABLE IF NOT EXISTS explore_item (
   description TEXT NOT NULL,
   categories category_enum[] NOT NULL,
   image_url TEXT NOT NULL,
-  link_url TEXT NOT NULL
+  link_url TEXT NOT NULL UNIQUE
 );
+
+-- Clear any existing data to prevent duplicates
+DELETE FROM explore_item;
+ALTER SEQUENCE explore_item_id_seq RESTART WITH 1;
 
 INSERT INTO explore_item (title, description, categories, image_url, link_url) VALUES
 ('Student Info', 'Help & important information.', ARRAY['SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/studentInfo'),
