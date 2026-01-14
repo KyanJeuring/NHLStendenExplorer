@@ -9,7 +9,6 @@ const translations = {
         subtitle: "Robotics & 3D Technology",
         bodyP1: "This place offers hands-on learning with modern equipment. Students work on real projects, design and test ideas, and develop practical skills for their future engineering careers.",
         bodyP2: "Here is also located a big 3D Robotic arm that can print large complex objects and used for different projects. There is also lots of other equipment students use for designing, printing, and learning how to use smart technology in a practical way.",
-        contact: "Contact Support",
         moveNext: "Move Next",
     },
     nl: {
