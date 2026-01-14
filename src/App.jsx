@@ -20,6 +20,7 @@ import Games from './pages/games/Games'
 import Lockers from './pages/lockers/Lockers'
 import Studyabroad from './pages/studyabroad/Studyabroad'
 import Parking from './pages/parking/Parking'
+import Footer from './components/footer/Footer'
 
 export default function App() {
   const [lang, setLang] = useState("en");
@@ -28,7 +29,6 @@ export default function App() {
   return (
     <>
       <Navbar lang={lang} toggleLang={toggleLang}/>
-
       <main>
         <Routes>
           <Route path="/" element={<Home lang={lang} toggleLang={toggleLang}/>}/>
@@ -52,6 +52,7 @@ export default function App() {
           <Route path="/parking" element={<Parking lang={lang} toggleLang={toggleLang}/>}/>
         </Routes>
       </main>
+      <Footer lang={lang} toggleLang={toggleLang} />
     </>
   );
 }

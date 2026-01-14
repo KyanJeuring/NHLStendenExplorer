@@ -16,6 +16,14 @@ footer {
     margin-left: 5%;
 }
 
+.footerElement a {
+    color: white;
+    text-decoration: underline;
+}
+
+.footerElement a:hover {
+    color: lightgray;
+}
 
 @media screen and (max-width: 600px) {
 
