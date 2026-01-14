@@ -1,14 +1,34 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import './studylandscapemain.css';
 import { useNavigate } from 'react-router-dom';
 
-export default function Studylandscape() {
+const translations = {
+    en: {
+        studyArea: "Study Areas",
+        title: "Study Landscape - Your Perfect Spot to Focus, Create and Connect",
+        subtitle: "Right next to the bustling canteen at NHL Stenden Emmen lies the Study Landscape.",
+        bodyP1: "It's a bright, welcoming space designed for students who want the best of both worlds: productivity and comfort. Whether you're diving into assignments, collaborating on projects, this area offers the ideal environment to stay focused and inspired.",
+        bodyP2: "With comfortable seating, open tables, and a relaxed atmosphere, the Study Landscape encourages creativity, teamwork, and concentration. Need a quick break or snack? The canteen is just steps away, so you're never far from a good coffee or something tasty to recharge your energy.",
+        moveNext: "Move Next",
+    },
+    nl: {
+        studyArea: "Studiegebieden",
+        title: "Studielandschap - Jouw Perfecte Plek om te Focussen, Creëren en Verbinden",
+        subtitle: "Rechts naast de gezellige kantine van NHL Stenden Emmen ligt het Studielandschap.",
+        bodyP1: "Het is een lichte, uitnodigende ruimte ontworpen voor studenten die het beste van twee werelden willen: productiviteit en comfort. Of je nu aan opdrachten werkt, samenwerkt aan projecten, deze ruimte biedt de ideale omgeving om gefocust en geïnspireerd te blijven.",
+        bodyP2: "Met comfortabele zitplaatsen, open tafels en een ontspannen sfeer stimuleert het Studielandschap creativiteit, teamwork en concentratie. Even een korte pauze of een snack nodig? De kantine is op slechts een paar stappen afstand, dus je bent nooit ver van een goede kop koffie of iets lekkers om je energie weer op te laden.",
+        moveNext: "Volgende",
+    },
+};
+
+export default function Studylandscape({ lang, toggleLang }) {
     const navigate = useNavigate();
+    const translated = useMemo(() => translations[lang], [lang]);
 
     return (
         <section className="studylandscapePage-container-main">
             <div className="studylandscape-header-main">
-                <h1>Study Areas</h1>
+                <h1>{translated.studyArea}</h1>
                 <svg width="174" height="147" viewBox="0 0 174 147" fill="none" xmlns="http://www.w3.org/2000/svg" className="pixelsCombination">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M108.85 94.2339H53V109.607H108.85V94.2339Z" fill="#00A7A2"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M108.85 63.4861H53V78.8611H108.85V63.4861Z" fill="#00A7A2"/>
@@ -23,14 +43,14 @@ export default function Studylandscape() {
                 </svg>
             </div>
             <main className="studylandcape-main-content">
-                <h2>Study Landscape - Your Perfect Spot to Focus, Create and Connect</h2>
+                <h2>{translated.title}</h2>
                 <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="imagePlaceholder"/>
-                <h3>Right next to the bustling canteen at NHL Stenden Emmen lies the Study Landscape</h3>
-                <p>It's a bright, welcoming space designed for students who want the best of both worlds: productivity and comfort. Whether you're diving into assignments, collaborating on projects, this area offers the ideal environment to stay focused and inspired.</p>
-                <p>With comfortable seating, open tables, and a relaxed atmosphere, the Study Landscape encourages creativity, teamwork, and concentration. Need a quick break or snack? The canteen is just steps away, so you're never far from a good coffee or something tasty to recharge your energy.</p>
+                <h3>{translated.subtitle}</h3>
+                <p>{translated.bodyP1}</p>
+                <p>{translated.bodyP2}</p>
             </main>
             <div className="buttonToNextPage">                
-                <button onClick={() => navigate('/learnMore')} className="moveNext">Move Next</button>
+                <button onClick={() => navigate('/learnMore')} className="moveNext">{translated.moveNext}</button>
             </div>
         </section>
     )

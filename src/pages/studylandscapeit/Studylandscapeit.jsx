@@ -1,14 +1,34 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import './studylandscapeit.css';
 import { useNavigate } from 'react-router-dom';
 
-export default function Studylandscape() {
+const translations = {
+    en: {
+        studyArea: "Study Areas",
+        title: "Study Landscape in the Tech & Design department",
+        subtitle: "Shaping the Future with Technology",
+        bodyP1: "🌿📚It's the perfect spot to team up and tackle projects together. You'll find comfy chairs, spacious tables, and plenty of sockets to keep your laptop charged and ideas flowing!",
+        bodyP2: "If you need a quiet and peaceful place to focus, the building offers several silent booths located throughout the area. These booths are perfect for important online calls or for concentrating when the surroundings feel too noisy, helping you work without distractions.",
+        moveNext: "Move Next",
+    },
+    nl: {
+        studyArea: "Studiegebieden",
+        title: "Studielandschap in de Tech & Design afdeling",
+        subtitle: "De Toekomst Vormgeven met Technologie",
+        bodyP1: "🌿📚Het is de perfecte plek om samen te werken en projecten aan te pakken. Je vindt er comfortabele stoelen, ruime tafels en voldoende stopcontacten om je laptop opgeladen te houden en je ideeën te laten stromen!",
+        bodyP2: "Als je een rustige en stille plek nodig hebt om je te concentreren, biedt het gebouw verschillende stille hokjes verspreid over het gebied. Deze hokjes zijn perfect voor belangrijke online gesprekken of om je te concentreren wanneer de omgeving te lawaaierig is, zodat je zonder afleiding kunt werken.",
+        moveNext: "Volgende",
+    },
+};
+
+export default function Studylandscape({ lang, toggleLang }) {
     const navigate = useNavigate();
+    const translated = useMemo(() => translations[lang], [lang]);
 
     return (
         <section className="studylandscapePage-container-it">
             <div className="studylandscape-header-it">
-                <h1>Study Areas</h1>
+                <h1>{translated.studyArea}</h1>
                 <svg width="174" height="147" viewBox="0 0 174 147" fill="none" xmlns="http://www.w3.org/2000/svg" className="pixelsCombination">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M108.85 94.2339H53V109.607H108.85V94.2339Z" fill="#00A7A2"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M108.85 63.4861H53V78.8611H108.85V63.4861Z" fill="#00A7A2"/>
@@ -23,14 +43,14 @@ export default function Studylandscape() {
                 </svg>
             </div>
             <main className="studylandcape-main-content-it">
-                <h2>Study Landscape in the Tech & Design department</h2>
+                <h2>{translated.title}</h2>
                 <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="imagePlaceholder"/>
-                <h3>Shaping the Future with Technology</h3>
-                <p className="textForIT">🌿📚It's the perfect spot to team up and tackle projects together. You'll find comfy chairs, spacious tables, and plenty of sockets to keep your laptop charged and ideas flowing!</p>
-                <p className="descriptionForIT">If you need a quiet and peaceful place to focus, the building offers several silent booths located throughout the area. These booths are perfect for important online calls or for concentrating when the surroundings feel too noisy, helping you work without distractions.</p>
+                <h3>{translated.subtitle}</h3>
+                <p className="textForIT">{translated.bodyP1}</p>
+                <p className="descriptionForIT">{translated.bodyP2}</p>
             </main>
             <div className="buttonToNextPage">                
-                <button onClick={() => navigate('/learnMore')} className="moveNext">Move Next</button>
+                <button onClick={() => navigate('/learnMore')} className="moveNext">{translated.moveNext}</button>
             </div>
         </section>
     )
