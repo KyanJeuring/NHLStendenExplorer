@@ -1,0 +1,162 @@
+/* PHONE SIZE */
+@media screen and (max-width: 600px) {
+    .pixelsCombination {
+        height: 5rem;
+    }
+
+    .courses-overview-header > h1 {
+        font-size: 1.5rem;
+        margin-block: 2rem;
+        margin-inline: 2rem;
+    }
+
+    .courses-overview-main-content > h2 {
+        margin-block: 2rem;
+        margin-inline: 2rem;
+        font-size: 1rem;
+    }
+
+    .courses-overview-main-content > .image {
+        margin-left: 14%;
+        width: 75%;
+        margin-top: 2rem;
+    }
+
+    .courses-overview-main-content > h3 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        margin-inline: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .courses-overview-main-content > p {
+        margin-inline: 2rem;
+        margin-block: 1rem;
+        font-size: 1rem;
+    }
+
+    .tour-guide-fixed {
+        margin-left: 0%
+    }
+}
+
+/* TABLET SIZE */
+@media screen and (min-width: 600px) and (max-width : 990px) {
+    .pixelsCombination {
+        height: 10rem;
+    }
+
+    .courses-overview-header > h1 {
+        font-size: 2.5rem;
+        margin-block: auto;
+        margin-inline: 3rem;
+    }
+
+    .courses-overview-main-content > h2 {
+        margin-block: 4rem;
+        margin-inline: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .courses-overview-main-content > .image {
+        margin-left: 12%;
+        width: 75%;
+        margin-top: 4rem;
+    }
+
+    .courses-overview-main-content > h3 {
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        margin-inline: 3rem;
+    }
+
+    .courses-overview-main-content > p {
+        margin-inline: 3rem;
+        margin-block: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .tour-guide-fixed {
+        margin-left: 0%;
+    }
+}
+
+/* LAPTOP AND DESKTOP SIZE */
+@media screen and (min-width: 990px) {
+    .pixelsCombination {
+        height: 19rem;
+    }
+
+    .courses-overview-header > h1 {
+        font-size: 3rem;
+        margin-block: auto;
+        margin-inline: 5rem;
+    }
+
+    .courses-overview-main-content > h2 {
+        margin-block: 4rem;
+        margin-inline: 5rem;
+        font-size: 2rem;
+    }
+
+    .courses-overview-main-content > .image {
+        margin-left: 35%;
+        width: 35%;
+        margin-top: 6rem;
+    }
+
+    .courses-overview-main-content > h3 {
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        margin-inline: 5rem;
+    }
+
+    .courses-overview-main-content > p {
+        margin-inline: 5rem;
+        margin-block: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .tour-guide-fixed {
+        margin-left: 25%
+    }
+}
+
+.courses-overview-container {
+    padding: 0rem;
+}
+
+.courses-overview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding: 0;
+}
+
+.games-main-content > h2 {
+    color: rgb(var(--nhl_stenden_corp_cyan));
+}
+
+.buttonToNextPage {
+    display: flex;
+    justify-content: center;
+}
+
+.moveNext {
+    background-color: rgb(var(--nhl_stenden_corp_blue));
+    color: white;
+    margin: 2rem;
+    width: 7rem;
+    height: 3rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    border: none;
+    font-family: 'CeraPro';
+}
+
+.moveNext:hover {
+    background-color: white;
+    border: 3px solid rgb(var(--nhl_stenden_corp_blue));
+    color: rgb(var(--nhl_stenden_corp_blue));
+    cursor: pointer;
+}
