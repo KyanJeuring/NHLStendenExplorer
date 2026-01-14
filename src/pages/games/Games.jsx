@@ -1,15 +1,49 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import './games.css';
 import { useNavigate } from 'react-router-dom';
 import TourGuide from '../../components/tourguide/TourGuide';
 
-export default function Games() {
+const translations = {
+    en: {
+        title: "Games",
+        subtitle: "Welcome to the Games Area",
+        bodyP1: "Around the campus you can relax and have fun in the games area. Here you will find games like <strong>ping pong</strong> and <strong>table football</strong> that students can freely use during breaks or after classes.",
+        bodyP2: "All game equipment is available to students. To get access, you simply need to hand in your student card along with your student information at the desk.",
+        bodyP3: "How it works:",
+        listItems: [
+            "Go to the games desk with your student card.",
+            "Hand in your student card and provide your student details.",
+            "Receive the game equipment (ping pong paddles, balls, etc.).",
+            "Enjoy the game with friends.",
+            "Return the equipment and get your student card back."
+        ],
+        moveNext: "Move Next"
+    },
+    nl: {
+        title: "Games",
+        subtitle: "Welkom bij de Game Area",
+        bodyP1: "Rondom de campus kun je ontspannen en plezier hebben in de game Area. Hier vind je spellen zoals <strong>tafeltennis</strong> en <strong>tafelvoetbal</strong> die studenten vrij kunnen gebruiken tijdens pauzes of na de lessen.",
+        bodyP2: "Alle spelmaterialen zijn beschikbaar voor studenten. Om toegang te krijgen, hoef je alleen maar je studentenkaart in te leveren samen met je studentgegevens bij de balie.",
+        bodyP3: "Hoe het werkt:",
+        listItems: [
+            "Ga naar de spellenbalie met je studentenkaart.",
+            "Lever je studentenkaart in en geef je studentgegevens op.",
+            "Ontvang het spelmateriaal (tafeltennisbatjes, ballen, etc.).",
+            "Geniet van het spel met vrienden.",
+            "Lever het materiaal terug en krijg je studentenkaart terug."
+        ],
+        moveNext: "Volgende"
+    }
+}
+
+export default function Games({ lang, toggleLang }) {
     const navigate = useNavigate();
+    const translate = useMemo(() => translations[lang] || translations.en, [lang]);
 
     return (
         <section className="gamesPage-container">
             <div className="games-header">
-                <h1>Games</h1>
+                <h1>{translate.title}</h1>
                 <svg width="174" height="147" viewBox="0 0 174 147" fill="none" xmlns="http://www.w3.org/2000/svg" className="pixelsCombination">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M108.85 94.2339H53V109.607H108.85V94.2339Z" fill="#00A7A2"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M108.85 63.4861H53V78.8611H108.85V63.4861Z" fill="#00A7A2"/>
@@ -25,31 +59,19 @@ export default function Games() {
             </div>
             <main className="games-main-content">
                 <img src="https://lipsum.app/1920x1080" alt="Games area" className="imagePlaceholder"/>
-                <h3>Welcome to the Games Area</h3>
-                <p>
-                    Around the campus you can relax and have fun in the games area.
-                    Here you’ll find games like <strong>ping pong</strong> and <strong>foosball</strong>
-                    that students can freely use during breaks or after classes.
-                </p>
-                <p>
-                    All game equipment is available to students. To get access, you simply
-                    need to hand in your <strong>student card</strong> along with your
-                    student information at the desk.
-                </p>
-                <p>How it works:</p>
+                <h3>{translate.welcome}</h3>
+                <p dangerouslySetInnerHTML={{ __html: translate.bodyP1 }}></p>
+                <p dangerouslySetInnerHTML={{ __html: translate.bodyP2 }}></p>
+                <p>{translate.bodyP3}</p>
                 <ol>
-                    <li>Go to the games desk with your student card.</li>
-                    <li>Hand in your student card and provide your student details.</li>
-                    <li>Receive the game equipment (ping pong paddles, balls, etc.).</li>
-                    <li>Enjoy the game with friends.</li>
-                    <li>Return the equipment and get your student card back.</li>
+                    {translate.listItems.map((item, index) => (
+                        <li key={index}>{item}</li>
+                    ))}
                 </ol>
-        <TourGuide/>
+                <TourGuide/>
             </main>
             <div className="buttonToNextPage">
-                <button onClick={() => navigate('/learnMore')} className="moveNext">
-                    Move Next
-                </button>
+                <button onClick={() => navigate('/learnMore')} className="moveNext">Move Next</button>
             </div>
         </section>
     );
