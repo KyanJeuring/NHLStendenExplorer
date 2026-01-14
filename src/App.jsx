@@ -49,7 +49,7 @@ export default function App() {
           <Route path="/games" element={<Games/>}/>
           <Route path="/lockers" element={<Lockers lang={lang} toggleLang={toggleLang} />}/>
           <Route path="/studyabroad" element={<Studyabroad lang={lang} toggleLang={toggleLang} />}/>
-          <Route path="/parking" element={<Parking/>}/>
+          <Route path="/parking" element={<Parking lang={lang} toggleLang={toggleLang} />}/>
         </Routes>
       </main>
     </>
