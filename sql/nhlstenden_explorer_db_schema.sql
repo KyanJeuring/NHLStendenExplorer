@@ -139,7 +139,7 @@ CREATE TABLE IF NOT EXISTS explore_item_translation (
 
 -- Seed NL translations mapped by link_url
 INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
-SELECT id, 'nl', 'Studenteninfo', 'Hulp & belangrijke informatie.' FROM explore_item WHERE link_url = '/studentInfo'
+SELECT id, 'nl', 'Student Info', 'Hulp & belangrijke informatie.' FROM explore_item WHERE link_url = '/studentInfo'
 ON CONFLICT DO NOTHING;
 
 INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
