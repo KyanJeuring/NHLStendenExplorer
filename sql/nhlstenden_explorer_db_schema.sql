@@ -102,7 +102,8 @@ INSERT INTO explore_item (title, description, categories, image_url, link_url) V
 ('Games', 'Unwind your mind with some games!', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/games'),
 ('Lockers', 'Want to store your stuff for the day?', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/lockers'),
 ('Study Abroad', 'Looking to study abroad? Sky is the limit!', ARRAY['SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/studyabroad'),
-('Parking', 'Do not know where to park your car, bike, or scooter?', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/parking');
+('Parking', 'Do not know where to park your car, bike, or scooter?', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/parking'),
+('Stones Restaurant', 'Good meals, coffee and many more!', ARRAY['FACILITIES','SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/stonesRestaurant');
 
 -- Category Translations
 CREATE TABLE IF NOT EXISTS category_translation (
@@ -201,4 +202,8 @@ ON CONFLICT DO NOTHING;
 
 INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
 SELECT id, 'nl', 'Parkeren', 'Weet je niet waar je je auto, fiets of scooter kunt parkeren?' FROM explore_item WHERE link_url = '/parking'
+ON CONFLICT DO NOTHING;
+
+INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
+SELECT id, 'nl', 'Stones Restaurant', 'stones restaurant nl description' FROM explore_item WHERE link_url = '/stonesRestaurant'
 ON CONFLICT DO NOTHING;

@@ -21,6 +21,7 @@ import Lockers from './pages/lockers/Lockers'
 import Studyabroad from './pages/studyabroad/Studyabroad'
 import Parking from './pages/parking/Parking'
 import Footer from './components/footer/Footer'
+import StonesRestaurant from './pages/stonesRestaurant/StonesRestaurant';
 
 export default function App() {
   const [lang, setLang] = useState("en");
@@ -50,6 +51,7 @@ export default function App() {
           <Route path="/lockers" element={<Lockers lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/studyabroad" element={<Studyabroad lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/parking" element={<Parking lang={lang} toggleLang={toggleLang}/>}/>
+          <Route path="/stonesRestaurant" element={<StonesRestaurant lang={lang} toggleLang={toggleLang}/>}/>
         </Routes>
       </main>
       <Footer lang={lang} toggleLang={toggleLang} />
