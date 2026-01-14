@@ -1,17 +1,46 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import './kennispoort.css';
 import { useNavigate } from 'react-router-dom';
 
 import TourGuide from '../../components/tourguide/TourGuide';
 
+const translations = {
+    en: {
+        title: "Kennispoort",
+        welcomeMessage: "Welcome to Kennispoort",
+        bodyP1: "Kennispoort is a location within the university.",
+        points: [
+            "It houses hospitality, health and welfare, as well as the IoT lab.",
+            "The auditorium downstairs is where some lectures and events are held, as well as graduation ceremonies and Think Wireless general assemblies.",
+            "It is a sponsor of FC Emmen.",
+            "The seats on the stairs are real stadium chairs from the Emmen stadium.",
+            "The center of entrepreneurship is here (check the website for more information)."
+        ],
+        moveNext: "Move Next"
+    },
+    nl: {
+        title: "Kennispoort",
+        welcomeMessage: "Welkom bij Kennispoort",
+        bodyP1: "Kennispoort is een locatie binnen de universiteit.",
+        points: [
+            "Het huisvest horeca, gezondheid en welzijn, evenals het IoT-lab.",
+            "Het auditorium beneden is waar sommige colleges en evenementen worden gehouden, evenals diploma-uitreikingen en Think Wireless algemene vergaderingen.",
+            "Het is een sponsor van FC Emmen.",
+            "De stoelen op de trap zijn echte stadionstoelen uit het Emmen stadion.",
+            "Het centrum voor ondernemerschap is hier (bekijk de website voor meer informatie)."
+        ],
+        moveNext: "Ga verder"
+    }
+};
 
-export default function Kennispoort() {
+export default function Kennispoort({ lang, toggleLang }) {
     const navigate = useNavigate();
+    const translation = useMemo(() => translations[lang] || translations.en, [lang]);
 
     return (
         <section className="kennispoortPage-container">
             <div className="kennispoort-header">
-                <h1>Kennispoort</h1>
+                <h1>{translation.title}</h1>
                 <svg width="174" height="147" viewBox="0 0 174 147" fill="none" xmlns="http://www.w3.org/2000/svg" className="pixelsCombination">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M108.85 94.2339H53V109.607H108.85V94.2339Z" fill="#00A7A2"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M108.85 63.4861H53V78.8611H108.85V63.4861Z" fill="#00A7A2"/>
@@ -27,19 +56,17 @@ export default function Kennispoort() {
             </div>
             <main className="kennispoort-main-content">
                 <img src="https://lipsum.app/1920x1080" alt="Kennispoort building" className="imagePlaceholder"/>
-                <h3>Welcome to Kennispoort</h3>
-                <p>Kennispoort is a location within the university.</p>
+                <h3>{translation.welcomeMessage}</h3>
+                <p>{translation.bodyP1}</p>
                 <ul>
-                    <li>It houses hospitality, health and welfare, as well as the IoT lab.</li>
-                    <li>The auditorium downstairs is where some lectures and events are held, as well as graduation ceremonies and Think Wireless general assemblies.</li>
-                    <li>It is a sponsor of FC Emmen.</li>
-                    <li>The seats on the stairs are real stadium chairs from the Emmen stadium.</li>
-                    <li>The center of entrepreneurship is here (check the website for more information).</li>
+                    {translation.points.map((point, index) => (
+                        <li key={index}>{point}</li>
+                    ))}
                 </ul>
-       <TourGuide />
+                <TourGuide />
             </main>
             <div className="buttonToNextPage">                
-                <button onClick={() => navigate('/learnMore')} className="moveNext">Move Next</button>
+                <button onClick={() => navigate('/learnMore')} className="moveNext">{translation.moveNext}</button>
             </div>
         </section>
     )

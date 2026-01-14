@@ -36,7 +36,7 @@ export default function App() {
           <Route path="/learnMore" element={<LearnMore/>}/>
           <Route path="/explore" element={<Explore/>}/>
           <Route path="/library" element={<Library lang={lang} toggleLang={toggleLang}/>}/>
-          <Route path="/kennispoort" element={<KennisPoort/>}/>
+          <Route path="/kennispoort" element={<KennisPoort lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/myConceptLab" element={<MyConceptLab lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/studentInfo" element={<StudentInfo lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/studylandscapelogistics" element={<Studylandscapelogistics lang={lang} toggleLang={toggleLang}/>}/>
