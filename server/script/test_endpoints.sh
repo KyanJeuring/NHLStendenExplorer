@@ -148,14 +148,14 @@ done
 log
 info "Summary"
 log "--------------------------------------------------------------------------"
-printf "%-30s | %-6s | %-6s | %-6s | %s\n" "Endpoint" "Result" "Method" "Status" "Time (s)"
+printf "%-35s | %-6s | %-6s | %-6s | %s\n" "Endpoint" "Result" "Method" "Status" "Time (s)"
 log "--------------------------------------------------------------------------"
 
 for i in "${!SUMMARY_ENDPOINTS[@]}"; do
   RESULT_LABEL="$PASS"
   [[ "${SUMMARY_RESULTS[$i]}" == "FAIL" ]] && RESULT_LABEL="$FAIL"
 
-  printf "%-30s | %-6b | %-6s | %-6s | %.3f\n" \
+  printf "%-35s | %-6b | %-6s | %-6s | %.3f\n" \
     "${SUMMARY_ENDPOINTS[$i]}" \
     "$RESULT_LABEL" \
     "${SUMMARY_METHODS[$i]}" \
