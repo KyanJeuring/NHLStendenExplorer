@@ -188,7 +188,7 @@ SELECT id, 'nl', 'Apparatuur', 'Wil je apparatuur lenen?' FROM explore_item WHER
 ON CONFLICT DO NOTHING;
 
 INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
-SELECT id, 'nl', 'Spelletjes', 'Ontspan je met wat spelletjes!' FROM explore_item WHERE link_url = '/games'
+SELECT id, 'nl', 'Games', 'Ontspan je met wat activiteiten!' FROM explore_item WHERE link_url = '/games'
 ON CONFLICT DO NOTHING;
 
 INSERT INTO explore_item_translation (explore_item_id, language_code, title, description)
