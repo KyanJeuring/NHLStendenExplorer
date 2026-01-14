@@ -26,9 +26,21 @@ app.get('/api/faq/nl', async (req, res) => {
   }
 });
 
-app.get('/api/explorer', async (_req, res) => {
+app.get('/api/explorer', async (req, res) => {
   try {
-    const result = await db.query('SELECT * FROM explore_item');
+    const lang = (req.query.lang || 'en').toLowerCase();
+    const result = await db.query(
+      `SELECT ei.id,
+              COALESCE(eit.title, ei.title) AS title,
+              COALESCE(eit.description, ei.description) AS description,
+              ei.categories,
+              ei.image_url,
+              ei.link_url
+       FROM explore_item ei
+       LEFT JOIN explore_item_translation eit
+         ON eit.explore_item_id = ei.id AND eit.language_code = $1`,
+      [lang]
+    );
     if (result.rows.length === 0) {
       return res.status(404).json({ error: 'No explore items found' });
     }
@@ -39,13 +51,24 @@ app.get('/api/explorer', async (_req, res) => {
   }
 });
 
-app.get('/api/explorer/categories', async (_req, res) => {
+app.get('/api/explorer/categories', async (req, res) => {
   try {
-    const result = await db.query("SELECT unnest(enum_range(NULL::category_enum)) AS category");
+    const lang = (req.query.lang || 'en').toLowerCase();
+    const result = await db.query(
+      `WITH cats AS (
+         SELECT unnest(enum_range(NULL::category_enum)) AS key
+       )
+      SELECT cats.key AS key,
+        COALESCE(ct.label, cats.key::text) AS label
+       FROM cats
+       LEFT JOIN category_translation ct
+         ON ct.category = cats.key AND ct.language_code = $1`,
+      [lang]
+    );
     if (result.rows.length === 0) {
       return res.status(404).json({ error: 'No categories found' });
     }
-    res.status(200).json(result.rows.map(r => r.category));
+    res.status(200).json(result.rows);
   } catch (err) {
     console.error('DB error', err);
     res.status(500).json({ error: 'Database error' });

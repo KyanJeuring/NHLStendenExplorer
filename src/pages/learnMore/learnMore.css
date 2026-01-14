@@ -11,12 +11,18 @@
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-    width: 100%;          /* let child use 100% */
-    margin-top: 2rem;     /* optional */
+    width: 100%;          
+    margin-top: 2rem;     
+}
+
+.learnMoreHeader{
+    margin-top: 0;
 }
 
 .learn-more-container {
     background-color: #005AA7;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 /* PHONE SIZE */
@@ -28,7 +34,7 @@
 
     .whiteWaves {
         height: 140px;
-        position: relative;
+       
         bottom: 2rem;
     }
     
@@ -46,6 +52,7 @@
         align-items: center;
         width: 100vw;
         gap: 5%;
+        margin-top: 0;
     }
 }
 
@@ -58,7 +65,7 @@
 
     .whiteWaves {
         height: 250px;
-        position: relative;
+        
         bottom: 2rem;
     }
 
@@ -88,7 +95,7 @@
 
     .whiteWaves {
         height: 300px;
-        position: relative;
+        
         bottom: 2rem;
     }
     
@@ -106,5 +113,6 @@
         align-items: center;
         width: 100vw;
         gap: 40%;
+        margin-top: 0;
     }
 }

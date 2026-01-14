@@ -1,3 +1,113 @@
+/* PHONE */
+@media screen and (max-width: 600px) {
+    .pixelsCombination {
+        height: 5rem;
+    }
+
+    .library-header > h1 {
+        font-size: 2rem;
+        margin-block: auto;
+        margin-inline: 2rem;
+    }
+
+    .library-content > h2 {
+        margin-block: 2rem;
+        margin-inline: 2rem;
+        font-size: 1rem;
+    }
+
+    .library-content > .imagePlaceholder {
+        width: 75%;
+        margin-top: 2rem;
+    }
+
+    .library-content > h3 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        margin-inline: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .library-content > p {
+        margin-inline: 2rem;
+        margin-block: 1rem;
+        font-size: 1rem;
+    }
+
+}
+
+/* TABLET */
+@media screen and (min-width: 600px) and (max-width : 990px) {
+    .pixelsCombination {
+        height: 10rem;
+    }
+
+    .library-header > h1 {
+        font-size: 2.5rem;
+        margin-block: auto;
+        margin-inline: 3rem;
+    }
+
+    .library-content > h2 {
+        margin-block: 4rem;
+        margin-inline: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .library-content > .imagePlaceholder {
+        width: 75%;
+        margin-top: 4rem;
+    }
+
+    .library-content > h3 {
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        margin-inline: 3rem;
+    }
+
+    .library-content > p {
+        margin-inline: 3rem;
+        margin-block: 1rem;
+        font-size: 1.3rem;
+    }
+}
+
+/* PC */
+@media screen and (min-width: 990px) {
+    .pixelsCombination {
+        height: 19rem;
+    }
+
+    .library-header > h1 {
+        font-size: 3rem;
+        margin-block: auto;
+        margin-inline: 5rem;
+    }
+
+    .library-content > h2 {
+        margin-block: 4rem;
+        margin-inline: 5rem;
+        font-size: 2rem;
+    }
+
+    .library-content > .imagePlaceholder {
+        width: 75%;
+        margin-top: 4rem;
+    }
+
+    .library-content > h3 {
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        margin-inline: 5rem;
+    }
+
+    .library-content > p {
+        margin-inline: 5rem;
+        margin-block: 1rem;
+        font-size: 1.3rem;
+    }
+}
+
 .library-container {
     padding: 0rem;
 }
@@ -9,18 +119,8 @@
     padding: 0;
 }
 
-.pixelsCombination {
-    width: 25%;
-}
-
-.library-header > h1 {
-    font-size: 3rem;
-    margin-block: auto;
-    margin-inline: 3rem;
-}
-
-.techAndDesign {
-    width: 30%;
+.library-content > h2 {
+    color: rgb(var(--nhl_stenden_corp_cyan));
 }
 
 .library-content {
@@ -28,24 +128,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.library-content > h2 {
-    margin-right: 36rem;
-    margin-block: 4rem;
-    color: rgb(var(--nhl_stenden_corp_cyan));
-}
-
-.library-content > h3 {
-    margin-right: 64.2rem;
-    margin-top: 5rem;
-    margin-bottom: 1rem;
-}
-
-.library-content > p {
-    margin-inline: 3.4rem;
-    margin-block: 1rem;
-}
+} 
 
 .buttonToNextPage {
     display: flex;

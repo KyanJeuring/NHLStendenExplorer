@@ -1,155 +1,132 @@
-/* PHONE SIZE */
+/* PHONE */
 @media screen and (max-width: 600px) {
     .pixelsCombination {
         height: 5rem;
     }
 
-    .myConceptLab-header > h1 {
-        font-size: 1.5rem;
+    .stones-header > h1 {
+        font-size: 2rem;
         margin-block: auto;
         margin-inline: 2rem;
     }
 
-    .myConceptLab-main-content > h2 {
+    .stones-content > h2 {
         margin-block: 2rem;
         margin-inline: 2rem;
         font-size: 1rem;
     }
 
-    .myConceptLab-main-content > .imagePlaceholder {
-        margin-left: 14%;
+    .stones-content > .imagePlaceholder {
         width: 75%;
         margin-top: 2rem;
     }
 
-    .myConceptLab-main-content > h3 {
+    .stones-content > h3 {
         margin-top: 2rem;
         margin-bottom: 1rem;
         margin-inline: 2rem;
         font-size: 0.8rem;
     }
 
-    .myConceptLab-main-content > p {
+    .stones-content > p {
         margin-inline: 2rem;
         margin-block: 1rem;
         font-size: 1rem;
     }
 
-    .myConceptLab-main-content li {
-        margin-inline: 3rem;
-        margin-block: 0.25rem;
-        font-size: 0.8rem;
-    }
-
-    .tour-guide-fixed {
-        margin-left: 0%
-    }
 }
 
-/* TABLET SIZE */
+/* TABLET */
 @media screen and (min-width: 600px) and (max-width : 990px) {
     .pixelsCombination {
         height: 10rem;
     }
 
-    .myConceptLab-header > h1 {
+    .stones-header > h1 {
         font-size: 2.5rem;
         margin-block: auto;
         margin-inline: 3rem;
     }
 
-    .myConceptLab-main-content > h2 {
+    .stones-content > h2 {
         margin-block: 4rem;
         margin-inline: 3rem;
         font-size: 1.5rem;
     }
 
-    .myConceptLab-main-content > .imagePlaceholder {
-        margin-left: 12%;
+    .stones-content > .imagePlaceholder {
         width: 75%;
         margin-top: 4rem;
     }
 
-    .myConceptLab-main-content > h3 {
+    .stones-content > h3 {
         margin-top: 5rem;
         margin-bottom: 1rem;
         margin-inline: 3rem;
     }
 
-    .myConceptLab-main-content > p {
+    .stones-content > p {
         margin-inline: 3rem;
         margin-block: 1rem;
         font-size: 1.3rem;
     }
-
-    .myConceptLab-main-content li {
-        margin-inline: 4em;
-        margin-block: 0.3rem;
-        font-size: 1.2rem;
-    }
-
-    .tour-guide-fixed {
-        margin-left: 0%;
-    }
 }
 
-/* LAPTOP AND DESKTOP SIZE */
+/* PC */
 @media screen and (min-width: 990px) {
     .pixelsCombination {
         height: 19rem;
     }
 
-    .myConceptLab-header > h1 {
+    .stones-header > h1 {
         font-size: 3rem;
         margin-block: auto;
         margin-inline: 5rem;
     }
 
-    .myConceptLab-main-content > h2 {
+    .stones-content > h2 {
         margin-block: 4rem;
         margin-inline: 5rem;
         font-size: 2rem;
     }
 
-    .myConceptLab-main-content > .imagePlaceholder {
-        margin-left: 35%;
+    .stones-content > .imagePlaceholder {
+        width: 75%;
+        margin-top: 4rem;
     }
 
-    .myConceptLab-main-content > h3 {
+    .stones-content > h3 {
         margin-top: 5rem;
         margin-bottom: 1rem;
         margin-inline: 5rem;
     }
 
-    .myConceptLab-main-content > p {
+    .stones-content > p {
         margin-inline: 5rem;
         margin-block: 1rem;
         font-size: 1.3rem;
     }
-
-    .myConceptLab-main-content li {
-        margin-inline: 6rem;
-        margin-block: 0.5rem;
-        font-size: 1rem;
-    }
-
-    .tour-guide-fixed {
-        margin-left: 25%
-    }
 }
 
-.myConceptLabPage-container {
+.stones-container {
     padding: 0rem;
 }
 
-.myConceptLab-header {
+.stones-header {
     display: flex;
     justify-content: space-between;
     align-items: top;
     padding: 0;
 }
 
-.myConceptLab-main-content > h2 {
+.stones-main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stones-main-content > h2 {
     color: rgb(var(--nhl_stenden_corp_cyan));
 }
 

@@ -1,19 +1,40 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useMemo } from 'react'
 import './explore.css';
 import FilterButton from '../../components/filter/FilterButton';
 import LocationCard from '../../components/locationcard/LocationCard';
 
-export default function Explore() {
+const translations = {
+    en: {
+        title: "Explore our Campus",
+        quickCategories: "Quick categories",
+        loading: "Loading...",
+        error: "Error:",
+        noItems: "No Explorer Items found.",
+    },
+    nl: {
+        title: "Ontdek onze Campus",
+        quickCategories: "Snelle categorieën",
+        loading: "Laden...",
+        error: "Fout:",
+        noItems: "Geen Explorer-items gevonden.",
+    },
+};
+
+// Using server-side translations via API
+const allLabels = { en: 'All', nl: 'Alles' };
+
+export default function Explore({ lang, toggleLang }) {
     const [explorerData, setExplorerData] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
+    const translation = useMemo(() => translations[lang] || translations.en, [lang])
 
     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000'
 
     useEffect(() => {
         let mounted = true
         setLoading(true)
-        fetch(`${API_URL}/api/explorer`)
+        fetch(`${API_URL}/api/explorer?lang=${lang}`)
             .then((res) => {
                 if (!res.ok) throw new Error('Network response was not ok')
                 return res.json()
@@ -30,9 +51,9 @@ export default function Explore() {
         return () => {
             mounted = false
         }
-    }, [API_URL])
+    }, [API_URL, lang])
 
-    const [filterTitle, setFilterTitle] = useState("All");
+    const [filterTitle, setFilterTitle] = useState('All');
     const [categories, setCategories] = useState([])
 
     const prettyTitle = (value) => value
@@ -42,14 +63,18 @@ export default function Explore() {
         .join(' ')
 
     useEffect(() => {
-        fetch(`${API_URL}/api/explorer/categories`)
+        fetch(`${API_URL}/api/explorer/categories?lang=${lang}`)
             .then((res) => {
                 if (!res.ok) throw new Error('Failed to fetch categories')
                 return res.json()
             })
-            .then((cats) => setCategories(Array.isArray(cats) ? cats : []))
+            .then((cats) => {
+                // Normalize to array of objects with key and label
+                const normalized = Array.isArray(cats) ? cats.map((category) => (typeof category === 'string' ? { key: category, label: null } : category)) : []
+                setCategories(normalized)
+            })
             .catch((err) => console.error('Failed to fetch categories', err))
-    }, [API_URL])
+    }, [API_URL, lang])
 
     const parseCategories = (raw) => {
         if (!raw) return []
@@ -64,21 +89,38 @@ export default function Explore() {
         return cats.includes(selected)
     })
 
+    // Keep filter title in sync with language and selected category
+    useEffect(() => {
+        const allLabel = (categories.find(category => category.key === 'ALL')?.label) || allLabels[lang] || 'All'
+        const selectedLabel = categories.find(category => category.key === selected)?.label
+        setFilterTitle(selected === 'ALL' ? allLabel : (selectedLabel || prettyTitle(selected)))
+    }, [lang, categories, selected])
+
+    // Render filters, derive categories from explorerData if API returns empty
+    const derivedCategories = useMemo(() => {
+        const set = new Set()
+        explorerData.forEach((item) => {
+            parseCategories(item.categories).forEach((category) => set.add(category))
+        })
+        return Array.from(set).map((key) => ({ key, label: null }))
+    }, [explorerData])
+    const categoriesToRender = categories.length ? categories : derivedCategories
+
     return (
         <section className="explore-our-campus">
-            <h1>Explore our Campus</h1>
-            <h3>Quick categories</h3>
+            <h1>{translation.title}</h1>
+            <h3>{translation.quickCategories}</h3>
             <div className="filter-buttons">
-                <FilterButton key="ALL" title="All" isActive={selected === 'ALL'} onClick={() => {setSelected('ALL'); setFilterTitle('All')}}/>
-                {categories.map((value) => (
-                    <FilterButton key={value} title={prettyTitle(value)} isActive={selected === value} onClick={() => {setSelected(value); setFilterTitle(prettyTitle(value))}}/>
+                <FilterButton key="ALL" title={(categoriesToRender.find(category => category.key === 'ALL')?.label) || allLabels[lang] || 'All'} isActive={selected === 'ALL'} onClick={() => {setSelected('ALL')}}/>
+                {categoriesToRender.filter(category => category.key !== 'ALL').map(({ key, label }) => (
+                    <FilterButton key={key} title={label || prettyTitle(key)} isActive={selected === key} onClick={() => {setSelected(key)}}/>
                 ))}
             </div>
             <div className="card-section">
                 <h2>{filterTitle}</h2>
-                {loading && <p>Loading...</p>}
-                {error && <p className="error">Error: {error}</p>}
-                {!loading && !error && visibleItems.length === 0 && <p>No Explorer Items found.</p>}
+                {loading && <p>{translation.loading}</p>}
+                {error && <p className="error">{translation.error} {error}</p>}
+                {!loading && !error && visibleItems.length === 0 && <p>{translation.noItems}</p>}
                 <div className="cards">
                     {!loading && !error && visibleItems.map((item) => (
                         <LocationCard key={item.id} image={item.image_url} title={item.title} description={item.description} link={item.link_url} />

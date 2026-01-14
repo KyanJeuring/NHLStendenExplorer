@@ -1,153 +1,135 @@
 .letsgonav-container {
-    min-width: 90%;
+  min-width: 90%;
 }
 
 .letsgonav-block {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
 }
 
 .letsgonav-block:hover {
-    background-color: rgb(200, 200, 200);
+  background-color: rgb(200, 200, 200);
 }
 
 .letsgonav-info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
 }
 
-/* ---------------- ICON + BG ---------------- */
-
 .letsgonav-icon-wrapper {
-    background-color: rgb(var(--nhl_stenden_corp_cyan));
-    overflow: hidden;
-    position: relative;     
+  flex: 0 0 auto;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(var(--nhl_stenden_corp_cyan));
+  border-radius: 50%;
 }
 
 .letsgonav-icon {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    object-fit: contain;
-    display: block;
-    top: 50%;
-    left: 50%;
-    width: 50%;            
-    height: 50%;
+  width: 60%;
+  height: 60%;
+  display: block;
 }
 
 .letsgonav-text h3 {
-    color: rgb(var(--color-text));
+  color: rgb(var(--color-text));
+  margin: 0;
 }
 
 .letsgonav-text p {
-    color: rgb(138, 138, 138);
+  color: rgb(138, 138, 138);
+  margin: 0.2rem 0 0;
 }
 
-/* PHONE SIZE */
 @media screen and (max-width: 600px) {
-    .letsgonav-container {
-        max-width: 90%;
-    }
+  .letsgonav-container {
+    max-width: 90%;
+  }
 
-    .letsgonav-block {
-        border-radius: 1.5rem;
-        padding: 1rem;
-    }
+  .letsgonav-block {
+    border-radius: 1.5rem;
+    padding: 1rem;
+  }
 
-    .letsgonav-info {
-        gap: 1rem;
-    }
+  .letsgonav-info {
+    gap: 1rem;
+  }
 
-    .letsgonav-icon-wrapper {
-        min-width: 50px;
-        height: 50px;
-        border-radius: 50%;
-    }
+  .letsgonav-icon-wrapper {
+    width: 50px;
+    height: 50px;
+  }
 
-    .letsgonav-text h3 {
-        margin: 0;
-        font-size: 1rem;
-    }
+  .letsgonav-text h3 {
+    font-size: 1rem;
+  }
 
-    .letsgonav-text p {
-        margin: 0.2rem 0 0;
-        font-size: 0.8rem;
-    }
+  .letsgonav-text p {
+    font-size: 0.8rem;
+  }
 
-    .letsgonav-arrow {
-        min-width: 2rem;
-    }
+  .letsgonav-arrow {
+    min-width: 2rem;
+  }
 }
 
-/* TABLET SIZE */
-@media screen and (min-width: 600px) and (max-width : 990px) {
-    .letsgonav-container {
-        max-width: 90%;
-    }
+@media screen and (min-width: 600px) and (max-width: 990px) {
+  .letsgonav-container {
+    max-width: 90%;
+  }
 
-    .letsgonav-block {
-        border-radius: 2rem;
-        padding: 1.5rem;
-    }
+  .letsgonav-block {
+    border-radius: 2rem;
+    padding: 1.5rem;
+  }
 
-    .letsgonav-info {
-        gap: 2rem;
-    }
+  .letsgonav-icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
 
-    .letsgonav-icon-wrapper {
-        min-width: 70px;
-        height: 70px;
-        border-radius: 50%;
-    }
+  .letsgonav-text h3 {
+    font-size: 1.4rem;
+  }
 
-    .letsgonav-text h3 {
-        margin: 0;
-        font-size: 1.4rem;
-    }
+  .letsgonav-text p {
+    font-size: 1rem;
+  }
 
-    .letsgonav-text p {
-        margin: 0.2rem 0 0;
-        font-size: 1rem;
-    }
-
-    .letsgonav-arrow {
-        min-width: 3rem;
-    }
+  .letsgonav-arrow {
+    min-width: 3rem;
+  }
 }
 
-/* LAPTOP AND DESKTOP SIZE */
 @media screen and (min-width: 990px) {
-    .letsgonav-block {
-        border-radius: 2rem;
-        padding: 1.5rem;
-    }
+  .letsgonav-block {
+    border-radius: 2rem;
+    padding: 1.5rem;
+  }
 
-    .letsgonav-info {
-        gap: 2rem;
-    }
+  .letsgonav-icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
 
-    .letsgonav-icon-wrapper {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-    }
+  .letsgonav-text h3 {
+    font-size: 1.4rem;
+  }
 
-    .letsgonav-text h3 {
-        margin: 0;
-        font-size: 1.4rem;
-    }
+  .letsgonav-text p {
+    font-size: 1rem;
+  }
 
-    .letsgonav-text p {
-        margin: 0.2rem 0 0;
-        font-size: 1rem;
-    }
-
-    .letsgonav-arrow {
-        width: 3rem;
-    }
+  .letsgonav-arrow {
+    width: 3rem;
+  }
 }

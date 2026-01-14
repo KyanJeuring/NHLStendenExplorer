@@ -47,6 +47,7 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - POSTGRES_DB=nhlstenden_explorer_db
+      - PGPASSWORD=${POSTGRES_PASSWORD}
     volumes:
       - ./sql:/docker-entrypoint-initdb.d:ro
     entrypoint: ["sh", "-c", "until pg_isready -h postgres -U \"$$POSTGRES_USER\" -d \"$$POSTGRES_DB\"; do sleep 1; done; psql -h postgres -U \"$$POSTGRES_USER\" -d \"$$POSTGRES_DB\" -f /docker-entrypoint-initdb.d/nhlstenden_explorer_db_schema.sql || true"]
