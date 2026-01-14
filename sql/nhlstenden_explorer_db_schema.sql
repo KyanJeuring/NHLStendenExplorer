@@ -87,7 +87,6 @@ CREATE TABLE IF NOT EXISTS explore_item (
 
 INSERT INTO explore_item (title, description, categories, image_url, link_url) VALUES
 ('Student Info', 'Help & important information.', ARRAY['SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/studentInfo'),
-('Study Landscapes', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/studyLandscapes'),
 ('Canteen', 'Hot and cold meals, snacks and beverage options.', ARRAY['FACILITIES','SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/canteen'),
 ('Library', 'The library with study spaces and resources.', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/library'),
 ('Computer Lab', 'Open computer labs with up-to-date software for coursework.', ARRAY['FACILITIES','STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/computerLab'),
