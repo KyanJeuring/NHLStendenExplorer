@@ -103,4 +103,6 @@ INSERT INTO explore_item (title, description, categories, image_url, link_url) V
 ('Games', 'Unwind your mind with some games!', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/games'),
 ('Lockers', 'Want to store your stuff for the day?', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/lockers'),
 ('Study Abroad', 'Looking to study abroad? Sky is the limit!', ARRAY['SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/studyabroad'),
-('Parking', 'Do not know where to park your car, bike, or scooter?', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/parking');
+('Parking', 'Do not know where to park your car, bike, or scooter?', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/parking'),
+('Campus Store', 'In need of school supplies? Visit the Campus Store!', ARRAY['FACILITIES', 'SERVICES'']::category_enum[], 'https://lipsum.app/512x512', '/campusStore')
+('Courses Overview', 'Curious in exploring our courses? Get a flier by Student Info!', ARRAY['SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/coursesOverview');
