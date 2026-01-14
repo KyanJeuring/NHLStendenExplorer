@@ -15,24 +15,27 @@ export default function Navbar({ lang, toggleLang }) {
         <img src="/logos/NHLStendenLogo_White.svg" alt="NHL Stenden Logo" />
       </section>
 
-      <section className="nav-links">
-        <button className="lang-toggle" onClick={toggleLang} type="button">
-         {lang}
-        </button>
+  <div className="nav-right">
+      <button className="lang-toggle" onClick={toggleLang} type="button">
+           <img src="icons/translate_icon.svg" alt="" /> {lang.toUpperCase()}
 
-        <NavLink to="/" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
-          Home
-        </NavLink>
-        <NavLink to="/learnMore" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
-          Learn More
-        </NavLink>
-        <NavLink to="/explore" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
-          Explore
-        </NavLink>
-        <NavLink to="/faq" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
-          FAQ
-        </NavLink>
-      </section>
+      </button>
+          
+        <section className="nav-links">
+          <NavLink to="/" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+            Home
+          </NavLink>
+          <NavLink to="/learnMore" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+            Learn More
+          </NavLink>
+          <NavLink to="/explore" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+            Explore
+          </NavLink>
+          <NavLink to="/faq" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+            FAQ
+          </NavLink>
+        </section>
+  </div>
 
       <div className="hamburger-menu">
         <BurgerMenu open={menuOpen} onClick={updateMenu} />

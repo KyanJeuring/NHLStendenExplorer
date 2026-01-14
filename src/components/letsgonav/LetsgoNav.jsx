@@ -12,20 +12,21 @@ export default function LetsgoNav({ src, location, description, link }) {
                 onClick={() => navigate(link)}
             > 
                 <section className="letsgonav-info">
-                    <figure className="letsgonav-icon-wrapper">
-                        <div className="letsgonav-icon-bg">
+                    
+                        <div className="letsgonav-icon-wrapper">
                             <img 
                                 src={src}
                                 alt={location}
                                 className="letsgonav-icon"
                             />  
+                            
                         </div>
-                    </figure>
+                    
 
-                    <header className="letsgonav-text">
+                    <div className="letsgonav-text">
                         <h3>{location}</h3>
                         <p>{description}</p>
-                    </header>
+                    </div>
                 </section>
 
                 <img 
