@@ -130,7 +130,7 @@ export default function Explore({ lang, toggleLang }) {
                 {!loading && !error && visibleItems.length === 0 && <p>{translation.noItems}</p>}
                 <div className="cards">
                     {!loading && !error && visibleItems.map((item) => (
-                        <LocationCard key={item.id} image={item.image_url} title={item.title} description={item.description} link={item.link_url} />
+                        <LocationCard key={item.id} image={item.image_url} title={item.title} description={item.description} link={item.link_url} lang={lang}/>
                     ))}
                 </div>
             </div>
