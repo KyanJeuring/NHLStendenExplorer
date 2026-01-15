@@ -145,3 +145,8 @@
     color: rgb(var(--nhl_stenden_corp_blue));
     cursor: pointer;
 }
+
+.studylandcape-main-content-logistics > div {
+    margin: 0 auto;
+    width: fit-content;
+}
