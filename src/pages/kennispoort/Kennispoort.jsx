@@ -65,9 +65,6 @@ export default function Kennispoort({ lang, toggleLang }) {
                 </ul>
                 <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">                
-                <button onClick={() => navigate('/learnMore')} className="moveNext">{translation.moveNext}</button>
-            </div>
         </section>
     )
 }

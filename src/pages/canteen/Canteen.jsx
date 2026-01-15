@@ -34,9 +34,6 @@ export default function Canteen({ lang, toggleLang }) {
                 <p>{translate.bodyP1}</p>
                 <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">                
-                <button onClick={() => navigate('/learnMore')} className="moveNext">{translate.moveNext}</button>
-            </div>
         </section>
     )
 }

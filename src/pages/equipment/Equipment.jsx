@@ -62,9 +62,6 @@ export default function Equipment({ lang, toggleLang }) {
                 </ol>
                 <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">
-                <button onClick={() => navigate('/learnMore')} className="moveNext">{translate.moveNext}</button>
-            </div>
         </section>
     );
 }

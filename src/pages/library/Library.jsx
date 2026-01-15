@@ -34,9 +34,6 @@ export default function Library({ lang, toggleLang }) {
                 <p>{translate.description}</p>
                 <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">                
-                <button onClick={() => navigate('/learnMore')} className="moveNext">{translate.moveNext}</button>
-            </div>
         </section>
     )
 }

@@ -51,9 +51,6 @@ export default function Studylandscape({ lang, toggleLang }) {
                 <p className="explanation">{translated.bodyP2}</p>
                 <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">                
-                <button onClick={() => navigate('/learnMore')} className="moveNext">{translated.moveNext}</button>
-            </div>
         </section>
     )
 }
