@@ -2,6 +2,7 @@ import React, {useMemo} from 'react';
 import './parking.css';
 import { useNavigate } from 'react-router-dom';
 import TourGuide from '../../components/tourguide/TourGuide';
+import { ReactPhotoSphereViewer } from 'react-photo-sphere-viewer';
 
 const translations = {
     en: {
@@ -25,6 +26,7 @@ const translations = {
 export default function Parking({ lang, toggleLang }) {
     const navigate = useNavigate();
     const translate = useMemo(() => translations[lang] || translations.en, [lang]);
+    const photoSphereRef = React.createRef();
 
     return (
         <section className="parking-container">
@@ -33,8 +35,22 @@ export default function Parking({ lang, toggleLang }) {
                 <img src="/pixels/combinationOfPixelsForLocations.svg" alt="Pixels Combination" className="pixelsCombination"/>
             </div>
             <main className="parking-content">
-                <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="imagePlaceholder"/>
-                <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="imagePlaceholder"/>
+                <ReactPhotoSphereViewer
+                    ref={photoSphereRef}
+                    src="/360photos/image00019.jpg"
+                    littlePlanet={false}
+                    hideNavbarButton={true}
+                    height={"500px"}
+                    width={"60%"}
+                />
+                <ReactPhotoSphereViewer
+                    ref={photoSphereRef}
+                    src="/360photos/image00017.jpg"
+                    littlePlanet={false}
+                    hideNavbarButton={true}
+                    height={"500px"}
+                    width={"60%"}
+                />
                 <h3>{translate.subtitle}</h3>
                 <p>{translate.bodyP1}</p>
                 <p>{translate.bodyP2}</p>

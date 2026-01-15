@@ -38,8 +38,8 @@ export default function StudentInfo({ lang, toggleLang }) {
                     src="/360photos/image00014.jpg"
                     littlePlanet={false}
                     hideNavbarButton={true}
-                    height={"400px"}
-                    width={"30%"}
+                    height={"500px"}
+                    width={"60%"}
                 />
                 <TourGuide />
                 <h2>{translate.subtitle}</h2>
