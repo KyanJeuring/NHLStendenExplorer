@@ -29,13 +29,13 @@ const lestsgoLinks = {
             src: "/icons/emergency.svg",
             location: "Emergency",
             description: "Where is first aid kit? Slow whoop sound?",
-            link: "/",
+            link: "/emergency",
         },
         {
             src: "/icons/it-support.svg",
             location: "IT Support Service",
             description: "Have any technical issues?",
-            link: "/",
+            link: "/supportIT",
         },
         {
             src: "/icons/campus-store.svg",
@@ -85,13 +85,13 @@ const lestsgoLinks = {
             src: "/icons/emergency.svg",
             location: "Noodgeval",
             description: "Waar is de EHBO-doos? Langzaam loeiend geluid?",
-            link: "/",
+            link: "/emergency",
         },
         {
             src: "/icons/it-support.svg",
             location: "IT-ondersteuningsdienst",
             description: "Heb je technische problemen?",
-            link: "/",
+            link: "/supportIT",
         },
         {
             src: "/icons/campus-store.svg",
