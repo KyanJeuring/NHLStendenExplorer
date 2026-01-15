@@ -2,6 +2,7 @@ import React, {useMemo} from 'react';
 import './canteen.css';
 import { useNavigate } from 'react-router-dom';
 import TourGuide from '../../components/tourguide/TourGuide';
+import { ReactPhotoSphereViewer } from 'react-photo-sphere-viewer';
 
 const translations = {
     en: {

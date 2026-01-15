@@ -2,6 +2,7 @@ import React, {useMemo} from 'react';
 import './studentInfo.css';
 import { useNavigate } from 'react-router-dom';
 import TourGuide from '../../components/tourguide/TourGuide';
+import { ReactPhotoSphereViewer } from 'react-photo-sphere-viewer';
 
 const translations = {
     en: {
@@ -23,6 +24,7 @@ const translations = {
 export default function StudentInfo({ lang, toggleLang }) {
     const navigate = useNavigate();
     const translate = useMemo(() => translations[lang], [lang]);
+    const photoSphereRef = React.createRef();
 
     return (
         <section className="studentInfo-container">
@@ -31,7 +33,14 @@ export default function StudentInfo({ lang, toggleLang }) {
                 <img src="/pixels/combinationOfPixelsForLocations.svg" alt="Pixels Combination" className="pixelsCombination"/>
             </div>
             <main className="studentInfo-main-content">
-                <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="techAndDesign"/>
+                <ReactPhotoSphereViewer
+                    ref={photoSphereRef}
+                    src="/360photos/image00014.jpg"
+                    littlePlanet={false}
+                    hideNavbarButton={true}
+                    height={"400px"}
+                    width={"30%"}
+                />
                 <TourGuide />
                 <h2>{translate.subtitle}</h2>
                 <h3>{translate.welcome}</h3>
