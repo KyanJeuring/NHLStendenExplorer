@@ -23,9 +23,8 @@ import Parking from './pages/parking/Parking'
 import Footer from './components/footer/Footer'
 import StonesRestaurant from './pages/stonesRestaurant/StonesRestaurant';
 import Emergency from './pages/emergency/Emergency';
-import CampusStore from './pages/campusStore/CampusStore';
 import CoursesOverview from './pages/coursesOverview/CoursesOverview';
-
+import CampusStore from './pages/campusStore/CampusStore';
 
 export default function App() {
   const [lang, setLang] = useState("en");

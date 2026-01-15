@@ -38,9 +38,6 @@ export default function Studyabroad({ lang, toggleLang }) {
                 <p>{translated.description2} <a href ="https://www.nhlstenden.com/en/practical-information/grand-tour-exchange-run-eu-and-internship-abroad">{translated.link}</a></p>
                 <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">                
-                <button onClick={() => navigate('/learnMore')} className="moveNext">{translated.moveNext}</button>
-            </div>
         </section>
     )
 }

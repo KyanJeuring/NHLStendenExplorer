@@ -48,9 +48,6 @@ export default function CoursesOverview({ lang, toggleLang }) {
                 <p>{translate.bodyP2}</p>
                 <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">
-                <button onClick={() => navigate('/learnMore')} className="moveNext">{translate.moveNext}</button>
-            </div>
         </section>
     );
 }

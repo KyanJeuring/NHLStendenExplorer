@@ -70,9 +70,6 @@ export default function Games({ lang, toggleLang }) {
                 </ol>
                 <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">
-                <button onClick={() => navigate('/learnMore')} className="moveNext">Move Next</button>
-            </div>
         </section>
     );
 }

@@ -29,7 +29,7 @@ const lestsgoLinks = {
             src: "/icons/emergency.svg",
             location: "Emergency",
             description: "Where is first aid kit? Slow whoop sound?",
-            link: "/",
+            link: "/emergency",
         },
         {
             src: "/icons/it-support.svg",
@@ -41,7 +41,7 @@ const lestsgoLinks = {
             src: "/icons/campus-store.svg",
             location: "Campus Store",
             description: "Urgently need a pen or a notebook?",
-            link: "/",
+            link: "/campusStore",
         },
         {
             src: "/icons/lockers.svg",
@@ -53,19 +53,19 @@ const lestsgoLinks = {
             src: "/icons/stones-restaurant.svg",
             location: "Stones Restaurant",
             description: "The real restaurant on campus where students get hands on experience!",
-            link: "/",
+            link: "/stonesRestaurant",
         },
         {
             src: "/icons/study-abroad.svg",
             location: "Study Abroad",
             description: "Want to know more about internships abroad or exchange programmes?",
-            link: "/",
+            link: "/studyabroad",
         },
         {
             src: "/icons/courses_overview.svg",
             location: "Courses Overview",
             description: "Go grab a flyer with the course overview in Student Info.",
-            link: "/",
+            link: "/coursesOverview",
         }
     ],
     nl: [
@@ -85,7 +85,7 @@ const lestsgoLinks = {
             src: "/icons/emergency.svg",
             location: "Noodgeval",
             description: "Waar is de EHBO-doos? Langzaam loeiend geluid?",
-            link: "/",
+            link: "/emergency",
         },
         {
             src: "/icons/it-support.svg",
@@ -97,7 +97,7 @@ const lestsgoLinks = {
             src: "/icons/campus-store.svg",
             location: "Campuswinkel",
             description: "Dringend een pen of een notitieboekje nodig?",
-            link: "/",
+            link: "/campusStore",
         },
         {
             src: "/icons/lockers.svg",
@@ -109,19 +109,19 @@ const lestsgoLinks = {
             src: "/icons/stones-restaurant.svg",
             location: "Stones Restaurant",
             description: "Het echte restaurant op de campus waar studenten praktijkervaring opdoen!",
-            link: "/",
+            link: "/stonesRestaurant",
         },
         {
             src: "/icons/study-abroad.svg",
             location: "Studeren in het buitenland",
             description: "Wil je meer weten over stages in het buitenland of uitwisselingsprogramma's?",
-            link: "/",
+            link: "/studyabroad",
         },
         {
             src: "/icons/courses_overview.svg",
             location: "Cursusoverzicht",
             description: "Haal een flyer met het cursusoverzicht in Student Info.",
-            link: "/",
+            link: "/coursesOverview",
         }
     ]
 };
