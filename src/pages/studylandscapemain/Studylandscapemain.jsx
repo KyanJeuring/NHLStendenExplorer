@@ -9,22 +9,20 @@ const translations = {
         title: "Study Landscape - Your Perfect Spot to Focus, Create and Connect",
         subtitle: "Right next to the bustling canteen at NHL Stenden Emmen lies the Study Landscape.",
         bodyP1: "It's a bright, welcoming space designed for students who want the best of both worlds: productivity and comfort. Whether you're diving into assignments, collaborating on projects, this area offers the ideal environment to stay focused and inspired.",
-        bodyP2: "With comfortable seating, open tables, and a relaxed atmosphere, the Study Landscape encourages creativity, teamwork, and concentration. Need a quick break or snack? The canteen is just steps away, so you're never far from a good coffee or something tasty to recharge your energy.",
-        moveNext: "Move Next",
+        bodyP2: "With comfortable seating, open tables, and a relaxed atmosphere, the Study Landscape encourages creativity, teamwork, and concentration. Need a quick break or snack? The canteen is just steps away, so you're never far from a good coffee or something tasty to recharge your energy."
     },
     nl: {
         studyArea: "Studiegebieden",
         title: "Studielandschap - Jouw Perfecte Plek om te Focussen, Creëren en Verbinden",
         subtitle: "Rechts naast de gezellige kantine van NHL Stenden Emmen ligt het Studielandschap.",
         bodyP1: "Het is een lichte, uitnodigende ruimte ontworpen voor studenten die het beste van twee werelden willen: productiviteit en comfort. Of je nu aan opdrachten werkt, samenwerkt aan projecten, deze ruimte biedt de ideale omgeving om gefocust en geïnspireerd te blijven.",
-        bodyP2: "Met comfortabele zitplaatsen, open tafels en een ontspannen sfeer stimuleert het Studielandschap creativiteit, teamwork en concentratie. Even een korte pauze of een snack nodig? De kantine is op slechts een paar stappen afstand, dus je bent nooit ver van een goede kop koffie of iets lekkers om je energie weer op te laden.",
-        moveNext: "Volgende",
+        bodyP2: "Met comfortabele zitplaatsen, open tafels en een ontspannen sfeer stimuleert het Studielandschap creativiteit, teamwork en concentratie. Even een korte pauze of een snack nodig? De kantine is op slechts een paar stappen afstand, dus je bent nooit ver van een goede kop koffie of iets lekkers om je energie weer op te laden."
     },
 };
 
 export default function Studylandscape({ lang, toggleLang }) {
     const navigate = useNavigate();
-    const translated = useMemo(() => translations[lang], [lang]);
+    const translated = useMemo(() => translations[lang] || translations.en, [lang]);
 
     return (
         <section className="studylandscapePage-container-main">

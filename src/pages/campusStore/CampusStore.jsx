@@ -8,15 +8,13 @@ const translations = {
         title: "Campus Store",
         subtitle: "Welcome to the Campus Store",
         bodyP1: "To the left of the Student Info desk, you will find the Campus Store. The Campus Store has a wide variety of school supplies available for purchase. From basic pencils, pens, rulers, notebooks, to technological gadgets and equipment, the Campus Store has it all and for affordable prices! You can even find local souvenirs from Emmen. Just drop by and have a look!",
-        bodyP2: "Found something that caught your eye? Keep in mind that there is, however, a minimum purchase limit of 50 cents.",
-        moveNext: "Move Next"
+        bodyP2: "Found something that caught your eye? Keep in mind that there is, however, a minimum purchase limit of 50 cents."
     },
     nl: {
         title: "Campus Winkel",
         subtitle: "Welkom bij de Campus Winkel",
         bodyP1: "Links van de Student Info balie vind je de Campus Winkel. De Campus Winkel heeft een breed scala aan schoolbenodigdheden beschikbaar voor aankoop. Van basis potloden, pennen, linialen, notitieboeken, tot technologische gadgets en apparatuur, de Campus Winkel heeft het allemaal en voor betaalbare prijzen! Je kunt er zelfs lokale souvenirs uit Emmen vinden. Kom gewoon langs en kijk eens rond!",
-        bodyP2: "Iets gevonden dat je interesseerde? Houd er echter rekening mee dat er een minimale aankooplimiet van 50 cent is.",
-        moveNext: "Ga verder"
+        bodyP2: "Iets gevonden dat je interesseerde? Houd er echter rekening mee dat er een minimale aankooplimiet van 50 cent is."
     }
 };
 

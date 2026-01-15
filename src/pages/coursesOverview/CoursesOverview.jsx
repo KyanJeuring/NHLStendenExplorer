@@ -8,15 +8,13 @@ const translations = {
         title: "Courses Overview",
         subtitle: "Want to find out more about your course?",
         bodyP1: "Just by the entrance of Student Info, on the left wall,  you will find a stand with fliers extensively covering all courses you can follow at NHL Stenden Emmen. Available both in Dutch and English, they are the perfect way of exploring essential information about whichever course you are interested in!",
-        bodyP2: "Just don't forget to stop by and grab your flier!",
-        moveNext: "Move Next"
+        bodyP2: "Just don't forget to stop by and grab your flier!"
     },
     nl: {
         title: "Overzicht van Cursussen",
         subtitle: "Wil je meer weten over jouw cursus?",
         bodyP1: "Direct bij de ingang van Student Info, aan de linkermuur, vind je een standaard met folders die uitgebreid alle cursussen behandelen die je kunt volgen aan NHL Stenden Emmen. Verkrijgbaar in zowel het Nederlands als het Engels, zijn ze de perfecte manier om essentiële informatie te verkennen over welke cursus je ook interesseert!",
-        bodyP2: "Vergeet niet langs te gaan en je folder mee te nemen!",
-        moveNext: "Ga verder"
+        bodyP2: "Vergeet niet langs te gaan en je folder mee te nemen!"
     }
 }
 

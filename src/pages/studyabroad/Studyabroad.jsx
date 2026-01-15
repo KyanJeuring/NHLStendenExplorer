@@ -24,7 +24,7 @@ const translations = {
 
 export default function Studyabroad({ lang, toggleLang }) {
     const navigate = useNavigate();
-    const translated = useMemo(() => translations[lang], [lang]);
+    const translated = useMemo(() => translations[lang] || translations.en, [lang]);
 
     return (
         <section className="studyabroad-container">

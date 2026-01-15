@@ -27,7 +27,7 @@ const translations = {
 }
 
 export default function Home({ lang, toggleLang }) {
-    const translated = useMemo(() => translations[lang], [lang]);
+    const translated = useMemo(() => translations[lang] || translations.en, [lang]);
     const [carouselItems, setCarouselItems] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);

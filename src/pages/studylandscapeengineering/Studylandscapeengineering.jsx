@@ -9,22 +9,20 @@ const translations = {
         title: "Study Landscape in the Polymer Lab & Engineering department",
         subtitle: "Robotics & 3D Technology",
         bodyP1: "This place offers hands-on learning with modern equipment. Students work on real projects, design and test ideas, and develop practical skills for their future engineering careers.",
-        bodyP2: "Here is also located a big 3D Robotic arm that can print large complex objects and used for different projects. There is also lots of other equipment students use for designing, printing, and learning how to use smart technology in a practical way.",
-        moveNext: "Move Next",
+        bodyP2: "Here is also located a big 3D Robotic arm that can print large complex objects and used for different projects. There is also lots of other equipment students use for designing, printing, and learning how to use smart technology in a practical way."
     },
     nl: {
         studyArea: "Studiegebieden",
         title: "Studielandschap in het Polymer Lab & Engineering afdeling",
         subtitle: "Robotica & 3D Technologie",
         bodyP1: "Deze plek biedt praktijkgericht leren met moderne apparatuur. Studenten werken aan echte projecten, ontwerpen en testen ideeën, en ontwikkelen praktische vaardigheden voor hun toekomstige loopbaan in de techniek.",
-        bodyP2: "Hier bevindt zich ook een grote 3D-robotarm die grote complexe objecten kan printen en voor verschillende projecten wordt gebruikt. Er is ook veel andere apparatuur die studenten gebruiken voor het ontwerpen, printen en leren hoe ze slimme technologie op een praktische manier kunnen gebruiken.",
-        moveNext: "Volgende",
+        bodyP2: "Hier bevindt zich ook een grote 3D-robotarm die grote complexe objecten kan printen en voor verschillende projecten wordt gebruikt. Er is ook veel andere apparatuur die studenten gebruiken voor het ontwerpen, printen en leren hoe ze slimme technologie op een praktische manier kunnen gebruiken."
     },
 };
 
 export default function Studylandscape({ lang, toggleLang }) {
     const navigate = useNavigate();
-    const translated = useMemo(() => translations[lang], [lang]);
+    const translated = useMemo(() => translations[lang] || translations.en, [lang]);
 
     return (
         <section className="studylandscapePage-container-engineering">

@@ -7,14 +7,12 @@ const translations = {
     en: {
         title: "Library",
         subtitle: "Welcome to the library",
-        description: "This place is great to have a study session, especially when you prefer quiet surroundings. If you want to work on a bigger screen, feel free to connect to the screens in the library. Beside from calm environment our library has a wide variety of over 10 000 books, 60 000 e-books and 39 databases, perfect for learnings new things on your own and doing research. ",
-        moveNext: "Move Next"
+        description: "This place is great to have a study session, especially when you prefer quiet surroundings. If you want to work on a bigger screen, feel free to connect to the screens in the library. Beside from calm environment our library has a wide variety of over 10 000 books, 60 000 e-books and 39 databases, perfect for learnings new things on your own and doing research. "
     },
     nl: {
         title: "Bibliotheek",
         subtitle: "Welkom bij de bibliotheek",
-        description: "Deze plek is ideaal om een studeersessie te houden, vooral als je de voorkeur geeft aan een rustige omgeving. Als je op een groter scherm wilt werken, kun je verbinding maken met de schermen in de bibliotheek. Naast de rustige omgeving heeft onze bibliotheek een grote verscheidenheid aan meer dan 10.000 boeken, 60.000 e-books en 39 databases, perfect om zelf nieuwe dingen te leren en onderzoek te doen.",
-        moveNext: "Ga verder"
+        description: "Deze plek is ideaal om een studeersessie te houden, vooral als je de voorkeur geeft aan een rustige omgeving. Als je op een groter scherm wilt werken, kun je verbinding maken met de schermen in de bibliotheek. Naast de rustige omgeving heeft onze bibliotheek een grote verscheidenheid aan meer dan 10.000 boeken, 60.000 e-books en 39 databases, perfect om zelf nieuwe dingen te leren en onderzoek te doen."
     }
 };
 

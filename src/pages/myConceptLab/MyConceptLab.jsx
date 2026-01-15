@@ -8,15 +8,13 @@ const translations = {
         title: "MyConcept Lab",
         welcome: "Welcome to MyConcept Lab",
         bodyP1: "MyConcept Lab is a location within the university.",
-        bodyP2: "At MyConceptLab, students have access to 3D printers, a factory model, and various other prototypes used in their projects. There are also monitors, keyboards, and mice available, providing students with a comfortable workspace where they can design, research, and develop their projects with ease. Additionally, the Green Chemistry course provides students with a fully equipped lab, where they can conduct experiments and gain hands-on experience in a real-world setting.",
-        moveNext: "Move Next"
+        bodyP2: "At MyConceptLab, students have access to 3D printers, a factory model, and various other prototypes used in their projects. There are also monitors, keyboards, and mice available, providing students with a comfortable workspace where they can design, research, and develop their projects with ease. Additionally, the Green Chemistry course provides students with a fully equipped lab, where they can conduct experiments and gain hands-on experience in a real-world setting."
     },
     nl: {
         title: "MyConcept Lab",
         welcome: "Welkom bij MyConcept Lab",
         bodyP1: "MyConcept Lab is een locatie binnen de universiteit.",
-        bodyP2: "Bij MyConceptLab hebben studenten toegang tot 3D-printers, een fabrieksmodel en verschillende andere prototypes die in hun projecten worden gebruikt. Er zijn ook monitoren, toetsenborden en muizen beschikbaar, waardoor studenten een comfortabele werkruimte hebben waar ze hun projecten kunnen ontwerpen, onderzoeken en ontwikkelen met gemak. Daarnaast biedt de cursus Green Chemistry studenten een volledig uitgeruste lab-ruimte, waar ze experimenten kunnen uitvoeren en praktijkervaring kunnen opdoen in een realistische omgeving.",
-        moveNext: "Ga verder"
+        bodyP2: "Bij MyConceptLab hebben studenten toegang tot 3D-printers, een fabrieksmodel en verschillende andere prototypes die in hun projecten worden gebruikt. Er zijn ook monitoren, toetsenborden en muizen beschikbaar, waardoor studenten een comfortabele werkruimte hebben waar ze hun projecten kunnen ontwerpen, onderzoeken en ontwikkelen met gemak. Daarnaast biedt de cursus Green Chemistry studenten een volledig uitgeruste lab-ruimte, waar ze experimenten kunnen uitvoeren en praktijkervaring kunnen opdoen in een realistische omgeving."
     }
 };
 

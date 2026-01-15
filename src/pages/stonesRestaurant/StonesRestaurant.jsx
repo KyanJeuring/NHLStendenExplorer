@@ -7,14 +7,12 @@ const translations = {
     en: {
         title: "Stones Restaurant",
         subtitle: "Welcome to the Stones Restaurant 🥪",
-        bodyP1: "This is the perfect place to get a really fancy coffee or something that's really tasty.",
-        moveNext: "Move Next"
+        bodyP1: "This is the perfect place to get a really fancy coffee or something that's really tasty."
     },
     nl: {
         title: "Stones Restaurant",
         subtitle: "Welkom bij Stones Restaurant 🥪",
-        bodyP1: "Dit is de perfecte plek om een echt fancy koffie te krijgen of iets dat echt lekker is.",
-        moveNext: "Volgende"
+        bodyP1: "Dit is de perfecte plek om een echt fancy koffie te krijgen of iets dat echt lekker is."
     }
 }
 
