@@ -60,7 +60,7 @@ export default function Equipment({ lang, toggleLang }) {
                         <li key={index}>{step}</li>
                     ))}
                 </ol>
-                <TourGuide/>
+                <TourGuide lang={lang} />
             </main>
             <div className="buttonToNextPage">
                 <button onClick={() => navigate('/learnMore')} className="moveNext">{translate.moveNext}</button>

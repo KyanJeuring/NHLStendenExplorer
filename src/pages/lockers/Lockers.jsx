@@ -67,7 +67,7 @@ export default function Lockers({ lang, toggleLang }) {
                         <li key={index}>{item}</li>
                     ))}
                 </ol>
-                <TourGuide />
+                <TourGuide lang={lang} />
             </main>
             <div className="buttonToNextPage">                
                 <button onClick={() => navigate('/learnMore')} className="moveNext">{translate.moveNext}</button>

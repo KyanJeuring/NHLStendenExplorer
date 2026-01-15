@@ -39,7 +39,7 @@ export default function Parking({ lang, toggleLang }) {
                 <p>{translate.bodyP1}</p>
                 <p>{translate.bodyP2}</p>
                 <p>{translate.bodyP3}</p>
-                <TourGuide />
+                <TourGuide lang={lang} />
             </main>
             <div className="buttonToNextPage">                
                 <button onClick={() => navigate('/learnMore')} className="moveNext">{translate.moveNext}</button>

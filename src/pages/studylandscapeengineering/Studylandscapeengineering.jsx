@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import './studylandscapeengineering.css';
 import { useNavigate } from 'react-router-dom';
+import TourGuide from '../../components/tourguide/TourGuide';
 
 const translations = {
     en: {
@@ -48,6 +49,7 @@ export default function Studylandscape({ lang, toggleLang }) {
                 <h3>{translated.subtitle}</h3>
                 <p className="title">{translated.bodyP1}</p>
                 <p className="explanation">{translated.bodyP2}</p>
+                <TourGuide lang={lang} />
             </main>
             <div className="buttonToNextPage">                
                 <button onClick={() => navigate('/learnMore')} className="moveNext">{translated.moveNext}</button>

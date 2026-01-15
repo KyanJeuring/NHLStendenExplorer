@@ -1,6 +1,7 @@
 import React, {useMemo} from 'react';
 import './studylandscapelogistics.css';
 import { useNavigate } from 'react-router-dom';
+import TourGuide from '../../components/tourguide/TourGuide';
 
 const translations = {
     en: {
@@ -45,6 +46,7 @@ export default function Studylandscape({ lang, toggleLang }) {
                 <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="imagePlaceholder"/>
                 <h3>{translated.subtitle}</h3>
                 <p>{translated.bodyP1}</p>
+                <TourGuide lang={lang} />
             </main>
             <div className="buttonToNextPage">                
                 <button onClick={() => navigate('/learnMore')} className="moveNext">{translated.moveNext}</button>

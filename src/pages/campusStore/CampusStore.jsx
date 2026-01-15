@@ -33,7 +33,7 @@ export default function CampusStore() {
                     You can even find local souvenirs from Emmen. Just drop by and have a look!
                 </p>
                 <p>Found something that caught your eye? Keep in mind that there is, however, a minimum purchase limit of 50 cents.</p>
-        <TourGuide/>
+                <TourGuide lang={lang} />
             </main>
             <div className="buttonToNextPage">
                 <button onClick={() => navigate('/learnMore')} className="moveNext">

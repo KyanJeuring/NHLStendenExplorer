@@ -32,11 +32,10 @@ export default function StudentInfo({ lang, toggleLang }) {
             </div>
             <main className="studentInfo-main-content">
                 <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="imagePlaceholder"/>
-                <TourGuide />
                 <h2>{translate.subtitle}</h2>
                 <h3>{translate.welcome}</h3>
                 <p>{translate.description}</p>
-
+                <TourGuide lang={lang} />
             </main>
             <div className="buttonToNextPage">                
                 <button onClick={() => navigate('/learnMore')} className="moveNext">{translate.moveNext}</button>

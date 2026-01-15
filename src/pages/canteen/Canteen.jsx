@@ -32,7 +32,7 @@ export default function Canteen({ lang, toggleLang }) {
                 <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="imagePlaceholder"/>
                 <h3>{translate.subtitle}</h3>
                 <p>{translate.bodyP1}</p>
-                <TourGuide />
+                <TourGuide lang={lang} />
             </main>
             <div className="buttonToNextPage">                
                 <button onClick={() => navigate('/learnMore')} className="moveNext">{translate.moveNext}</button>

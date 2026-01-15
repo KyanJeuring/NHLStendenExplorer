@@ -46,7 +46,7 @@ export default function MyConceptLab({ lang, toggleLang }) {
                 <h3>{translation.welcome}</h3>
                 <p>{translation.bodyP1}</p>
                 <p>{translation.bodyP2}</p>
-                <TourGuide />   
+                <TourGuide lang={lang} />   
             </main>
             <div className="buttonToNextPage">                
                 <button onClick={() => navigate('/learnMore')} className="moveNext">{translation.moveNext}</button>
