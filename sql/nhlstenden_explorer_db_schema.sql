@@ -45,8 +45,8 @@ CREATE TABLE IF NOT EXISTS carousel_item (
 );
 
 INSERT INTO carousel_item (title, description, language_code) VALUES
-('Cago Bike', 'You can find the cargo bike on campus — it was made in 1925 and is now over 100 years old. By the way, if needed, students can rent it from Student Info to help move their belongings to a new place.', 'en'),
-('Fietscago', 'Je kunt de bakfiets op de campus vinden - hij is gemaakt in 1925 en is nu meer dan 100 jaar oud. Trouwens, indien nodig, kunnen studenten hem huren bij Student Info om hun spullen naar een nieuwe plek te verplaatsen.', 'nl'),
+('Cargo Bike', 'You can find the cargo bike on campus — it was made in 1925 and is now over 100 years old. By the way, if needed, students can rent it from Student Info to help move their belongings to a new place.', 'en'),
+('Bakfiets', 'Je kunt de bakfiets op de campus vinden - hij is gemaakt in 1925 en is nu meer dan 100 jaar oud. Trouwens, indien nodig, kunnen studenten hem huren bij Student Info om hun spullen naar een nieuwe plek te verplaatsen.', 'nl'),
 ('Metro Design', 'The entire NHL Stenden campus was built in a metro-style design. The atmosphere reflects the idea that learning is a journey that students are meant to follow.', 'en'),
 ('Metro Ontwerp', 'De hele NHL Stenden campus is gebouwd in een metro-stijl ontwerp. De sfeer weerspiegelt het idee dat leren een reis is die studenten moeten volgen.', 'nl'),
 ('Time to eat!', 'You can eat anywhere on campus, wherever you feel like it — which is actually really cool!', 'en'),
