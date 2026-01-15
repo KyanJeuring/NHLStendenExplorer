@@ -24,6 +24,7 @@ import Footer from './components/footer/Footer'
 import StonesRestaurant from './pages/stonesRestaurant/StonesRestaurant';
 import Emergency from './pages/emergency/Emergency';
 import CampusStore from './pages/campusStore/CampusStore';
+import CoursesOverview from './pages/coursesOverview/CoursesOverview';
 
 
 export default function App() {
@@ -57,6 +58,7 @@ export default function App() {
           <Route path="/stonesRestaurant" element={<StonesRestaurant lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/emergency" element={<Emergency lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/campusStore" element={<CampusStore lang={lang} toggleLang={toggleLang}/>}/>
+          <Route path="/coursesOverview" element={<CoursesOverview lang={lang} toggleLang={toggleLang}/>}/>
         </Routes>
       </main>
       <Footer lang={lang} toggleLang={toggleLang} />
