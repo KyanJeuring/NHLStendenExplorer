@@ -18,7 +18,6 @@ export default function Navbar({ lang, toggleLang }) {
   <div className="nav-right">
       <button className="lang-toggle" onClick={toggleLang} type="button">
            <img src="icons/translate_icon.svg" alt="" /> {lang.toUpperCase()}
-
       </button>
           
         <section className="nav-links">
