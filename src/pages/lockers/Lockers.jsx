@@ -16,8 +16,7 @@ const translations = {
             "Place your belongings inside the locker.",
             "Close the locker door and it will lock automatically.",
             "To open the locker again, simply put your myCard on the scanner again."
-        ],
-        moveNext: "Move Next"
+        ]
     },
     nl: {
         title: "Lockers",
@@ -31,9 +30,8 @@ const translations = {
             "Plaats je bezittingen in de locker.",
             "Sluit de deur van de locker en deze vergrendelt automatisch.",
             "Om de locker weer te openen, houd je gewoon je myCard opnieuw tegen de scanner."
-        ],
-        moveNext: "Volgende"
-    },
+        ]
+    }
 };
 
 export default function Lockers({ lang, toggleLang }) {
@@ -69,9 +67,6 @@ export default function Lockers({ lang, toggleLang }) {
                 </ol>
                 <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">                
-                <button onClick={() => navigate('/learnMore')} className="moveNext">{translate.moveNext}</button>
-            </div>
         </section>
     )
 }

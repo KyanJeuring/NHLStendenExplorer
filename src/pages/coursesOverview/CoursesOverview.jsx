@@ -1,15 +1,31 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import './coursesOverview.css';
 import { useNavigate } from 'react-router-dom';
 import TourGuide from '../../components/tourguide/TourGuide';
 
-export default function CoursesOverview() {
+const translations = {
+    en: {
+        title: "Courses Overview",
+        subtitle: "Want to find out more about your course?",
+        bodyP1: "Just by the entrance of Student Info, on the left wall,  you will find a stand with fliers extensively covering all courses you can follow at NHL Stenden Emmen. Available both in Dutch and English, they are the perfect way of exploring essential information about whichever course you are interested in!",
+        bodyP2: "Just don't forget to stop by and grab your flier!"
+    },
+    nl: {
+        title: "Overzicht van Cursussen",
+        subtitle: "Wil je meer weten over jouw cursus?",
+        bodyP1: "Direct bij de ingang van Student Info, aan de linkermuur, vind je een standaard met folders die uitgebreid alle cursussen behandelen die je kunt volgen aan NHL Stenden Emmen. Verkrijgbaar in zowel het Nederlands als het Engels, zijn ze de perfecte manier om essentiële informatie te verkennen over welke cursus je ook interesseert!",
+        bodyP2: "Vergeet niet langs te gaan en je folder mee te nemen!"
+    }
+}
+
+export default function CoursesOverview({ lang, toggleLang }) {
     const navigate = useNavigate();
+    const translate = useMemo(() => translations[lang] || translations.en, [lang]);
 
     return (
         <section className="courses-overview-container">
             <div className="courses-overview-header">
-                <h1>Courses Overview</h1>
+                <h1>{translate.title}</h1>
                 <svg width="174" height="147" viewBox="0 0 174 147" fill="none" xmlns="http://www.w3.org/2000/svg" className="pixelsCombination">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M108.85 94.2339H53V109.607H108.85V94.2339Z" fill="#00A7A2"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M108.85 63.4861H53V78.8611H108.85V63.4861Z" fill="#00A7A2"/>
@@ -25,24 +41,11 @@ export default function CoursesOverview() {
             </div>
             <main className="courses-overview-main-content">
                 <img src="photos\coursesOverview.jpeg" alt="Campus Store" className="image"/>
-                <h3>Want to find out more about your course?</h3>
-                <p>
-                    Just by the entrance of Student Info, on the left wall,  
-                    you will find a stand with fliers extensively covering 
-                    all courses you can follow at NHL Stenden Emmen.
-                    Available both in Dutch and English, they are the perfect 
-                    way of exploring essential information about whichever course you are interested in!
-                </p>
-                <p>
-                    Just don't forget to stop by and grab your flier!
-                </p>
+                <h3>{translate.subtitle}</h3>
+                <p>{translate.bodyP1}</p>
+                <p>{translate.bodyP2}</p>
                 <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">
-                <button onClick={() => navigate('/learnMore')} className="moveNext">
-                    Move Next
-                </button>
-            </div>
         </section>
     );
 }

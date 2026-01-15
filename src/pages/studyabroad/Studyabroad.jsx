@@ -24,7 +24,7 @@ const translations = {
 
 export default function Studyabroad({ lang, toggleLang }) {
     const navigate = useNavigate();
-    const translated = useMemo(() => translations[lang], [lang]);
+    const translated = useMemo(() => translations[lang] || translations.en, [lang]);
 
     return (
         <section className="studyabroad-container">
@@ -38,9 +38,6 @@ export default function Studyabroad({ lang, toggleLang }) {
                 <p>{translated.description2} <a href ="https://www.nhlstenden.com/en/practical-information/grand-tour-exchange-run-eu-and-internship-abroad">{translated.link}</a></p>
                 <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">                
-                <button onClick={() => navigate('/learnMore')} className="moveNext">{translated.moveNext}</button>
-            </div>
         </section>
     )
 }

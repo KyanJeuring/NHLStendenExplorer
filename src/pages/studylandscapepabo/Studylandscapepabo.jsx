@@ -24,7 +24,7 @@ const translations = {
 
 export default function Studylandscape({ lang, toggleLang }) {
     const navigate = useNavigate();
-    const translated = useMemo(() => translations[lang], [lang]);
+    const translated = useMemo(() => translations[lang] || translations.en, [lang]);
 
     return (
         <section className="studylandscapePage-container-pabo">
@@ -40,9 +40,6 @@ export default function Studylandscape({ lang, toggleLang }) {
                 <p className="fact">{translated.bodyP2}</p>
                 <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">                
-                <button onClick={() => navigate('/learnMore')} className="moveNext">{translated.moveNext}</button>
-            </div>
         </section>
     )
 }

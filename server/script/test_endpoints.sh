@@ -64,7 +64,8 @@ ENDPOINTS=(
   "GET /api/explorer?lang=nl"
   "GET /api/explorer/categories?lang=en"
   "GET /api/explorer/categories?lang=nl"
-  "GET /api/carousel"
+  "GET /api/carousel/en"
+  "GET /api/carousel/nl"
 )
 
 SUMMARY_ENDPOINTS=()

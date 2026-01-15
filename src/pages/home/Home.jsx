@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo, useState, useEffect } from 'react'
 import './home.css'
 import {Link}  from 'react-router-dom'
 import Carousel from '../../components/carousel/Carousel'
@@ -27,17 +27,42 @@ const translations = {
 }
 
 export default function Home({ lang, toggleLang }) {
-    const translated = useMemo(() => translations[lang], [lang]);
+    const translated = useMemo(() => translations[lang] || translations.en, [lang]);
+    const [carouselItems, setCarouselItems] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+
+    useEffect(() => {
+        let mounted = true;
+        const apiLang = lang === 'en' ? 'en' : 'nl';
+
+        setLoading(true);
+        setError(null);
+
+        fetch(`${API_URL}/api/carousel/${apiLang}`)
+            .then((res) => {
+                if (!res.ok) throw new Error('Network response was not ok');
+                return res.json();
+            })
+            .then((data) => {
+                if (mounted) setCarouselItems(data);
+            })
+            .catch((err) => {
+                console.error('Failed to fetch carousel items', err);
+                if (mounted) setError(err.message);
+            })
+            .finally(() => mounted && setLoading(false));
+
+        return () => {
+            mounted = false;
+        };
+    }, [API_URL, lang]);
+
     const OnClick = () => {
         useNavigate('/page1');
     }
-
-    const [lorem ,setLorem] = useState('Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae architecto, molestias temporibus dicta veniam perspiciatis nulla facere saepe excepturi, quasi quidem atque quas ipsum, consequatur quia magnam neque? Voluptatum, quae?')
-    const [carouselItems, setCarouselItems] = useState([
-    { title: "Did you know?", description: lorem },
-    { title: "Did you know?", description: lorem },
-    { title: "Did you know? ", description: lorem },
-    { title: "Did you know?", description: lorem }])
     
     return (
         <section className="home">

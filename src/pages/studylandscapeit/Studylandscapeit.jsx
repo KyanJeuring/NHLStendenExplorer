@@ -9,22 +9,20 @@ const translations = {
         title: "Study Landscape in the Tech & Design department",
         subtitle: "Shaping the Future with Technology",
         bodyP1: "🌿📚It's the perfect spot to team up and tackle projects together. You'll find comfy chairs, spacious tables, and plenty of sockets to keep your laptop charged and ideas flowing!",
-        bodyP2: "If you need a quiet and peaceful place to focus, the building offers several silent booths located throughout the area. These booths are perfect for important online calls or for concentrating when the surroundings feel too noisy, helping you work without distractions.",
-        moveNext: "Move Next",
+        bodyP2: "If you need a quiet and peaceful place to focus, the building offers several silent booths located throughout the area. These booths are perfect for important online calls or for concentrating when the surroundings feel too noisy, helping you work without distractions."
     },
     nl: {
         studyArea: "Studiegebieden",
         title: "Studielandschap in de Tech & Design afdeling",
         subtitle: "De Toekomst Vormgeven met Technologie",
         bodyP1: "🌿📚Het is de perfecte plek om samen te werken en projecten aan te pakken. Je vindt er comfortabele stoelen, ruime tafels en voldoende stopcontacten om je laptop opgeladen te houden en je ideeën te laten stromen!",
-        bodyP2: "Als je een rustige en stille plek nodig hebt om je te concentreren, biedt het gebouw verschillende stille hokjes verspreid over het gebied. Deze hokjes zijn perfect voor belangrijke online gesprekken of om je te concentreren wanneer de omgeving te lawaaierig is, zodat je zonder afleiding kunt werken.",
-        moveNext: "Volgende",
+        bodyP2: "Als je een rustige en stille plek nodig hebt om je te concentreren, biedt het gebouw verschillende stille hokjes verspreid over het gebied. Deze hokjes zijn perfect voor belangrijke online gesprekken of om je te concentreren wanneer de omgeving te lawaaierig is, zodat je zonder afleiding kunt werken."
     },
 };
 
 export default function Studylandscape({ lang, toggleLang }) {
     const navigate = useNavigate();
-    const translated = useMemo(() => translations[lang], [lang]);
+    const translated = useMemo(() => translations[lang] || translations.en, [lang]);
 
     return (
         <section className="studylandscapePage-container-it">
@@ -51,9 +49,6 @@ export default function Studylandscape({ lang, toggleLang }) {
                 <p className="descriptionForIT">{translated.bodyP2}</p>
                 <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">                
-                <button onClick={() => navigate('/learnMore')} className="moveNext">{translated.moveNext}</button>
-            </div>
         </section>
     )
 }

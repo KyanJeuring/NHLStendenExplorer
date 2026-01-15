@@ -1,15 +1,31 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import './campusStore.css';
 import { useNavigate } from 'react-router-dom';
 import TourGuide from '../../components/tourguide/TourGuide';
 
-export default function CampusStore() {
+const translations = {
+    en: {
+        title: "Campus Store",
+        subtitle: "Welcome to the Campus Store",
+        bodyP1: "To the left of the Student Info desk, you will find the Campus Store. The Campus Store has a wide variety of school supplies available for purchase. From basic pencils, pens, rulers, notebooks, to technological gadgets and equipment, the Campus Store has it all and for affordable prices! You can even find local souvenirs from Emmen. Just drop by and have a look!",
+        bodyP2: "Found something that caught your eye? Keep in mind that there is, however, a minimum purchase limit of 50 cents."
+    },
+    nl: {
+        title: "Campus Winkel",
+        subtitle: "Welkom bij de Campus Winkel",
+        bodyP1: "Links van de Student Info balie vind je de Campus Winkel. De Campus Winkel heeft een breed scala aan schoolbenodigdheden beschikbaar voor aankoop. Van basis potloden, pennen, linialen, notitieboeken, tot technologische gadgets en apparatuur, de Campus Winkel heeft het allemaal en voor betaalbare prijzen! Je kunt er zelfs lokale souvenirs uit Emmen vinden. Kom gewoon langs en kijk eens rond!",
+        bodyP2: "Iets gevonden dat je interesseerde? Houd er echter rekening mee dat er een minimale aankooplimiet van 50 cent is."
+    }
+};
+
+export default function CampusStore({ lang, toggleLang }) {
     const navigate = useNavigate();
+    const translate = useMemo(() => translations[lang], [lang]);
 
     return (
         <section className="campusStore-container">
             <div className="campus-store-header">
-                <h1>Campus Store</h1>
+                <h1>{translate.title}</h1>
                 <svg width="174" height="147" viewBox="0 0 174 147" fill="none" xmlns="http://www.w3.org/2000/svg" className="pixelsCombination">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M108.85 94.2339H53V109.607H108.85V94.2339Z" fill="#00A7A2"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M108.85 63.4861H53V78.8611H108.85V63.4861Z" fill="#00A7A2"/>
@@ -25,21 +41,11 @@ export default function CampusStore() {
             </div>
             <main className="campus-store-main-content">
                 <img src="https://lipsum.app/1920x1080" alt="Campus Store" className="image-placeholder"/>
-                <h3>Welcome to Campus Store</h3>
-                <p>
-                    To the left of the Student Info desk, you will find the Campus Store. 
-                    The Campus Store has a wide variety of school supplies available for purchase.
-                    From basic pencils, pens, rulers, notebooks, to technological gadgets and equipment, the Campus Store has it all and for affordable prices!
-                    You can even find local souvenirs from Emmen. Just drop by and have a look!
-                </p>
-                <p>Found something that caught your eye? Keep in mind that there is, however, a minimum purchase limit of 50 cents.</p>
+                <h3>{translate.subtitle}</h3>
+                <p>{translate.bodyP1}</p>
+                <p>{translate.bodyP2}</p>
                 <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">
-                <button onClick={() => navigate('/learnMore')} className="moveNext">
-                    Move Next
-                </button>
-            </div>
         </section>
     );
 }

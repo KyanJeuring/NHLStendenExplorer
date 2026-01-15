@@ -41,13 +41,32 @@ CREATE TABLE IF NOT EXISTS carousel_item (
   id SERIAL PRIMARY KEY,
   title TEXT NOT NULL,
   description TEXT NOT NULL,
-  image_url TEXT NOT NULL
+  language_code TEXT DEFAULT 'en' NOT NULL
 );
 
-INSERT INTO carousel_item (title, description, image_url) VALUES
-('Test Card 1', 'This is placeholder text for now, will be changed later.', 'https://lipsum.app/512x512'),
-('Test Card 2', 'This is placeholder text for now, will be changed later.', 'https://lipsum.app/512x512'),
-('Test Card 3', 'This is placeholder text for now, will be changed later.', 'https://lipsum.app/512x512');
+INSERT INTO carousel_item (title, description, language_code) VALUES
+('Cago Bike', 'You can find the cargo bike on campus — it was made in 1925 and is now over 100 years old. By the way, if needed, students can rent it from Student Info to help move their belongings to a new place.', 'en'),
+('Fietscago', 'Je kunt de bakfiets op de campus vinden - hij is gemaakt in 1925 en is nu meer dan 100 jaar oud. Trouwens, indien nodig, kunnen studenten hem huren bij Student Info om hun spullen naar een nieuwe plek te verplaatsen.', 'nl'),
+('Metro Design', 'The entire NHL Stenden campus was built in a metro-style design. The atmosphere reflects the idea that learning is a journey that students are meant to follow.', 'en'),
+('Metro Ontwerp', 'De hele NHL Stenden campus is gebouwd in een metro-stijl ontwerp. De sfeer weerspiegelt het idee dat leren een reis is die studenten moeten volgen.', 'nl'),
+('Time to eat!', 'You can eat anywhere on campus, wherever you feel like it — which is actually really cool!', 'en'),
+('Tijd om te eten!', 'Je kunt overal op de campus eten, waar je maar wilt - wat eigenlijk heel gaaf is!', 'nl'),
+('One Table for All', 'In the canteen, students and staff sit together — no one is separated. Everyone is equal and can feel connected.', 'en'),
+('Eén Tafel voor Allen', 'In de kantine zitten studenten en personeel samen - niemand wordt gescheiden. Iedereen is gelijk en kan zich verbonden voelen.', 'nl'),
+('Student Associations', 'Students can also join student associations like "Think Wireless", "Helios", or "Studie Stad Emmen" to organize events, connect with others, and have fun together.', 'en'),
+('Studentenverenigingen', 'Studenten kunnen ook lid worden van studentenverenigingen zoals "Think Wireless", "Helios" of "Studie Stad Emmen" om evenementen te organiseren, contact te maken met anderen en samen plezier te hebben.', 'nl'),
+('Smart Study Spaces', 'The library also offers monitors that users can connect to as extended screens, making studying more modern and convenient. There are also power sockets, height-adjustable desks, and comfortable chairs to support a better learning experience.', 'en'),
+('Slimme Studieruimtes', 'De bibliotheek biedt ook monitoren die gebruikers kunnen aansluiten als extra schermen, waardoor studeren moderner en handiger wordt. Er zijn ook stopcontacten, in hoogte verstelbare bureaus en comfortabele stoelen om een betere leerervaring te ondersteunen.', 'nl'),
+('Writing Support', 'There is a Writing Center located at Student Info. If you want to book a meeting and get help with your writing, you can do it there by contacting them via a dedicated email to reserve a time slot.', 'en'),
+('Schrijfondersteuning', 'Er is een Writing Center gevestigd bij Student Info. Als je een afspraak wilt maken en hulp wilt bij het schrijven, kun je dat daar doen door contact met hen op te nemen via een speciaal e-mailadres om een tijdslot te reserveren.', 'nl'),
+('A small lifehack', 'There are plenty of books for children on level A1 in Dutch available in the library, which international students can use to practice and improve their language skills. Remember we all start from something small!', 'en'),
+('Een kleine lifehack', 'Er zijn veel boeken voor kinderen in het Nederlands op niveau A1 beschikbaar in de bibliotheek, die internationale studenten kunnen gebruiken om hun taalvaardigheden te oefenen en te verbeteren. Onthoud dat we allemaal ergens klein beginnen!', 'nl'),
+('Center for Entrepreneurship', 'At the Center for Entrepreneurship, you can join a 10-week program to explore your entrepreneurial ambitions — whether you are just curious or ready to start your own business. Several learning journeys are available alongside your studies. You can learn more about it on the official NHL Stenden website.', 'en'),
+('Center for Entrepreneurship', 'Bij het Center for Entrepreneurship kun je deelnemen aan een programma van 10 weken om je ondernemende ambities te verkennen - of je nu gewoon nieuwsgierig bent of klaar bent om je eigen bedrijf te starten. Er zijn verschillende leertrajecten beschikbaar naast je studie. Je kunt er meer over leren op de officiële NHL Stenden-website.', 'nl'),
+('HBO-Sportpas', 'All students in Emmen can get the HBO-Sportpas, which offers unlimited sports and discounts on activities like golf, skiing, go-karting, and more. You can also join affordable courses in tennis, padel, squash, or rowing. Free weekly sports like volleyball, basketball, and futsal are organized for NHL Stenden students — just check the website or school screens to sign up!', 'en'),
+('HBO-Sportpas', 'Alle studenten in Emmen kunnen de HBO-Sportpas krijgen, die onbeperkt sporten en kortingen op activiteiten zoals golf, skiën, karten en meer biedt. Je kunt ook betaalbare cursussen volgen in tennis, padel, squash of roeien. Gratis wekelijkse sporten zoals volleybal, basketbal en futsal worden georganiseerd voor NHL Stenden-studenten - bekijk gewoon de website of schoolschermen om je aan te melden!', 'nl'),
+('3D Robotic Arm', 'In the engineering department, there is a large 3D robotic arm capable of printing all kinds of objects — even sofas and giant plant pots you will see around campus. Keep an eye out for them next time!', 'en'),
+('3D Robotarm', 'In de afdeling engineering is er een grote 3D-robotarm die allerlei objecten kan printen - zelfs banken en gigantische plantenpotten die je op de campus zult zien. Houd ze de volgende keer in de gaten!', 'nl');
 
 -- LetsGo Item Table
 CREATE TABLE IF NOT EXISTS letsgo_item (

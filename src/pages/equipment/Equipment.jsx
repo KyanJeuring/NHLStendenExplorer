@@ -17,8 +17,7 @@ const translations = {
             "Request the equipment you need.",
             "Use the equipment for your project or activity.",
             "Return the equipment and collect your student card."
-        ],
-        moveNext: "Move Next"
+        ]
     },
     nl: {
         title: "Apparatuur",
@@ -33,8 +32,7 @@ const translations = {
             "Vraag de apparatuur aan die je nodig hebt.",
             "Gebruik de apparatuur voor je project of activiteit.",
             "Retourneer de apparatuur en haal je studentenkaart op."
-        ],
-        moveNext: "Ga Verder"
+        ]
     }
 };
 
@@ -62,9 +60,6 @@ export default function Equipment({ lang, toggleLang }) {
                 </ol>
                 <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">
-                <button onClick={() => navigate('/learnMore')} className="moveNext">{translate.moveNext}</button>
-            </div>
         </section>
     );
 }
