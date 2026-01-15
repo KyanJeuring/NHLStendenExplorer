@@ -47,13 +47,13 @@ export default function Studylandscape({ lang, toggleLang }) {
             <main className="studylandcape-main-content-it">
                 <h2>{translated.title}</h2>
                 <ReactPhotoSphereViewer
-                                    ref={photoSphereRef}
-                                    src="/360photos/image00010.jpg"
-                                    littlePlanet={false}
-                                    hideNavbarButton={true}
-                                    height={"500px"}
-                                    width={"60%"}
-                                />
+                    ref={photoSphereRef}
+                    src="/360photos/image00002.jpg"
+                    littlePlanet={false}
+                    hideNavbarButton={true}
+                    height={"500px"}
+                    width={"60%"}
+                />
                 <h3>{translated.subtitle}</h3>
                 <p className="textForIT">{translated.bodyP1}</p>
                 <p className="descriptionForIT">{translated.bodyP2}</p>
