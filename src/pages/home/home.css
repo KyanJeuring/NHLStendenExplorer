@@ -62,7 +62,12 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 2rem;
     grid-column: 2 / 3;
+}
+
+.description-for-combination-home-page :is(h1, p) {
+    margin: 0;
 }
 
 .carousel-section {
@@ -156,10 +161,14 @@ img {
         grid-column: 2;
     }
 
-    .info {
+    .info-phone {
         margin-top: 1rem;
         margin-bottom: 1rem;
         font-size: 1.1rem;
+    }
+
+    .info-desktop {
+        display: none;
     }
 
     .play-arrow {
@@ -255,7 +264,11 @@ img {
         grid-column: 2;
     }
 
-    .info {
+    .info-desktop {
+        display: none;
+    }
+
+    .info-phone {
         margin-top: 2rem;
         margin-bottom: 2rem;
         font-size: 1.4rem;
@@ -337,11 +350,15 @@ img {
         grid-column: 2;
     }
 
-    .info {
+    .info-desktop {
         margin-top: 2rem;
         margin-bottom: 5rem;
         font-size: 1.2rem;
         text-align: center;
+    }
+
+    .info-phone {
+        display: none;
     }
 
     .play-arrow {
