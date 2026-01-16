@@ -26,6 +26,7 @@ import Emergency from './pages/emergency/Emergency';
 import CoursesOverview from './pages/coursesOverview/CoursesOverview';
 import CampusStore from './pages/campusStore/CampusStore';
 import SupportIT from './pages/supportIT/SupportIT';
+import TourGuideStatic from './components/tourguide/Tourguide';
 
 export default function App() {
   const [lang, setLang] = useState("en");

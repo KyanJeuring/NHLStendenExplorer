@@ -1,0 +1,45 @@
+.tour-guide-section {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Tour guide → bottom left */
+.guide {
+  grid-column: 1;
+  grid-row: 2;
+
+  width: 24%;
+  min-width: 120px;
+  align-self: end;
+}
+
+/* Speech bubble → top right */
+.speech-wrapper {
+  grid-column: 2;
+  grid-row: 1;
+
+  width: 460px;        /* 🔒 fixed width */
+  height: 180px;       /* 🔒 fixed height */
+
+  padding: 2rem 2.2rem 3rem 2.2rem;
+
+  background-image: url("/icons/chat_speech_bubble.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: left bottom;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 0.95rem;
+  line-height: 1.4;
+  overflow: hidden;    /* prevents resize */
+}
+
+.speech-text {
+  margin: 0;
+  text-align: left;
+}

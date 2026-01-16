@@ -1,7 +1,7 @@
 import React, {useMemo} from 'react';
 import './campusStore.css';
 import { useNavigate } from 'react-router-dom';
-import TourGuide from '../../components/tourguide/TourGuide';
+import TourGuide from '../../components/tourguide/Tourguide';
 
 const translations = {
     en: {

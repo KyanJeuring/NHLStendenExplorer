@@ -2,7 +2,7 @@ import React, {useMemo} from 'react';
 import './kennispoort.css';
 import { useNavigate } from 'react-router-dom';
 
-import TourGuide from '../../components/tourguide/TourGuide';
+import TourGuide from '../../components/tourguide/Tourguide';
 
 const translations = {
     en: {

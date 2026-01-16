@@ -2,6 +2,7 @@ import React, { useMemo, useState, useEffect } from 'react'
 import './home.css'
 import {Link}  from 'react-router-dom'
 import Carousel from '../../components/carousel/Carousel'
+import TourGuideStatic from '../../components/tourguide_static/TourGuideStatic'
 
 const translations = {
     en: {
@@ -71,8 +72,10 @@ export default function Home({ lang, toggleLang }) {
             <p className="postal-code">{translated.postalCode}</p>
             <p className="description">{translated.description}</p>
             <img src="/photos/campus-emmen-photo.webp" alt="NHL Stenden Emmen Campus" className="campus-image"/>
+
             <Link to="/explore" className="button-pulse"><svg className="play-arrow"  viewBox="0 0 24 24"><path d="M8 19V5L19 12L8 19Z" /></svg>{translated.startTour}</Link>
             <p className="explanation-to-button">{translated.explanationToButton}</p>
+            <TourGuideStatic />
             <div className="combination-for-home-page">
                 <img src="/pixels/group-selection-home-page.svg" alt="Group of Pixels" className="pixels-home-page"/>
                 <div className="description-for-combination-home-page">
