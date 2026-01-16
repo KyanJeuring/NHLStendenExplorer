@@ -121,7 +121,7 @@ INSERT INTO explore_item (title, description, categories, image_url, link_url) V
 ('Study Landscape Logistics & IB', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], './photos/logistics-study-landscape.jpeg', '/studylandscapelogistics'),
 ('Study Landscape Engineering', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], './photos/study-landscape-engineering.jpeg', '/studylandscapeengineering'),
 ('Study Landscape PABO', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], './photos/pabo-study-landscape.jpeg', '/studyLandscapePabo'),
-('Equipment', 'Looking to borrow equipement?', ARRAY['SERVICES']::category_enum[], './photos/study-landscape.jpeg', '/equipment'),
+('Equipment', 'Looking to borrow equipement?', ARRAY['SERVICES']::category_enum[], './photos/student-info.jpeg', '/equipment'),
 ('Games', 'Unwind your mind with some games!', ARRAY['FACILITIES']::category_enum[], './photos/games.jpeg', '/games'),
 ('Lockers', 'Want to store your stuff for the day?', ARRAY['FACILITIES']::category_enum[], './photos/lockers.jpeg', '/lockers'),
 ('Study Abroad', 'Looking to study abroad? The sky is the limit!', ARRAY['SERVICES']::category_enum[], './photos/studyAbroadDesk.jpeg', '/studyabroad'),

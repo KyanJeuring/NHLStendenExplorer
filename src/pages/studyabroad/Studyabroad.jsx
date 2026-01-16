@@ -32,7 +32,7 @@ export default function Studyabroad({ lang, toggleLang }) {
                 <h1>{translated.title}</h1>
             </div>
             <main className="studyabroad-main-content">
-                <img src="/photos/studyAbroadDesk.JPG" alt="Where to find information about studying abroad" className="techAndDesign"/>
+                <img src="/photos/studyAbroadDesk.jpeg" alt="Where to find information about studying abroad" className="techAndDesign"/>
                 <h3>{translated.subtitle}</h3>
                 <p>{translated.description1}</p>
                 <p>{translated.description2} <a href ="https://www.nhlstenden.com/en/practical-information/grand-tour-exchange-run-eu-and-internship-abroad">{translated.link}</a></p>
