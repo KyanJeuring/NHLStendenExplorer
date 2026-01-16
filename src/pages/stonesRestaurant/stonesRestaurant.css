@@ -147,8 +147,3 @@
     color: rgb(var(--nhl_stenden_corp_cyan));
 }
 
-.stones-main-content h3,
-.stones-main-content p{
-  width: 100%;
-  margin-left: 0;
-}
