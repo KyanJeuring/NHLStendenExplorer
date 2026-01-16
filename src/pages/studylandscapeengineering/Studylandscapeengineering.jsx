@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import './studylandscapeengineering.css';
 import { useNavigate } from 'react-router-dom';
+import { ReactPhotoSphereViewer } from 'react-photo-sphere-viewer';
 import TourGuide from '../../components/tourguide/Tourguide';
 
 const translations = {
@@ -22,6 +23,7 @@ const translations = {
 
 export default function Studylandscape({ lang, toggleLang }) {
     const navigate = useNavigate();
+    const photoSphereRef = React.createRef();
     const translated = useMemo(() => translations[lang] || translations.en, [lang]);
 
     return (
@@ -43,7 +45,14 @@ export default function Studylandscape({ lang, toggleLang }) {
             </div>
             <main className="studylandcape-main-engineering">
                 <h2>{translated.title}</h2>
-                <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="imagePlaceholder"/>
+                <ReactPhotoSphereViewer
+                    ref={photoSphereRef}
+                    src="/360photos/image00005.jpg"
+                    littlePlanet={false}
+                    hideNavbarButton={true}
+                    height={"500px"}
+                    width={"60%"}
+                />
                 <h3>{translated.subtitle}</h3>
                 <p className="title">{translated.bodyP1}</p>
                 <p className="explanation">{translated.bodyP2}</p>

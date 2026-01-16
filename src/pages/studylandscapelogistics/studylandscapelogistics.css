@@ -121,3 +121,8 @@
 .studylandcape-main-content-logistics > h2 {
     color: rgb(var(--nhl_stenden_corp_cyan));
 }
+
+.studylandcape-main-content-logistics > div {
+    margin: 0 auto;
+    width: fit-content;
+}

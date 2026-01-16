@@ -153,3 +153,7 @@
     color: rgb(var(--nhl_stenden_corp_cyan));
 }
 
+.kennispoort-main-content > div {
+    margin: 0 auto;
+    width: fit-content;
+}

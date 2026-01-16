@@ -12,17 +12,17 @@
 
 @font-face {
     font-family: 'CeraPro';
-    src: url(/font/CeraPRO-Regular.otf);
+    src: url(../public/font/CeraPRO-Regular.otf);
 }
 
 @font-face {
     font-family: 'CeraPro_Bold';
-    src: url(/font/CeraPRO-Bold.otf);
+    src: url(../public/font/CeraPRO-Bold.otf);
 }
 
 @font-face {
     font-family: 'CeraPro_Italic';
-    src: url(/font/CeraPRO-RegularItalic.otf);
+    src: url(../public/font/CeraPRO-RegularItalic.otf);
 }
 
 * {

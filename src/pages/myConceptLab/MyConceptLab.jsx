@@ -1,6 +1,7 @@
 import React, {useMemo} from 'react';
 import './myConceptLab.css';
 import { useNavigate } from 'react-router-dom';
+import { ReactPhotoSphereViewer } from 'react-photo-sphere-viewer';
 import TourGuide from '../../components/tourguide/Tourguide';
 
 const translations = {
@@ -21,6 +22,7 @@ const translations = {
 export default function MyConceptLab({ lang, toggleLang }) {
     const navigate = useNavigate();
     const translation = useMemo(() => translations[lang] || translations.en, [lang]);
+    const photoSphereRef = React.createRef();
 
     return (
         <section className="myConceptLabPage-container">
@@ -40,7 +42,14 @@ export default function MyConceptLab({ lang, toggleLang }) {
                 </svg>
             </div>
             <main className="myConceptLab-main-content">
-                <img src="https://lipsum.app/1920x1080" alt="MyConcept Lab" className="imagePlaceholder"/>
+                <ReactPhotoSphereViewer
+                    ref={photoSphereRef}
+                    src="/360photos/image00006.jpg"
+                    littlePlanet={false}
+                    hideNavbarButton={true}
+                    height={"500px"}
+                    width={"60%"}
+                />
                 <h3>{translation.welcome}</h3>
                 <p>{translation.bodyP1}</p>
                 <p>{translation.bodyP2}</p>

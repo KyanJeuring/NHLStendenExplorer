@@ -1,6 +1,7 @@
 import React, {useMemo} from 'react';
 import './equipment.css';
 import { useNavigate } from 'react-router-dom';
+import { ReactPhotoSphereViewer } from 'react-photo-sphere-viewer';
 import TourGuide from '../../components/tourguide/Tourguide';
 
 const translations = {
@@ -39,6 +40,7 @@ const translations = {
 export default function Equipment({ lang, toggleLang }) {
     const navigate = useNavigate();
     const translate = useMemo(() => translations[lang] || translations.en, [lang]);
+    const photoSphereRef = React.createRef();
 
     return (
         <section className="equipmentPage-container">
@@ -47,7 +49,14 @@ export default function Equipment({ lang, toggleLang }) {
             </div>
 
             <main className="equipment-main-content">
-                <img src="https://lipsum.app/1920x1080" alt="Equipment counter" className="techAndDesign"/>
+                <ReactPhotoSphereViewer
+                    ref={photoSphereRef}
+                    src="/360photos/image00014.jpg"
+                    littlePlanet={false}
+                    hideNavbarButton={true}
+                    height={"500px"}
+                    width={"60%"}
+                />
                 <h3>{translate.subtitle}</h3>
                 <div className="equipment-info">
                     <p className="equipment-description">{translate.bodyP1}</p>
