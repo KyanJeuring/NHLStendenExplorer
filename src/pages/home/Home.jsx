@@ -77,9 +77,9 @@ export default function Home({ lang, toggleLang }) {
                 <img src="/pixels/group-selection-home-page.svg" alt="Group of Pixels" className="pixels-home-page"/>
                 <div className="description-for-combination-home-page">
                     <h2>{translated.hiddenGemsTitle}</h2>
-                    <p className="info">{translated.hiddenGemsInfo}</p>
                 </div>
             </div>
+            <p className="info">{translated.hiddenGemsInfo}</p>
             <div className='carousel-section'>
                <Carousel items={carouselItems} />
             </div>
