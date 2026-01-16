@@ -9,14 +9,12 @@ nav {
   padding: 1rem 3rem;
 }
 
-
 .nav-right {
   display: flex;
   align-items: center;
   gap: 2rem;
   margin-left: auto;
 }
-
 
 .lang-toggle {
   display: inline-flex;
@@ -26,10 +24,11 @@ nav {
   color: white;
   font-size: 1rem;
   background-color: rgb(var(--nhl_stenden_corp_blue));
-  border: 0.2vh solid rgb(194, 192, 192);
+  border: 0.25vh solid white;
   border-radius: 1rem;
   padding: 0.4rem 0.8rem;
   cursor: pointer;
+  margin-top: 0.4rem;
 }
 
 .lang-toggle img {
@@ -38,8 +37,6 @@ nav {
   display: block;
 }
 
-
-
 .logo img {
     height: 8vh;
 }
@@ -47,7 +44,7 @@ nav {
 .menu {
     background-color: white;
     position: fixed;
-    top: 7rem;
+    top: 6rem;
     left: 0; 
     width: 100%;
     height: 100%;
@@ -88,6 +85,8 @@ nav {
 
     .burger-btn {
         margin-top: 0.8rem;
+        margin-right: -2rem;
+        margin-left: 1rem;
     }
 
     .nav-links {
@@ -95,7 +94,8 @@ nav {
     }
 
     .logo img {
-        height: 5rem;
+        height: 3.5rem;
+        margin-left: -3.5em;
     }
 }
 
@@ -104,6 +104,7 @@ nav {
 
     .burger-btn {
         margin-top: 0.8rem;
+        margin-left: 1rem;
     }
 
     .nav-links {
@@ -123,11 +124,10 @@ nav {
     }
 
    .nav-links {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
     
     .nav-link {
         color: white;
