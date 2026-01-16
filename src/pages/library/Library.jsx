@@ -33,7 +33,7 @@ export default function Library({ lang, toggleLang }) {
             <main className="studylandcape-main-content">
                 <ReactPhotoSphereViewer
                     ref={photoSphereRef}
-                    src="/360photos/image00014.jpg"
+                    src="/360photos/image00013.jpg"
                     littlePlanet={false}
                     hideNavbarButton={true}
                     height={"500px"}
