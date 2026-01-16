@@ -26,7 +26,7 @@ export default function Canteen({ lang, toggleLang }) {
                 <h1>{translate.title}</h1>
                 <img src="/pixels/combinationOfPixelsForLocations.svg" alt="Pixels Combination" className="pixelsCombination"/>
             </div>
-            <main className="canteen-main-content">
+            <main className="canteen-content">
                 <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="imagePlaceholder"/>
                 <h3>{translate.subtitle}</h3>
                 <p>{translate.bodyP1}</p>
