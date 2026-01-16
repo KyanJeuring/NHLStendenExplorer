@@ -2,6 +2,7 @@ import React, {useMemo} from 'react';
 import './studylandscapepabo.css';
 import { useNavigate } from 'react-router-dom';
 import { ReactPhotoSphereViewer } from 'react-photo-sphere-viewer';
+import TourGuide from '../../components/tourguide/Tourguide';
 
 const translations = {
     en: {
@@ -24,8 +25,8 @@ const translations = {
 
 export default function Studylandscape({ lang, toggleLang }) {
     const navigate = useNavigate();
-    const translated = useMemo(() => translations[lang], [lang]);
     const photoSphereRef = React.createRef();
+    const translated = useMemo(() => translations[lang] || translations.en, [lang]);
 
     return (
         <section className="studylandscapePage-container-pabo">
@@ -46,10 +47,8 @@ export default function Studylandscape({ lang, toggleLang }) {
                 <h3>{translated.subtitle}</h3>
                 <p className="text">{translated.bodyP1}</p>
                 <p className="fact">{translated.bodyP2}</p>
+                <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">                
-                <button onClick={() => navigate('/learnMore')} className="moveNext">{translated.moveNext}</button>
-            </div>
         </section>
     )
 }

@@ -3,7 +3,7 @@ import './kennispoort.css';
 import { useNavigate } from 'react-router-dom';
 import { ReactPhotoSphereViewer } from 'react-photo-sphere-viewer';
 
-import TourGuide from '../../components/tourguide/TourGuide';
+import TourGuide from '../../components/tourguide/Tourguide';
 
 const translations = {
     en: {
@@ -16,8 +16,7 @@ const translations = {
             "It is a sponsor of FC Emmen.",
             "The seats on the stairs are real stadium chairs from the Emmen stadium.",
             "The center of entrepreneurship is here (check the website for more information)."
-        ],
-        moveNext: "Move Next"
+        ]
     },
     nl: {
         title: "Kennispoort",
@@ -29,8 +28,7 @@ const translations = {
             "Het is een sponsor van FC Emmen.",
             "De stoelen op de trap zijn echte stadionstoelen uit het Emmen stadion.",
             "Het centrum voor ondernemerschap is hier (bekijk de website voor meer informatie)."
-        ],
-        moveNext: "Ga verder"
+        ]
     }
 };
 
@@ -72,11 +70,8 @@ export default function Kennispoort({ lang, toggleLang }) {
                         <li key={index}>{point}</li>
                     ))}
                 </ul>
-                <TourGuide />
+                <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">                
-                <button onClick={() => navigate('/learnMore')} className="moveNext">{translation.moveNext}</button>
-            </div>
         </section>
     )
 }

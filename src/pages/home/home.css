@@ -59,7 +59,15 @@ img {
 }
 
 .description-for-combination-home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
     grid-column: 2 / 3;
+}
+
+.description-for-combination-home-page :is(h1, p) {
+    margin: 0;
 }
 
 .carousel-section {
@@ -124,12 +132,13 @@ img {
 
     .explanation-to-button {
         font-size: 1rem;
+        margin-bottom: 2rem;
     }
 
    .description-for-combination-home-page {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
     }
 
     .description-for-combination-home-page > h2 {
@@ -140,6 +149,7 @@ img {
 
     img {
         height: 100%;
+        width: 10rem;
     }
 
     .combination-for-home-page p {  
@@ -151,9 +161,14 @@ img {
         grid-column: 2;
     }
 
-    .info {
-        margin-top: 0.5rem;
-        margin-bottom: 5rem;
+    .info-phone {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .info-desktop {
+        display: none;
     }
 
     .play-arrow {
@@ -164,10 +179,6 @@ img {
 
     .button-pulse:hover .play-arrow {
         fill: white; 
-    }
-
-    .pixels-home-page {
-        width: 20rem;
     }
     
     .combination-for-home-page {
@@ -253,9 +264,14 @@ img {
         grid-column: 2;
     }
 
-    .info {
-        margin-top: 0.5rem;
-        margin-bottom: 5rem;
+    .info-desktop {
+        display: none;
+    }
+
+    .info-phone {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-size: 1.4rem;
     }
 
     .play-arrow {
@@ -323,7 +339,7 @@ img {
 
     .description-for-combination-home-page > h2 {
         text-align: left;
-        margin-top: 5rem;
+        /* margin-top: 6rem; */
     }
 
     .combination-for-home-page > p {  
@@ -334,9 +350,15 @@ img {
         grid-column: 2;
     }
 
-    .info {
-        margin-top: 0.5rem;
+    .info-desktop {
+        margin-top: 2rem;
         margin-bottom: 5rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .info-phone {
+        display: none;
     }
 
     .play-arrow {

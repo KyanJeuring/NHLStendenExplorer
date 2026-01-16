@@ -1,3 +1,143 @@
+/* PHONE SIZE */
+@media screen and (max-width: 600px) {
+    .pixelsCombination {
+        height: 5rem;
+    }
+
+    .lockers-header > h1 {
+        font-size: 2rem;
+        margin-block: auto;
+        margin-inline: 2rem;
+    }
+
+    .lockers-main-content > h2 {
+        margin-block: 2rem;
+        margin-inline: 2rem;
+        font-size: 1rem;
+    }
+
+    .lockers-main-content > .imagePlaceholder {
+        margin-left: 14%;
+        width: 75%;
+        margin-top: 2rem;
+    }
+
+    .lockers-main-content > h3 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        margin-inline: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .lockers-main-content > p {
+        margin-inline: 2rem;
+        margin-block: 1rem;
+        font-size: 1rem;
+    }
+
+    .lockers-main-content li {
+        margin-inline: 3rem;
+        margin-block: 0.25rem;
+        font-size: 0.8rem;
+    }
+
+    .tour-guide-fixed {
+        margin-left: 0%
+    }
+}
+
+/* TABLET SIZE */
+@media screen and (min-width: 600px) and (max-width : 990px) {
+    .pixelsCombination {
+        height: 10rem;
+    }
+
+    .lockers-header > h1 {
+        font-size: 2.5rem;
+        margin-block: auto;
+        margin-inline: 3rem;
+    }
+
+    .lockers-main-content > h2 {
+        margin-block: 4rem;
+        margin-inline: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .lockers-main-content > .imagePlaceholder {
+        margin-left: 12%;
+        width: 75%;
+        margin-top: 4rem;
+    }
+
+    .lockers-main-content > h3 {
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        margin-inline: 3rem;
+    }
+
+    .lockers-main-content > p {
+        margin-inline: 3rem;
+        margin-block: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .lockers-main-content li {
+        margin-inline: 4em;
+        margin-block: 0.3rem;
+        font-size: 1.2rem;
+    }
+
+    .tour-guide-fixed {
+        margin-left: 0%;
+    }
+}
+
+/* LAPTOP AND DESKTOP SIZE */
+@media screen and (min-width: 990px) {
+    .pixelsCombination {
+        height: 19rem;
+    }
+
+    .lockers-header > h1 {
+        font-size: 3rem;
+        margin-block: auto;
+        margin-inline: 5rem;
+    }
+
+    .lockers-main-content > h2 {
+        margin-block: 4rem;
+        margin-inline: 5rem;
+        font-size: 2rem;
+    }
+
+    .lockers-main-content > .imagePlaceholder {
+        margin-left: 35%;
+    }
+
+    .lockers-main-content > h3 {
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        margin-inline: 5rem;
+    }
+
+    .lockers-main-content > p {
+        margin-inline: 5rem;
+        margin-block: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .lockers-main-content li {
+        margin-inline: 6rem;
+        margin-block: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .tour-guide-fixed {
+        margin-left: 25%
+    }
+}
+
 .lockersPage-container {
     padding: 0rem;
 }
@@ -9,97 +149,7 @@
     padding: 0;
 }
 
-.pixelsCombination {
-    width: 25%;
-}
-
-.lockers-header > h1 {
-    font-size: 3rem;
-    margin-block: 6rem;
-    margin-inline: 3rem;
-}
-
-.techAndDesign {
-    width: 30%;
-}
-
-.lockers-main-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .lockers-main-content > h2 {
-    margin-right: 51rem;
-    margin-block: 4rem;
     color: rgb(var(--nhl_stenden_corp_cyan));
 }
 
-.lockers-main-content > h3 {
-    margin-right: 63.5rem;
-    margin-top: 5rem;
-}
-
-.lockers-main-content > p {
-    margin-right: 2rem;
-    margin-block: 1rem;
-}
-
-.lockers-main-content > ol {
-    width: 50%;
-}
-
-.buttonToNextPage {
-    display: flex;
-    justify-content: center;
-}
-
-.moveNext {
-    background-color: rgb(var(--nhl_stenden_corp_blue));
-    color: white;
-    margin: 2rem;
-    width: 7rem;
-    height: 3rem;
-    font-size: 1rem;
-    border-radius: 0.3rem;
-    border: none;
-    font-family: 'CeraPro';
-}
-
-.moveNext:hover {
-    background-color: white;
-    border: 3px solid rgb(var(--nhl_stenden_corp_blue));
-    color: rgb(var(--nhl_stenden_corp_blue));
-    cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-    .lockers-main-content {
-        padding: 2rem;
-    }
-
-    .lockers-header > h1 {
-        font-size: 2rem;
-        margin-inline: 1rem;
-    }
-
-    .lockers-main-content > h2 {
-        margin-right: 2rem;
-        margin-block: 2rem;
-    }
-
-    .lockers-main-content > h3 {
-        margin-right: 2rem;
-        margin-top: 2rem;
-    }
-
-    .lockers-main-content > p {
-        margin-right: 1rem;
-    }
-
-    .lockers-main-content > ol {
-        width: 90%;
-    }
-    
-}

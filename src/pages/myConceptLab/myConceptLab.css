@@ -1,3 +1,143 @@
+/* PHONE SIZE */
+@media screen and (max-width: 600px) {
+    .pixelsCombination {
+        height: 5rem;
+    }
+
+    .myConceptLab-header > h1 {
+        font-size: 1.5rem;
+        margin-block: auto;
+        margin-inline: 2rem;
+    }
+
+    .myConceptLab-main-content > h2 {
+        margin-block: 2rem;
+        margin-inline: 2rem;
+        font-size: 1rem;
+    }
+
+    .myConceptLab-main-content > .imagePlaceholder {
+        margin-left: 14%;
+        width: 75%;
+        margin-top: 2rem;
+    }
+
+    .myConceptLab-main-content > h3 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        margin-inline: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .myConceptLab-main-content > p {
+        margin-inline: 2rem;
+        margin-block: 1rem;
+        font-size: 1rem;
+    }
+
+    .myConceptLab-main-content li {
+        margin-inline: 3rem;
+        margin-block: 0.25rem;
+        font-size: 0.8rem;
+    }
+
+    .tour-guide-fixed {
+        margin-left: 0%
+    }
+}
+
+/* TABLET SIZE */
+@media screen and (min-width: 600px) and (max-width : 990px) {
+    .pixelsCombination {
+        height: 10rem;
+    }
+
+    .myConceptLab-header > h1 {
+        font-size: 2.5rem;
+        margin-block: auto;
+        margin-inline: 3rem;
+    }
+
+    .myConceptLab-main-content > h2 {
+        margin-block: 4rem;
+        margin-inline: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .myConceptLab-main-content > .imagePlaceholder {
+        margin-left: 12%;
+        width: 75%;
+        margin-top: 4rem;
+    }
+
+    .myConceptLab-main-content > h3 {
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        margin-inline: 3rem;
+    }
+
+    .myConceptLab-main-content > p {
+        margin-inline: 3rem;
+        margin-block: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .myConceptLab-main-content li {
+        margin-inline: 4em;
+        margin-block: 0.3rem;
+        font-size: 1.2rem;
+    }
+
+    .tour-guide-fixed {
+        margin-left: 0%;
+    }
+}
+
+/* LAPTOP AND DESKTOP SIZE */
+@media screen and (min-width: 990px) {
+    .pixelsCombination {
+        height: 19rem;
+    }
+
+    .myConceptLab-header > h1 {
+        font-size: 3rem;
+        margin-block: auto;
+        margin-inline: 5rem;
+    }
+
+    .myConceptLab-main-content > h2 {
+        margin-block: 4rem;
+        margin-inline: 5rem;
+        font-size: 2rem;
+    }
+
+    .myConceptLab-main-content > .imagePlaceholder {
+        margin-left: 35%;
+    }
+
+    .myConceptLab-main-content > h3 {
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        margin-inline: 5rem;
+    }
+
+    .myConceptLab-main-content > p {
+        margin-inline: 5rem;
+        margin-block: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .myConceptLab-main-content li {
+        margin-inline: 6rem;
+        margin-block: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .tour-guide-fixed {
+        margin-left: 25%
+    }
+}
+
 .myConceptLabPage-container {
     padding: 0rem;
 }
@@ -9,63 +149,11 @@
     padding: 0;
 }
 
-.pixelsCombination {
-    width: 25%;
-}
-
-.myConceptLab-header > h1 {
-    font-size: 3rem;
-    margin-block: 6rem;
-    margin-inline: 3rem;
-}
-
-.techAndDesign {
-    width: 30%;
-}
-
-.myConceptLab-main-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .myConceptLab-main-content > h2 {
-    margin-right: 51rem;
-    margin-block: 4rem;
     color: rgb(var(--nhl_stenden_corp_cyan));
 }
 
-.myConceptLab-main-content > h3 {
-    margin-right: 61.4rem;
-    margin-top: 5rem;
-}
-
-.myConceptLab-main-content > p {
-    margin-inline: 3.2rem;
-    margin-block: 1rem;
-}
-
-.buttonToNextPage {
-    display: flex;
-    justify-content: center;
-}
-
-.moveNext {
-    background-color: rgb(var(--nhl_stenden_corp_blue));
-    color: white;
-    margin: 2rem;
-    width: 7rem;
-    height: 3rem;
-    font-size: 1rem;
-    border-radius: 0.3rem;
-    border: none;
-    font-family: 'CeraPro';
-}
-
-.moveNext:hover {
-    background-color: white;
-    border: 3px solid rgb(var(--nhl_stenden_corp_blue));
-    color: rgb(var(--nhl_stenden_corp_blue));
-    cursor: pointer;
+.myConceptLab-main-content > div {
+    margin: 0 auto;
+    width: fit-content;
 }

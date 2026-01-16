@@ -1,0 +1,138 @@
+/* PHONE SIZE */
+@media screen and (max-width: 600px) {
+    .pixelsCombination {
+        height: 5rem;
+    }
+
+    .campus-store-header > h1 {
+        font-size: 2rem;
+        margin-block: auto;
+        margin-inline: 2rem;
+    }
+
+    .campus-store-main-content > h2 {
+        margin-block: 2rem;
+        margin-inline: 2rem;
+        font-size: 1rem;
+    }
+
+    .campus-store-main-content > .image-placeholder {
+        margin-left: 14%;
+        width: 75%;
+        margin-top: 2rem;
+    }
+
+    .campus-store-main-content > h3 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        margin-inline: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .campus-store-main-content > p {
+        margin-inline: 2rem;
+        margin-block: 1rem;
+        font-size: 1rem;
+    }
+
+    .tour-guide-fixed {
+        margin-left: 0%
+    }
+}
+
+/* TABLET SIZE */
+@media screen and (min-width: 600px) and (max-width : 990px) {
+    .pixelsCombination {
+        height: 10rem;
+    }
+
+    .campus-store-header > h1 {
+        font-size: 2.5rem;
+        margin-block: auto;
+        margin-inline: 3rem;
+    }
+
+    .campus-store-main-content > h2 {
+        margin-block: 4rem;
+        margin-inline: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .campus-store-main-content > .image-placeholder {
+        margin-left: 12%;
+        width: 75%;
+        margin-top: 4rem;
+    }
+
+    .campus-store-main-content > h3 {
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        margin-inline: 3rem;
+    }
+
+    .campus-store-main-content > p {
+        margin-inline: 3rem;
+        margin-block: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .tour-guide-fixed {
+        margin-left: 0%;
+    }
+}
+
+/* LAPTOP AND DESKTOP SIZE */
+@media screen and (min-width: 990px) {
+    .pixelsCombination {
+        height: 19rem;
+    }
+
+    .campus-store-header > h1 {
+        font-size: 3rem;
+        margin-block: auto;
+        margin-inline: 5rem;
+    }
+
+    .campus-store-main-content > h2 {
+        margin-block: 4rem;
+        margin-inline: 5rem;
+        font-size: 2rem;
+    }
+
+    .campus-store-main-content > .image-placeholder {
+        margin-left: 35%;
+        width: 35%;
+        margin-top: 6rem;
+    }
+
+    .campus-store-main-content > h3 {
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        margin-inline: 5rem;
+    }
+
+    .campus-store-main-content > p {
+        margin-inline: 5rem;
+        margin-block: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .tour-guide-fixed {
+        margin-left: 25%
+    }
+}
+
+.campusStore-container {
+    padding: 0rem;
+}
+
+.campus-store-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding: 0;
+}
+
+.games-main-content > h2 {
+    color: rgb(var(--nhl_stenden_corp_cyan));
+}

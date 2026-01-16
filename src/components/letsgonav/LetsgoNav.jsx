@@ -19,9 +19,7 @@ export default function LetsgoNav({ src, location, description, link }) {
                                 alt={location}
                                 className="letsgonav-icon"
                             />  
-                            
                         </div>
-                    
 
                     <div className="letsgonav-text">
                         <h3>{location}</h3>

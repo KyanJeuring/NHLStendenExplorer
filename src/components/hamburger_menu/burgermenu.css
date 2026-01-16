@@ -5,12 +5,32 @@
 
 .burger-bar {
     stroke: white;
-    height: 4rem;
     width: auto;
 }
 
 .close-x {
     fill: white;
-    height: 4rem;
     width: auto;
+}
+
+/* PHONE SCREEN */
+@media screen and (max-width: 600px) {
+    .burger-bar {
+        height: 3rem;
+    }
+
+    .close-x {
+        height: 3rem;
+    }
+}
+
+/* TABLET, LAPTOP AND DESKTOP SCREEN */
+@media screen and (min-width: 601px) {
+    .burger-bar {
+        height: 4rem;
+    }
+
+    .close-x {
+        height: 4rem;
+    }
 }

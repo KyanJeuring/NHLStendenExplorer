@@ -30,7 +30,7 @@ app.get('/api/explorer', async (req, res) => {
   try {
     const lang = (req.query.lang || 'en').toLowerCase();
     const result = await db.query(
-      `SELECT ei.id,
+      `SELECT DISTINCT ei.id,
               COALESCE(eit.title, ei.title) AS title,
               COALESCE(eit.description, ei.description) AS description,
               ei.categories,
@@ -38,7 +38,8 @@ app.get('/api/explorer', async (req, res) => {
               ei.link_url
        FROM explore_item ei
        LEFT JOIN explore_item_translation eit
-         ON eit.explore_item_id = ei.id AND eit.language_code = $1`,
+         ON eit.explore_item_id = ei.id AND eit.language_code = $1
+       ORDER BY ei.id`,
       [lang]
     );
     if (result.rows.length === 0) {
@@ -75,13 +76,20 @@ app.get('/api/explorer/categories', async (req, res) => {
   }
 });
 
-app.get('/api/carousel', async (_req, res) => {
+app.get('/api/carousel/en', async (req, res) => {
   try {
-    const result = await db.query('SELECT * FROM carousel_item ORDER BY RANDOM() LIMIT 15');
-    if (result.rows.length === 0) {
-      return res.status(404).json({ error: 'No carousel items found' });
-    }
-    res.status(200).json(result.rows);
+    const result = await db.query("SELECT DISTINCT ON (id) * FROM carousel_item WHERE language_code = 'en' ORDER BY id, RANDOM() LIMIT 15");
+    res.json(result.rows);
+  } catch (err) {
+    console.error('DB error', err);
+    res.status(500).json({ error: 'Database error' });
+  }
+});
+
+app.get('/api/carousel/nl', async (req, res) => {
+  try {
+    const result = await db.query("SELECT DISTINCT ON (id) * FROM carousel_item WHERE language_code = 'nl' ORDER BY id, RANDOM() LIMIT 15");
+    res.json(result.rows);
   } catch (err) {
     console.error('DB error', err);
     res.status(500).json({ error: 'Database error' });

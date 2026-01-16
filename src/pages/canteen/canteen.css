@@ -17,8 +17,8 @@
     }
 
     .canteen-content > .imagePlaceholder {
-        width: 75%;
-        margin-top: 2rem;
+        margin-left: 35%;
+        justify-content: center;
     }
 
     .canteen-content > h3 {
@@ -55,8 +55,8 @@
     }
 
     .canteen-content > .imagePlaceholder {
-        width: 75%;
-        margin-top: 4rem;
+        margin-left: 35%;
+        justify-content: center;
     }
 
     .canteen-content > h3 {
@@ -91,8 +91,8 @@
     }
 
     .canteen-content > .imagePlaceholder {
-        width: 75%;
-        margin-top: 4rem;
+        margin-left: 35%;
+        justify-content: center;
     }
 
     .canteen-content > h3 {
@@ -130,26 +130,3 @@
     color: rgb(var(--nhl_stenden_corp_cyan));
 }
 
-.buttonToNextPage {
-    display: flex;
-    justify-content: center;
-}
-
-.moveNext {
-    background-color: rgb(var(--nhl_stenden_corp_blue));
-    color: white;
-    margin: 2rem;
-    width: 7rem;
-    height: 3rem;
-    font-size: 1rem;
-    border-radius: 0.3rem;
-    border: none;
-    font-family: 'CeraPro';
-}
-
-.moveNext:hover {
-    background-color: white;
-    border: 3px solid rgb(var(--nhl_stenden_corp_blue));
-    color: rgb(var(--nhl_stenden_corp_blue));
-    cursor: pointer;
-}

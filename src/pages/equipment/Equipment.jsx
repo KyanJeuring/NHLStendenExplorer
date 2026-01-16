@@ -1,8 +1,8 @@
 import React, {useMemo} from 'react';
 import './equipment.css';
 import { useNavigate } from 'react-router-dom';
-import TourGuide from '../../components/tourguide/TourGuide';
 import { ReactPhotoSphereViewer } from 'react-photo-sphere-viewer';
+import TourGuide from '../../components/tourguide/Tourguide';
 
 const translations = {
     en: {
@@ -18,8 +18,7 @@ const translations = {
             "Request the equipment you need.",
             "Use the equipment for your project or activity.",
             "Return the equipment and collect your student card."
-        ],
-        moveNext: "Move Next"
+        ]
     },
     nl: {
         title: "Apparatuur",
@@ -34,8 +33,7 @@ const translations = {
             "Vraag de apparatuur aan die je nodig hebt.",
             "Gebruik de apparatuur voor je project of activiteit.",
             "Retourneer de apparatuur en haal je studentenkaart op."
-        ],
-        moveNext: "Ga Verder"
+        ]
     }
 };
 
@@ -60,20 +58,19 @@ export default function Equipment({ lang, toggleLang }) {
                     width={"60%"}
                 />
                 <h3>{translate.subtitle}</h3>
-                <p>{translate.bodyP1}</p>
-                <p>{translate.bodyP2}</p>
-                <p>{translate.bodyP3}</p>
-                <p>{translate.howItWorks}</p>
-                <ol>
-                    {translate.steps.map((step, index) => (
-                        <li key={index}>{step}</li>
-                    ))}
-                </ol>
-                <TourGuide/>
+                <div className="equipment-info">
+                    <p className="equipment-description">{translate.bodyP1}</p>
+                    <p className="equipment-description">{translate.bodyP2}</p>
+                    <p className="equipment-description">{translate.bodyP3}</p>
+                    <p>{translate.howItWorks}</p>
+                    <ol className="equipment-details">
+                        {translate.steps.map((step, index) => (
+                            <li key={index}>{step}</li>
+                        ))}
+                    </ol>
+                    <TourGuide lang={lang} />
+                </div>
             </main>
-            <div className="buttonToNextPage">
-                <button onClick={() => navigate('/learnMore')} className="moveNext">{translate.moveNext}</button>
-            </div>
         </section>
     );
 }

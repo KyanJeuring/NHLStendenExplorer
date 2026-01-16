@@ -2,28 +2,27 @@ import React, {useMemo} from 'react';
 import './studylandscapelogistics.css';
 import { useNavigate } from 'react-router-dom';
 import { ReactPhotoSphereViewer } from 'react-photo-sphere-viewer';
+import TourGuide from '../../components/tourguide/Tourguide';
 
 const translations = {
     en: {
         studyArea: "Study Areas",
         title: "Study Landscape in the Business Leadership & Commerce Media Entrepreneurship department",
         subtitle: "🚀 Explore the World of Logistics & International Business at NHL Stenden Emmen!",
-        bodyP1: "Step into a dynamic study environment where global trade meets smart logistics. At NHL Stenden in Emmen, you'll dive into real-world projects, work with international partners, and develop the skills to lead in a fast-moving global market. From supply chains to sustainable solutions — your journey starts here!",
-        moveNext: "Move Next",
+        bodyP1: "Step into a dynamic study environment where global trade meets smart logistics. At NHL Stenden in Emmen, you'll dive into real-world projects, work with international partners, and develop the skills to lead in a fast-moving global market. From supply chains to sustainable solutions — your journey starts here!"
     },
     nl: {
         studyArea: "Studiegebieden",
         title: "Studielandschap in de Business Leadership & Commerce Media Entrepreneurship afdeling",
         subtitle: "🚀 Ontdek de Wereld van Logistiek & International Business bij NHL Stenden Emmen!",
-        bodyP1: "Stap in een dynamische studieomgeving waar wereldhandel slimme logistiek ontmoet. Bij NHL Stenden in Emmen duik je in praktijkgerichte projecten, werk je samen met internationale partners en ontwikkel je de vaardigheden om te leiden in een snel veranderende wereldmarkt. Van supply chains tot duurzame oplossingen — jouw reis begint hier!",
-        moveNext: "Volgende",
+        bodyP1: "Stap in een dynamische studieomgeving waar wereldhandel slimme logistiek ontmoet. Bij NHL Stenden in Emmen duik je in praktijkgerichte projecten, werk je samen met internationale partners en ontwikkel je de vaardigheden om te leiden in een snel veranderende wereldmarkt. Van supply chains tot duurzame oplossingen — jouw reis begint hier!"
     },
 };
 
 export default function Studylandscape({ lang, toggleLang }) {
     const navigate = useNavigate();
-    const translated = useMemo(() => translations[lang], [lang]);
     const photoSphereRef = React.createRef();
+    const translated = useMemo(() => translations[lang] || translations.en, [lang]);
 
     return (
         <section className="studylandscapePage-container-logistics">
@@ -44,20 +43,18 @@ export default function Studylandscape({ lang, toggleLang }) {
             </div>
             <main className="studylandcape-main-content-logistics">
                 <ReactPhotoSphereViewer
-                                    ref={photoSphereRef}
-                                    src="/360photos/image00004.jpg"
-                                    littlePlanet={false}
-                                    hideNavbarButton={true}
-                                    height={"500px"}
-                                    width={"60%"}
-                                />
+                    ref={photoSphereRef}
+                    src="/360photos/image00004.jpg"
+                    littlePlanet={false}
+                    hideNavbarButton={true}
+                    height={"500px"}
+                    width={"60%"}
+                />
                 <h2>{translated.title}</h2>
                 <h3>{translated.subtitle}</h3>
                 <p>{translated.bodyP1}</p>
+                <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">                
-                <button onClick={() => navigate('/learnMore')} className="moveNext">{translated.moveNext}</button>
-            </div>
         </section>
     )
 }

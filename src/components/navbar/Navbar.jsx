@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
 import BurgerMenu from "../hamburger_menu/burgermenu";
@@ -9,6 +9,15 @@ export default function Navbar({ lang, toggleLang }) {
   const updateMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+  }, [menuOpen]);
+
   return (
     <nav className={menuOpen ? "menu-open" : "menu-hidden"}>
       <section className="logo">
@@ -18,7 +27,6 @@ export default function Navbar({ lang, toggleLang }) {
   <div className="nav-right">
       <button className="lang-toggle" onClick={toggleLang} type="button">
            <img src="icons/translate_icon.svg" alt="" /> {lang.toUpperCase()}
-
       </button>
           
         <section className="nav-links">
@@ -38,7 +46,7 @@ export default function Navbar({ lang, toggleLang }) {
   </div>
 
       <div className="hamburger-menu">
-        <BurgerMenu open={menuOpen} onClick={updateMenu} />
+        <BurgerMenu open={menuOpen} onClick={(updateMenu)} />
       </div>
 
       <div className={menuOpen ? "menu" : "hidden"}>
@@ -52,21 +60,21 @@ export default function Navbar({ lang, toggleLang }) {
           </NavLink>
         </div>
         <div className="link">
-            <NavLink to="/learnMore" onClick={closeMenu} className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Learn More
+            <NavLink to="/learnMore" onClick={closeMenu} className={( {isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Learn More
             <svg className="arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             </NavLink>
         </div>
         <div className="link">
-            <NavLink to="/explore" onClick={closeMenu} className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Explore
+            <NavLink to="/explore" onClick={closeMenu} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Explore
             <svg className="arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             </NavLink>
         </div>
         <div className="link">
-            <NavLink to="/faq" onClick={closeMenu} className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>FAQ
+            <NavLink to="/faq" onClick={closeMenu} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>FAQ
             <svg className="arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>

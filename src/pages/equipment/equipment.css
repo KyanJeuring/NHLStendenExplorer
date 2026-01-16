@@ -46,32 +46,14 @@
     margin-block: 1rem;
 }
 
-.equipment-main-content > ol {
-    width: 50%;
+.equipment-description {
+    margin-right: 24.4rem;
+    margin-block: 0.5rem;
 }
 
-.buttonToNextPage {
-    display: flex;
-    justify-content: center;
-}
-
-.moveNext {
-    background-color: rgb(var(--nhl_stenden_corp_blue));
-    color: white;
-    margin: 2rem;
-    width: 7rem;
-    height: 3rem;
-    font-size: 1rem;
-    border-radius: 0.3rem;
-    border: none;
-    font-family: 'CeraPro';
-}
-
-.moveNext:hover {
-    background-color: white;
-    border: 3px solid rgb(var(--nhl_stenden_corp_blue));
-    color: rgb(var(--nhl_stenden_corp_blue));
-    cursor: pointer;
+.equipment-details {
+    margin-left: 2.8rem;
+    margin-block: 1rem;
 }
 
 @media screen and (max-width: 768px) {

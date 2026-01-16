@@ -1,7 +1,7 @@
 import React, {useMemo} from 'react';
 import './games.css';
 import { useNavigate } from 'react-router-dom';
-import TourGuide from '../../components/tourguide/TourGuide';
+import TourGuide from '../../components/tourguide/Tourguide';
 
 const translations = {
     en: {
@@ -16,8 +16,7 @@ const translations = {
             "Receive the game equipment (ping pong paddles, balls, etc.).",
             "Enjoy the game with friends.",
             "Return the equipment and get your student card back."
-        ],
-        moveNext: "Move Next"
+        ]
     },
     nl: {
         title: "Games",
@@ -31,8 +30,7 @@ const translations = {
             "Ontvang het spelmateriaal (tafeltennisbatjes, ballen, etc.).",
             "Geniet van het spel met vrienden.",
             "Lever het materiaal terug en krijg je studentenkaart terug."
-        ],
-        moveNext: "Volgende"
+        ]
     }
 }
 
@@ -59,7 +57,7 @@ export default function Games({ lang, toggleLang }) {
             </div>
             <main className="games-main-content">
                 <img src="https://lipsum.app/1920x1080" alt="Games area" className="imagePlaceholder"/>
-                <h3>{translate.welcome}</h3>
+                <h3>{translate.subtitle}</h3>
                 <p dangerouslySetInnerHTML={{ __html: translate.bodyP1 }}></p>
                 <p dangerouslySetInnerHTML={{ __html: translate.bodyP2 }}></p>
                 <p>{translate.bodyP3}</p>
@@ -68,11 +66,8 @@ export default function Games({ lang, toggleLang }) {
                         <li key={index}>{item}</li>
                     ))}
                 </ol>
-                <TourGuide/>
+                <TourGuide lang={lang} />
             </main>
-            <div className="buttonToNextPage">
-                <button onClick={() => navigate('/learnMore')} className="moveNext">Move Next</button>
-            </div>
         </section>
     );
 }

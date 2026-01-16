@@ -11,7 +11,7 @@ import Canteen from './pages/canteen/Canteen'
 import Library from './pages/library/Library'
 import KennisPoort from './pages/kennisPoort/KennisPoort'
 import MyConceptLab from './pages/myConceptLab/MyConceptLab'
-import StudentInfo from './pages/studentInfo/StudentInfo'
+import StudentInfo from './pages/studentInfo/Studentinfo'
 import Studylandscapelogistics from './pages/studylandscapelogistics/Studylandscapelogistics'
 import Studylandscapeit from './pages/studylandscapeit/Studylandscapeit'
 import Studylandscapemain from './pages/studylandscapemain/Studylandscapemain'
@@ -22,6 +22,12 @@ import Lockers from './pages/lockers/Lockers'
 import Studyabroad from './pages/studyabroad/Studyabroad'
 import Parking from './pages/parking/Parking'
 import Footer from './components/footer/Footer'
+import StonesRestaurant from './pages/stonesRestaurant/StonesRestaurant';
+import Emergency from './pages/emergency/Emergency';
+import CoursesOverview from './pages/coursesOverview/CoursesOverview';
+import CampusStore from './pages/campusStore/CampusStore';
+import SupportIT from './pages/supportIT/SupportIT';
+import TourGuideStatic from './components/tourguide/Tourguide';
 
 export default function App() {
   const [lang, setLang] = useState("en");
@@ -51,6 +57,11 @@ export default function App() {
           <Route path="/lockers" element={<Lockers lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/studyabroad" element={<Studyabroad lang={lang} toggleLang={toggleLang}/>}/>
           <Route path="/parking" element={<Parking lang={lang} toggleLang={toggleLang}/>}/>
+          <Route path="/stonesRestaurant" element={<StonesRestaurant lang={lang} toggleLang={toggleLang}/>}/>
+          <Route path="/emergency" element={<Emergency lang={lang} toggleLang={toggleLang}/>}/>
+          <Route path="/campusStore" element={<CampusStore lang={lang} toggleLang={toggleLang}/>}/>
+          <Route path="/coursesOverview" element={<CoursesOverview lang={lang} toggleLang={toggleLang}/>}/>
+          <Route path="/supportIT" element={<SupportIT lang={lang} toggleLang={toggleLang}/>}/>
         </Routes>
       </main>
       <Footer lang={lang} toggleLang={toggleLang} />
