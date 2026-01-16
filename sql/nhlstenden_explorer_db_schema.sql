@@ -109,26 +109,26 @@ DELETE FROM explore_item;
 ALTER SEQUENCE explore_item_id_seq RESTART WITH 1;
 
 INSERT INTO explore_item (title, description, categories, image_url, link_url) VALUES
-('Student Info', 'Help & important information.', ARRAY['SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/studentInfo'),
-('Canteen', 'Hot and cold meals, snacks and beverage options.', ARRAY['FACILITIES','SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/canteen'),
-('Library', 'The library with study spaces and resources.', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/library'),
-('Computer Lab', 'Open computer labs with up-to-date software for coursework.', ARRAY['FACILITIES','STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/computerLab'),
-('Career Services', 'Support for internships, CVs and career guidance.', ARRAY['SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/careerServices'),
-('Kennispoort Hub', 'Collaboration space connecting students with industry partners.', ARRAY['STUDY_AREAS','SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/kennispoort'),
-('MyConcept Lab', 'Hands-on innovation lab with 3D printing, prototyping, and fully equipped chemistry facilities.', ARRAY['FACILITIES','STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/myConceptLab'),
-('Main Study Landscape', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/studylandscapemain'),
-('Study Landscape Tech & Design', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/studylandscapeit'),
-('Study Landscape Logistics & IB', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/studylandscapelogistics'),
-('Study Landscape Engineering', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/studylandscapeengineering'),
-('Study Landscape PABO', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], 'https://lipsum.app/512x512', '/studyLandscapePabo'),
-('Equipment', 'Looking to borrow equipement?', ARRAY['SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/equipment'),
-('Games', 'Unwind your mind with some games!', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/games'),
-('Lockers', 'Want to store your stuff for the day?', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/lockers'),
-('Study Abroad', 'Looking to study abroad? Sky is the limit!', ARRAY['SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/studyabroad'),
-('Parking', 'Do not know where to park your car, bike, or scooter?', ARRAY['FACILITIES']::category_enum[], 'https://lipsum.app/512x512', '/parking'),
-('Campus Store', 'In need of school supplies and more? Visit the campus store!', ARRAY['FACILITIES', 'SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/campusStore'),
-('Courses Overview', 'Curious about our courses at NHL Stenden Emmen? Come and grab a flier!', ARRAY['SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/coursesOverview'),
-('Stones Restaurant', 'Good meals, coffee and many more!', ARRAY['FACILITIES','SERVICES']::category_enum[], 'https://lipsum.app/512x512', '/stonesRestaurant');
+('Student Info', 'Help & important information.', ARRAY['SERVICES']::category_enum[], './photos/student-info.jpeg', '/studentInfo'),
+('Canteen', 'Hot and cold meals, snacks and beverage options.', ARRAY['FACILITIES','SERVICES']::category_enum[], './photos/canteen.jpeg', '/canteen'),
+('Library', 'The library with study spaces and resources.', ARRAY['FACILITIES']::category_enum[], './photos/library.jpeg', '/library'),
+('IoT Lab', 'Open computer labs with up-to-date software for coursework.', ARRAY['FACILITIES','STUDY_AREAS']::category_enum[], './photos/iot-lab.jpeg', '/computerLab'),
+('Career Services', 'Support for internships, CVs and career guidance.', ARRAY['SERVICES']::category_enum[], './photos/student-info.jpeg', '/careerServices'),
+('Kennispoort Hub', 'Collaboration space connecting students with industry partners.', ARRAY['STUDY_AREAS','SERVICES']::category_enum[], './photos/kennispoort.jpeg', '/kennispoort'),
+('MyConcept Lab', 'Hands-on innovation lab with 3D printing, prototyping, and fully equipped chemistry facilities.', ARRAY['FACILITIES','STUDY_AREAS']::category_enum[], './photos/myconcept-lab.jpeg', '/myConceptLab'),
+('Main Study Landscape', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], './photos/main-study-landscape.jpeg', '/studylandscapemain'),
+('Study Landscape Tech & Design', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], './photos/study-landscape-it.jpeg', '/studylandscapeit'),
+('Study Landscape Logistics & IB', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], './photos/logistics-study-landscape.jpeg', '/studylandscapelogistics'),
+('Study Landscape Engineering', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], './photos/study-landscape-engineering.jpeg', '/studylandscapeengineering'),
+('Study Landscape PABO', 'Time to study!', ARRAY['STUDY_AREAS']::category_enum[], './photos/pabo-study-landscape.jpeg', '/studyLandscapePabo'),
+('Equipment', 'Looking to borrow equipement?', ARRAY['SERVICES']::category_enum[], './photos/study-landscape.jpeg', '/equipment'),
+('Games', 'Unwind your mind with some games!', ARRAY['FACILITIES']::category_enum[], './photos/games.jpeg', '/games'),
+('Lockers', 'Want to store your stuff for the day?', ARRAY['FACILITIES']::category_enum[], './photos/lockers.jpeg', '/lockers'),
+('Study Abroad', 'Looking to study abroad? The sky is the limit!', ARRAY['SERVICES']::category_enum[], './photos/studyAbroadDesk.jpeg', '/studyabroad'),
+('Parking', 'Do not know where to park your car, bike, or scooter?', ARRAY['FACILITIES']::category_enum[], './photos/parking.jpeg', '/parking'),
+('Campus Store', 'In need of school supplies and more? Visit the campus store!', ARRAY['FACILITIES', 'SERVICES']::category_enum[], './photos/campus-store.jpeg', '/campusStore'),
+('Courses Overview', 'Curious about our courses at NHL Stenden Emmen? Come and grab a flier!', ARRAY['SERVICES']::category_enum[], './photos/coursesOverview.jpeg', '/coursesOverview'),
+('Stones Restaurant', 'Good meals, coffee and many more!', ARRAY['FACILITIES','SERVICES']::category_enum[], './photos/stones-restaurant.jpeg', '/stonesRestaurant');
 
 -- Category Translations
 CREATE TABLE IF NOT EXISTS category_translation (
