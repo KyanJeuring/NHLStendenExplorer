@@ -49,16 +49,18 @@ export default function Equipment({ lang, toggleLang }) {
             <main className="equipment-main-content">
                 <img src="https://lipsum.app/1920x1080" alt="Equipment counter" className="techAndDesign"/>
                 <h3>{translate.subtitle}</h3>
-                <p>{translate.bodyP1}</p>
-                <p>{translate.bodyP2}</p>
-                <p>{translate.bodyP3}</p>
-                <p>{translate.howItWorks}</p>
-                <ol>
-                    {translate.steps.map((step, index) => (
-                        <li key={index}>{step}</li>
-                    ))}
-                </ol>
-                <TourGuide lang={lang} />
+                <div className="equipment-info">
+                    <p className="equipment-description">{translate.bodyP1}</p>
+                    <p className="equipment-description">{translate.bodyP2}</p>
+                    <p className="equipment-description">{translate.bodyP3}</p>
+                    <p>{translate.howItWorks}</p>
+                    <ol className="equipment-details">
+                        {translate.steps.map((step, index) => (
+                            <li key={index}>{step}</li>
+                        ))}
+                    </ol>
+                    <TourGuide lang={lang} />
+                </div>
             </main>
         </section>
     );
