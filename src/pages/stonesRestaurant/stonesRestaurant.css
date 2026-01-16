@@ -24,12 +24,17 @@
     .stones-content > h3 {
         margin-top: 2rem;
         margin-bottom: 1rem;
-        margin-inline: 2rem;
+        margin-left: 0.5rem;
+        margin-right: 2rem;
         font-size: 0.8rem;
+        align-self: flex-start;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .stones-content > p {
-        margin-inline: 2rem;
+        margin-left: 0.5rem;
+        margin-right: 2rem;
         margin-block: 1rem;
         font-size: 1rem;
     }
@@ -63,6 +68,9 @@
         margin-top: 5rem;
         margin-bottom: 1rem;
         margin-inline: 3rem;
+        align-self: flex-start;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .stones-content > p {
@@ -95,10 +103,17 @@
         justify-content: center;
     }
 
+    .imagePlaceholder{
+        align-self: center;
+    }
+
     .stones-content > h3 {
         margin-top: 5rem;
         margin-bottom: 1rem;
         margin-inline: 5rem;
+        align-self: flex-start;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .stones-content > p {
@@ -119,14 +134,21 @@
     padding: 0;
 }
 
-.stones-main-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.stones-main-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   /* <-- makes h3 + p stick to the left */
+  text-align: left;          /* <-- makes text left aligned */
+  padding: 24px 60px;        /* <-- controls how close to the left it is */
+  box-sizing: border-box;
 }
 
 .stones-main-content > h2 {
     color: rgb(var(--nhl_stenden_corp_cyan));
 }
 
+.stones-main-content h3,
+.stones-main-content p{
+  width: 100%;
+  margin-left: 0;
+}

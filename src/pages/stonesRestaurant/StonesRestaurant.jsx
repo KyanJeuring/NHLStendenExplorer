@@ -7,7 +7,7 @@ const translations = {
     en: {
         title: "Stones Restaurant",
         subtitle: "Welcome to the Stones Restaurant 🥪",
-        bodyP1: "This is the perfect place to get a really fancy coffee or something that's really tasty."
+        bodyP1: "This is the perfect place to get a really fancy coffee or something that's really tasty. In this restaurant you will experience a beautiful interaction and beautiful harmony with the MBO students of Drenthe College. Everything is under the guidance of professionals."
     },
     nl: {
         title: "Stones Restaurant",
