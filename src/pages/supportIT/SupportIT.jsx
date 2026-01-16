@@ -2,6 +2,7 @@ import React, {useMemo} from 'react';
 import './supportIT.css';
 import { useNavigate } from 'react-router-dom';
 import TourGuide from '../../components/tourguide/Tourguide';
+import { ReactPhotoSphereViewer } from 'react-photo-sphere-viewer';
 
 const translations = {
     en: {
@@ -19,6 +20,7 @@ const translations = {
 export default function SupportIT({ lang, toggleLang }) {
     const navigate = useNavigate();
     const translate = useMemo(() => translations[lang] || translations.en, [lang]);
+    const photoSphereRef = React.createRef();
 
     return (
         <section className="supportIT-container">
@@ -27,8 +29,14 @@ export default function SupportIT({ lang, toggleLang }) {
                 <img src="/pixels/combinationOfPixelsForLocations.svg" alt="Pixels Combination" className="pixelsCombination"/>
             </div>
             <main className="supportIT-content">
-                <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="imagePlaceholder"/>
-                <img src="/photos/studylandscapePhotoPlaceholder.png" alt="360 Photo Placeholder" className="imagePlaceholder"/>
+                <ReactPhotoSphereViewer
+                    ref={photoSphereRef}
+                    src="/360photos/image00003.jpg"
+                    littlePlanet={false}
+                    hideNavbarButton={true}
+                    height={"500px"}
+                    width={"60%"}
+                />
                 <h3>{translate.subtitle}</h3>
                 <p>{translate.bodyP1}</p>
                 <TourGuide lang={lang} />
