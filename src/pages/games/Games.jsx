@@ -57,7 +57,7 @@ export default function Games({ lang, toggleLang }) {
             </div>
             <main className="games-main-content">
                 <img src="https://lipsum.app/1920x1080" alt="Games area" className="imagePlaceholder"/>
-                <h3>{translate.welcome}</h3>
+                <h3>{translate.subtitle}</h3>
                 <p dangerouslySetInnerHTML={{ __html: translate.bodyP1 }}></p>
                 <p dangerouslySetInnerHTML={{ __html: translate.bodyP2 }}></p>
                 <p>{translate.bodyP3}</p>

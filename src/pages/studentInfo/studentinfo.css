@@ -72,16 +72,10 @@
         height: 19rem;
     }
 
-    .studentInfo-main-header > h1 {
+    .studentInfo-header > h1 {
         font-size: 3rem;
-        margin-block: auto;
+        margin-block: 6rem;
         margin-inline: 5rem;
-    }
-
-    .studentInfo-main-content > h2 {
-        margin-block: 4rem;
-        margin-inline: 5rem;
-        font-size: 2rem;
     }
 
     .studentInfo-main-content > .imagePlaceholder {
@@ -115,9 +109,9 @@
     align-items: center;
 }
 
-.studentInfo-main-content > h2 {
-    /*margin-right: 51rem;
-    margin-block: 4rem;*/
+.studentInfo-main-content > h3 {
+    margin-top: 4rem;
+    margin-right: 56.3rem;
     color: rgb(var(--nhl_stenden_corp_cyan));
 }
 
